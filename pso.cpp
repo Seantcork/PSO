@@ -1,33 +1,34 @@
-"Authos Sean Cork, Kamaal Palmer, Luca Ostertag-Hill"
+// Authors Sean Cork, Kamaal Palmer, Luca Ostertag-Hill
 
 
-const double CONSTIRCTION_FACTOR = const int TOURNAMENT_SELECTION_M = 2;
+const double CONSTIRCTION_FACTOR = 0.7298;
 
-"neighborhood topologies"
-def global(){
 
-}
-
-def ring(){
+void global(){
 
 }
 
-def vonNeuman(){
+void ring(){
 
 }
 
-def random(){
-
+void vonNeuman(){
 
 }
 
+void random(){
 
-def Pso(){
 
 }
 
 
+void Pso(){
 
-def main(char argc, char* argv){
+}
 
+
+
+int main(int argc, char* argv[]){
+
+	return 1;
 }
