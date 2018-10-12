@@ -64,10 +64,16 @@ double distance(particle a, particle b){
 }
 
 
-double evalAckley (vector<double> dimensionVector) {
+double evalAckley (vector<double> positions) {
 
-    double firstSum = x*x + y*y;
-    double secondSum = cos(2.0*M_PI*x) + cos(2.0*M_PI*y);
+    double firstSum = 0
+    double secondSum = 0
+
+    for(int i = 0; i < position.size(); i++){
+    	firstSum += position[i];
+    }
+
+    firstSum = -0.2 * sqrt((1/positions.size()) * firstSum);
 
     return -20.0 * exp(-0.2 * sqrt(firstSum/2.0)) - 
       exp(secondSum/2.0) + 20.0 + Math.E;
