@@ -12,19 +12,17 @@
 
 const double CONSTIRCTION_FACTOR = 0.7298;
 
-class neighborhood{
+class Neighborhood {
 	public:
 		//update neighbors each time velocity update
-		vector<*particle> neighbors;
+		vector<*Particle> neighbors;
 		double neighborhoodBest;
-		findNeighborhoodBest();
-		particle Ring();
-		particle vonNeuman();
+		void findNeighborhoodBest();
 }
 
 
 
-class particle {
+class Particle {
 	public:
 		vector<double> position;
 		vector<double> pBest;
@@ -34,23 +32,27 @@ class particle {
 		void updateVelocity();
 		void updatePosition();
 
-
+		Particle();	
 }
 
 
-class swarm {
+class Swarm {
 
 	public:
-		vector<*particle> swarm;
+		vector<*Particle> swarm;
 		double swarmSize;
+
 		double globalBest;
 		void findGlobalBest();
 
+		void globalTopology();
+		void ringTopology();
+		void vonNeumanTopology();
+		void randomTopology();
+
+		Swarm();
 }
 
-public initializeParticle(particle a){
-
-}
 
 //parses comand line and makes sure to enter the right things
 void evaluate(){
@@ -115,19 +117,19 @@ public double evalRastrigin (vector<double> position) {
 }
 
 
-void global(){
+void globalTopology(){
 
 }
 
-void ring(){
+void ringTopology(){
 
 }
 
-void vonNeuman(){
+void vonNeumanTopology(){
 
 }
 
-void random(){
+void randomTopology(){
 
 
 }
