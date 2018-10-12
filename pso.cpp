@@ -34,7 +34,7 @@ class Particle {
 		void updatePosition();
 		void updateVelocity();
 
-		Particle();	
+		void initParticle(int numDimensions, string testFunction);	
 }
 
 
@@ -52,7 +52,8 @@ class Swarm {
 		void vonNeumanTopology();
 		void randomTopology();
 
-		Swarm();
+		void initSwarm(int swarmSize, int numDimensions, 
+			string neighborhoodTopology, string testFunction);
 }
 
 
@@ -60,7 +61,7 @@ void Neighborhood::findNeighborhoodBest(){
 
 }
 
-void Particle::Particle(){
+void Particle::initParticle(){
 
 }
 
@@ -76,7 +77,7 @@ void Particle::updateVelocity(){
 
 }
 
-void Swarm::Swarm(){
+void Swarm::initSwarm(){
 	
 }
 
@@ -137,7 +138,7 @@ double evalAckley (vector<double> positions) {
 
 
 
- //evaluates rosenbrock for the specified number of dimenstions
+ //evaluates rosenbrock for the specified number of dimensions
 public double evalRosenbrock (vector<double> position) {
 	double sum = 0;
 
