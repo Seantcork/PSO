@@ -10,10 +10,7 @@
 
 # define M_PI    3.14159265358979323846
 
-
-
 const double CONSTIRCTION_FACTOR = 0.7298;
-
 
 class neighborhood{
 	public:
@@ -55,6 +52,14 @@ public initializeParticle(particle a){
 
 //parses comand line and makes sure to enter the right things
 void evaluate(){
+
+	string neighborhoodTopology = string(argv[1]);
+	int swarmSize = atoi(argv[2]);
+	int numIterations = atoi(argv[3]);
+	string testFunction = string(argv[4]);
+	int numDimensions = atoi(argv[5]);
+
+	 
 
 }
 
