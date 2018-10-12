@@ -8,7 +8,7 @@
 #include <vector>
 #include <iostream>
 
-# define M_PI           3.14159265358979323846
+# define M_PI    3.14159265358979323846
 
 
 
@@ -75,22 +75,6 @@ double evalAckley (double x, double y) {
       exp(secondSum/2.0) + 20.0 + Math.E;
 }  
 
-public double evalGriewank (vector<double> position) {
-
-
-    double sumSquares = x*x + y*y;
-    double productCos = cos(x/sqrt(1)) * cos(y/sqrt(2));
-
-    return sumSquares/4000.0 - productCos + 1.0;
-
-    double division = 1/4000.0
-
-    double sum = 0;
-    for(int i = 0; i < position.size(); i++){
-    	
-    }
-
- }  
 
 
 
