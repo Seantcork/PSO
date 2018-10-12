@@ -10,7 +10,11 @@
 
 # define M_PI    3.14159265358979323846
 
+#define E 2.71828
 const double CONSTIRCTION_FACTOR = 0.7298;
+
+
+
 
 class neighborhood{
 	public:
@@ -77,11 +81,15 @@ double evalAckley (vector<double> positions) {
     for(int i = 0; i < position.size(); i++){
     	firstSum += position[i];
     }
-
     firstSum = -0.2 * sqrt((1/positions.size()) * firstSum);
 
-    return -20.0 * exp(-0.2 * sqrt(firstSum/2.0)) - 
-      exp(secondSum/2.0) + 20.0 + Math.E;
+    for(int i = 0; i < position.size(); i++){
+    	secondSum += cos(2 * M_PI * position[i])
+    }
+
+    secondSum = exp(secondSum) + 20 + E;
+
+    return -20 * firstSum - secondSum;
 }  
 
 
