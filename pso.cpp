@@ -91,12 +91,13 @@ public double evalRosenbrock (vector<double> position) {
 
   // returns the value of the Rastrigin Function at point (x, y)
   //   minimum is 0.0, which occurs at (0.0,...,0.0)
-public double evalRastrigin (vector<double> dimensionVector) {
+public double evalRastrigin (vector<double> position) {
 
 	double retVal = 0;
-    retVal += x*x - 10.0* cos(2.0*M_PI*x) + 10.0;
-    retVal += y*y - 10.0* cos(2.0*M_PI*y) + 10.0;
 
+	for(int i = 0; i < position.size(); i++){
+		retval += (pow(position[i], 2) - 10* cos(2* M_PI * position[i]) + 10)
+	}
     return retVal;
 }
 
