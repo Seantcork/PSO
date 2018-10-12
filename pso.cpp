@@ -46,7 +46,9 @@ class Swarm {
 		vector<*Particle> swarm;
 		double swarmSize;
 
-		double globalBest;
+
+		vector<double> gBest;
+		double globalFitness;
 		void findGlobalBest();
 
 		void globalTopology();
@@ -59,10 +61,16 @@ class Swarm {
 }
 
 
+/*
+	Functions for neighborhood class
+*/
 void Neighborhood::findNeighborhoodBest(){
 
 }
 
+/*
+	Functions for particle class
+*/
 void Particle::initParticle(){
 
 }
@@ -79,11 +87,21 @@ void Particle::updateVelocity(){
 
 }
 
-void Swarm::initSwarm(){
+
+/*
+	Functions for swarm class
+*/
+void Swarm::initSwarm(int swarmSize, int numDimensions, 
+			string neighborhoodTopology, string testFunction){
 	
 }
 
 void Swarm::findGlobalBest(){
+	for (int i = 0; i < swarmSize; i++){
+		if swarm[i]->fitness > globalFitness{
+			gBest = swarm[i]->pBest;
+		}
+	}
 
 }
 
