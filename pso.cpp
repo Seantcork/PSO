@@ -18,7 +18,7 @@ const double CONSTIRCTION_FACTOR = 0.7298;
 class neighborhood{
 	public:
 		//update neighbors each time velocity update
-		vector<particle> neighbors;
+		vector<*particle> neighbors;
 		double neighborhoodBest;
 		findNeighborhoodBest();
 		particle Ring();
@@ -27,15 +27,13 @@ class neighborhood{
 
 
 
-class particle{
+class particle {
 	public:
-		double xPos;
-		double yPos;
+		vector<double> position;
+		vector<double> pBest;
+		vector<double> velocity;
 		double fitness;
-		double velocity;
-		//could be class of struct
-		double personalBest;
-		double calculateFitness(this->xPos, this->yPos);
+		void calculateFitness();
 		void updateVelocity();
 		void updatePosition();
 
@@ -43,7 +41,7 @@ class particle{
 }
 
 
-class swarm{
+class swarm {
 
 	public:
 		vector<neighborhood> swarm;
@@ -66,7 +64,7 @@ double distance(particle a, particle b){
 }
 
 
-double evalAckley (double x, double y) {
+double evalAckley (vector<double> dimensionVector) {
 
     double firstSum = x*x + y*y;
     double secondSum = cos(2.0*M_PI*x) + cos(2.0*M_PI*y);
@@ -77,8 +75,7 @@ double evalAckley (double x, double y) {
 
 
 
-
-//evaluates rosenbrock for the specified number of dimenstions
+ //evaluates rosenbrock for the specified number of dimenstions
 public double evalRosenbrock (vector<double> position) {
 	double sum = 0;
 
@@ -94,7 +91,7 @@ public double evalRosenbrock (vector<double> position) {
 
   // returns the value of the Rastrigin Function at point (x, y)
   //   minimum is 0.0, which occurs at (0.0,...,0.0)
-public double evalRastrigin (double x, double y) {
+public double evalRastrigin (vector<double> dimensionVector) {
 
 	double retVal = 0;
     retVal += x*x - 10.0* cos(2.0*M_PI*x) + 10.0;
