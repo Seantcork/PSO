@@ -44,8 +44,10 @@ class particle {
 class swarm {
 
 	public:
-		vector<neighborhood> swarm;
-		double global bestl;
+		vector<*particle> swarm;
+		double swarmSize;
+		double globalBest;
+		void findGlobalBest();
 
 }
 
