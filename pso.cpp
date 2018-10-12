@@ -27,10 +27,12 @@ class Particle {
 		vector<double> position;
 		vector<double> pBest;
 		vector<double> velocity;
+
 		double fitness;
 		void calculateFitness();
-		void updateVelocity();
+
 		void updatePosition();
+		void updateVelocity();
 
 		Particle();	
 }
@@ -53,6 +55,51 @@ class Swarm {
 		Swarm();
 }
 
+
+void Neighborhood::findNeighborhoodBest(){
+
+}
+
+void Particle::Particle(){
+
+}
+
+void Particle::calculateFitness(){
+
+}
+
+void Particle::updatePosition(){
+
+}
+
+void Particle::updateVelocity(){
+
+}
+
+void Swarm::Swarm(){
+	
+}
+
+void Swarm::findGlobalBest(){
+
+}
+
+void Swarm::globalTopology(){
+
+}
+
+void Swarm::ringTopology(){
+
+}
+
+void Swarm::vonNeumanTopology(){
+
+}
+
+void Swarm::randomTopology(){
+
+
+}
 
 //parses comand line and makes sure to enter the right things
 void evaluate(){
@@ -117,25 +164,10 @@ public double evalRastrigin (vector<double> position) {
 }
 
 
-void globalTopology(){
-
-}
-
-void ringTopology(){
-
-}
-
-void vonNeumanTopology(){
-
-}
-
-void randomTopology(){
 
 
-}
 
-
-void Pso(){
+void PSO(){
 
 }
 
