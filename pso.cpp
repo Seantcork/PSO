@@ -1,4 +1,15 @@
 // Authors Sean Cork, Kamaal Palmer, Luca Ostertag-Hill
+#include <math.h>
+#include <fstream>
+#include <cstdlib>
+#include <stdint.h>
+#include <random>
+#include <string>
+#include <vector>
+#include <iostream>
+
+# define M_PI           3.14159265358979323846
+
 
 
 const double CONSTIRCTION_FACTOR = 0.7298;
@@ -39,7 +50,7 @@ class swarm {
 }
 
 public initializeParticle(particle a){
-	
+
 }
 
 //parses comand line and makes sure to enter the right things
@@ -56,25 +67,40 @@ double distance(particle a, particle b){
 double evalAckley (vector<double> dimensionVector) {
 
     double firstSum = x*x + y*y;
-    double secondSum = Math.cos(2.0*Math.PI*x) + Math.cos(2.0*Math.PI*y);
+    double secondSum = cos(2.0*M_PI*x) + cos(2.0*M_PI*y);
 
-    return -20.0 * Math.exp(-0.2 * Math.sqrt(firstSum/2.0)) - 
-      Math.exp(secondSum/2.0) + 20.0 + Math.E;
+    return -20.0 * exp(-0.2 * sqrt(firstSum/2.0)) - 
+      exp(secondSum/2.0) + 20.0 + Math.E;
 }  
 
-public double evalGriewank (vector<double> dimensionVector) {
+public double evalGriewank (vector<double> position) {
 
     double sumSquares = x*x + y*y;
-    double productCos = Math.cos(x/Math.sqrt(1)) * Math.cos(y/Math.sqrt(2));
+    double productCos = cos(x/sqrt(1)) * cos(y/sqrt(2));
 
     return sumSquares/4000.0 - productCos + 1.0;
+
+    double division = 1/4000.0
+
+    double sum = 0;
+    for(int i = 0; i < position.size(); i++){
+    	
+    }
+
  }  
 
-
 public double evalRosenbrock (vector<double> dimensionVector) {
+	
+//evaluates rosenbrock for the specified number of dimenstions
+public double evalRosenbrock (vector<double> position) {
+	double sum = 0;
 
-    return 100.0 * Math.pow(y - x*x, 2.0) + Math.pow(x-1.0, 2.0);
-  }
+	for(int i = 0; i < position.size() -1; i++){
+		sum+ = 100.0 * pow(position[i+1] - pow(position[i], 2), 2) + pow(position[i] -1, 2);
+	}
+
+	return sum;
+}
 
 
 
@@ -84,8 +110,8 @@ public double evalRosenbrock (vector<double> dimensionVector) {
 public double evalRastrigin (vector<double> dimensionVector) {
 
 	double retVal = 0;
-    retVal += x*x - 10.0*Math.cos(2.0*Math.PI*x) + 10.0;
-    retVal += y*y - 10.0*Math.cos(2.0*Math.PI*y) + 10.0;
+    retVal += x*x - 10.0* cos(2.0*M_PI*x) + 10.0;
+    retVal += y*y - 10.0* cos(2.0*M_PI*y) + 10.0;
 
     return retVal;
 }
