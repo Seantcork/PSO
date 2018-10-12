@@ -7,7 +7,7 @@ const double CONSTIRCTION_FACTOR = 0.7298;
 class neighborhood{
 	public:
 		//update neighbors each time velocity update
-		vector<particle> neighbors;
+		vector<*particle> neighbors;
 		double neighborhoodBest;
 		findNeighborhoodBest();
 		particle Ring();
@@ -16,15 +16,13 @@ class neighborhood{
 
 
 
-class particle{
+class particle {
 	public:
-		double xPos;
-		double yPos;
+		vector<double> position;
+		vector<double> pBest;
+		vector<double> velocity;
 		double fitness;
-		double velocity;
-		//could be class of struct
-		double personalBest;
-		double calculateFitness(this->xPos, this->yPos);
+		void calculateFitness();
 		void updateVelocity();
 		void updatePosition();
 
@@ -32,7 +30,7 @@ class particle{
 }
 
 
-class swarm{
+class swarm {
 
 	public:
 		vector<neighborhood> swarm;
@@ -55,7 +53,7 @@ double distance(particle a, particle b){
 }
 
 
-double evalAckley (double x, double y) {
+double evalAckley (vector<double> dimensionVector) {
 
     double firstSum = x*x + y*y;
     double secondSum = Math.cos(2.0*Math.PI*x) + Math.cos(2.0*Math.PI*y);
@@ -64,7 +62,7 @@ double evalAckley (double x, double y) {
       Math.exp(secondSum/2.0) + 20.0 + Math.E;
 }  
 
-public double evalGriewank (double x, double y) {
+public double evalGriewank (vector<double> dimensionVector) {
 
     double sumSquares = x*x + y*y;
     double productCos = Math.cos(x/Math.sqrt(1)) * Math.cos(y/Math.sqrt(2));
@@ -73,7 +71,7 @@ public double evalGriewank (double x, double y) {
  }  
 
 
-public double evalRosenbrock (double x, double y) {
+public double evalRosenbrock (vector<double> dimensionVector) {
 
     return 100.0 * Math.pow(y - x*x, 2.0) + Math.pow(x-1.0, 2.0);
   }
@@ -83,7 +81,7 @@ public double evalRosenbrock (double x, double y) {
 
   // returns the value of the Rastrigin Function at point (x, y)
   //   minimum is 0.0, which occurs at (0.0,...,0.0)
-public double evalRastrigin (double x, double y) {
+public double evalRastrigin (vector<double> dimensionVector) {
 
 	double retVal = 0;
     retVal += x*x - 10.0*Math.cos(2.0*Math.PI*x) + 10.0;
