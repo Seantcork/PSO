@@ -82,39 +82,33 @@ void Particle::initParticle(int numDimensions, string testFunction){
 	if(testFunction.compare("rok") == 0){
 		uniform_real_distribution<double> gen(15.0, 30.0);
 		for(int i = 0; i < numDimensions; i ++){
-			int rand = gen(engine);
-			this->position.push_back(rand)
+			this->position.push_back(gen(engine));
 		}
 		uniform_real_distribution<double> gen(-2.0, 2.0);
 		for(int i = 0; i < numDimensions; i++){
-			int rand = gen(engine);
-			this->velocity.push_back(rand)
+			this->velocity.push_back(gen(engine));
 		}
 	}
 
 	if(testFunction.compare("ack")){
 		uniform_real_distribution<double> gen(16.0, 32.0);
 		for(int i = 0; i < numDimensions; i ++){
-			int rand = gen(engine);
-			this->position.push_back(rand)
+			this->position.push_back(gen(engine));
 		}
 		uniform_real_distribution<double> gen(-2.0, 4.0);
 		for(int i = 0; i < numDimensions; i++){
-			int rand = gen(engine);
-			this->velocity.push_back(rand)
+			this->velocity.push_back(gen(engine));
 		}
 	}
 	
 	if(testFunction.compare("ras")){
 		uniform_real_distribution<double> gen(2.56, 5.12);
 		for(int i = 0; i < numDimensions; i ++){
-			int rand = gen(engine);
-			this->position.push_back(rand)
+			this->position.push_back(gen(engine));
 		}
 		uniform_real_distribution<double> gen(-2.0, 4.0);
 		for(int i = 0; i < numDimensions; i++){
-			int rand = gen(engine);
-			this->velocity.push_back(rand)
+			this->velocity.push_back(gen(engine));
 		}
 	}
 	cerr << "Optimization Function does not exist" << endl;
