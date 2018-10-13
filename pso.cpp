@@ -1,4 +1,12 @@
-/*Authors Sean Cork, Kamaal Palmer, Luca Ostertag-Hill*/
+/*
+
+	Authors Sean Cork, Kamaal Palmer, Luca Ostertag-Hill
+	Nature Inspired Computation Project 2: PSO
+	October 13, 2018
+
+*/
+
+
 #include <math.h>
 #include <fstream>
 #include <cstdlib>
@@ -7,18 +15,17 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <limits>       // std::numeric_limits
+
 using namespace std;
 
 
 #define E 2.71828
 const double CONSTRICTION_FACTOR = 0.7298;
 
-const double P_BEST_ATTRACTION = 0.5;
+const double C1 = 2.05;
 
-const double G_BEST_ATTRACTION = 0.5;
-
-
-const double DBL_MAX;
+const double C2 = 2.05;
 
 const string GLOBAL_TOPOLOGY = "gl";
 const string RING_TOPOLOGY = "ri";
@@ -131,6 +138,7 @@ void Particle::initParticle(int numDimensions, string testFunction){
 
 	//Particles pBest is set as its initial position
 	this->pBestArray = this->position;
+	this->nBestArray = this->position;
 
 	
 }
@@ -190,15 +198,15 @@ void Particle::updatePosition(){
 }
 
 
-// Possible here that we want a max velocity -- Discuss at next group meeting
+// Revisit the numbers that the acceleration is between. Not sure about these values but just put them in to move forward
 void Particle::updateVelocity(){
 	random_device seeder;
 	mt19937 engine(seeder());
 	uniform_real_distribution<double> randAcceleration(0.0, 3.0);
 	for(int i = 0; i < position.size(); i++) {
-		velocity.at(i) = velocity.at(i) + 
-		(randAcceleration(engine) * (pBestArray.at(i) - position.at(i))) + 
-		(randAcceleration(engine) * (nBestArray.at(i) - position.at(i)));
+		velocity.at(i) = CONSTRICTION_FACTOR * (velocity.at(i) +
+		((C1*randAcceleration(engine) * (pBestArray.at(i) - position.at(i))) + 
+		((C2*randAcceleration(engine)) * (nBestArray.at(i) - position.at(i))))); 
 	}
 }
 
@@ -234,7 +242,7 @@ void Particle::updateNeighborhoodBest(double bestFitness, vector<double> bestFit
 void Swarm::initSwarm(int swarmSize, int numDimensions, 
 			string neighborhoodTopology, string testFunction){
 	this->swarmSize = swarmSize;
-	gBestFitness = DBL_MAX;
+	gBestFitness = numeric_limits<double>::max();
 	for(int i = 0; i < swarmSize; i++){
 		shared_ptr<Particle> ptr(new Particle());
 		ptr->initParticle(numDimensions, testFunction);
@@ -309,7 +317,7 @@ void Swarm::randomTopology(){
 
 //returns distance between particles
 double distance(Particle a, Particle b){
-
+	return 0.0;
 }
 
 
@@ -362,7 +370,19 @@ double evalRastrigin (vector<double> position) {
 
 
 
-void PSO(){
+void PSO(Swarm swarm, int numIterations, string testFunction){
+	for(int i = 0; i < numIterations; i++ ){
+		// cout << "Iteration number: " << i << endl;
+		for(int j = 0; j < swarm.swarmSize; j++){
+			swarm.swarm.at(j)->updatePosition();
+			// cout << "Post update position" << endl;	
+			swarm.swarm.at(j)->calculateFitness(testFunction);
+			// cout << "Post calc fitness" << endl;	
+			swarm.swarm.at(j)->updateVelocity();
+			// cout << "Post update velocity" << endl;	
+		}
+	}
+	cout << "Best Fitness found: " << swarm.gBestFitness << endl;
 
 }
 
@@ -378,10 +398,11 @@ int main(int argc, char* argv[]){
 
 	Swarm *swarm = new Swarm;
 	swarm->initSwarm(swarmSize, numDimensions, neighborhoodTopology, testFunction);
+	cout << "Pre PSO Run" << endl;
+	PSO(*swarm, numIterations, testFunction);
 
-	PSO(&swarm)
 
-	 	return 1;
+	return 1;
 
 
 
