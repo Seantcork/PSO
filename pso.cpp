@@ -14,21 +14,21 @@ using namespace std;
 #define E 2.71828
 const double CONSTRICTION_FACTOR = 0.7298;
 
-class Particle;
-
-
 class Particle {
 	public:
 		vector<double> position;
 		vector<double> pBest;
 		vector<double> velocity;
-		Neighborhood neighbors;
+		
+		vector<Particle*> neighbors;
+		double neighborhoodBest;
 
 		double fitness;
 		void calculateFitness();
 
 		void updatePosition();
 		void updateVelocity();
+		void findNeighborhoodBest();
 
 		void initParticle(int numDimensions, string testFunction);	
 }
@@ -37,7 +37,7 @@ class Particle {
 class Swarm {
 
 	public:
-		vector<*Particle> swarm;
+		vector<shared_ptr<Particle> > swarm;
 		double swarmSize;
 
 
@@ -52,11 +52,6 @@ class Swarm {
 
 		void initSwarm(int swarmSize, int numDimensions, 
 			string neighborhoodTopology, string testFunction);
-
-
-		vector<Particle*> neighbors;
-		double neighborhoodBest;
-		void findNeighborhoodBest();
 }
 
 
@@ -92,13 +87,20 @@ void Particle::updateVelocity(){
 */
 void Swarm::initSwarm(int swarmSize, int numDimensions, 
 			string neighborhoodTopology, string testFunction){
-	
+	this->swarmSize = swarmSize;
+	this->globalFitness = DBL_MAX;
+	for(int i = 0; i < swarmSize; i++){
+		shared_ptr<Particle> ptr(new Particle());
+		ptr->initParticle;
+		swarm.push_back(ptr);
+	}
 }
 
 void Swarm::findGlobalBest(){
 	for (int i = 0; i < swarmSize; i++){
-		if (swarm[i]->fitness > globalFitness){
+		if (swarm[i]->fitness < globalFitness){
 			gBest = swarm[i]->pBest;
+			globalFitness = swarm[i]->fitness;
 		}
 	}
 
