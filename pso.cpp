@@ -27,14 +27,14 @@ const string RASTRIGIN_FUNCTION = "ras";
 class Particle {
 	public:
 		vector<double> position;
-		vector<double> pBest;
 		vector<double> velocity;
+		vector<double> pBest;
 		
 		vector<Particle*> neighbors;
 		double neighborhoodBest;
 
 		double fitness;
-		void calculateFitness();
+		void calculateFitness(string testFunction);
 
 		void updatePosition();
 		void updateVelocity();
@@ -72,10 +72,10 @@ void particle::findNeighborhoodBest(){
 	vector<double> minPos;
 	double minFitness = 1000000;
 
-	for(int i = 0; i < this->neighbors.size(); i++){
-		if(this->neighbors[i].fitness < minFitness) {
-			minPos = this->neighbors[i].position;
-			minFitness = this->neighbors[i].fitness;
+	for(int i = 0; i < neighbors.size(); i++){
+		if(neighbors[i].fitness < minFitness) {
+			minPos = neighbors[i].position;
+			minFitness = neighbors[i].fitness;
 		}
 	}
 }
@@ -92,34 +92,42 @@ void Particle::initParticle(int numDimensions, string testFunction){
 		uniform_real_distribution<double> genPosition(15.0, 30.0);
 		uniform_real_distribution<double> genVelocity(-2.0, 2.0);
 		for(int i = 0; i < numDimensions; i ++){
-			this->position.push_back(genPosition(engine));
-			this->velocity.push_back(genVelocity(engine));
+			position.push_back(genPosition(engine));
+			velocity.push_back(genVelocity(engine));
 		}
 	}
 
-	if(testFunction.compare(ACKLEY_FUNCTION)){
+	else if(testFunction.compare(ACKLEY_FUNCTION)){
 		uniform_real_distribution<double> genPosition(16.0, 32.0);
 		uniform_real_distribution<double> genVelocity(-2.0, 4.0);
 		for(int i = 0; i < numDimensions; i ++){
-			this->position.push_back(genPosition(engine));
-			this->velocity.push_back(genVelocity(engine));
+			position.push_back(genPosition(engine));
+			velocity.push_back(genVelocity(engine));
 
 		}
 	}
 	
-	if(testFunction.compare(RASTRIGIN_FUNCTION)){
+	else if(testFunction.compare(RASTRIGIN_FUNCTION)){
 		uniform_real_distribution<double> genPosition(2.56, 5.12);
 		uniform_real_distribution<double> genVelocity(-2.0, 4.0);
 		for(int i = 0; i < numDimensions; i ++){
-			this->position.push_back(genPosition(engine));
-			this->velocity.push_back(genVelocity(engine));
+			position.push_back(genPosition(engine));
+			velocity.push_back(genVelocity(engine));
 
 		}
 	}
-	cerr << "Optimization Function does not exist" << endl;
+
+	else {
+		cerr << "Optimization Function does not exist" << endl;
+	}
+
+	//Particles pBest is set as its initial position
+	pBest = position;
+
+	
 }
 
-void Particle::calculateFitness(){
+void Particle::calculateFitness(string testFunction){
 
 }
 
