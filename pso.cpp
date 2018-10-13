@@ -154,6 +154,9 @@ void Particle::initParticle(int numDimensions, string testFunction){
 		cerr << "Optimization Function does not exist" << endl;
 	}
 
+
+	this->pBestFitness = 100000000000;
+	this->nBestFitness = 100000000000;
 	//Particles pBest is set as its initial position
 	this->pBestArray = this->position;
 
@@ -246,10 +249,6 @@ void Particle::updateVelocity(){
 		((C1*randAcceleration(engine) * (pBestArray.at(i) - position.at(i))) + 
 		((C2*randAcceleration(engine)) * (nBestArray.at(i) - position.at(i))))); 
 
-		//cout << this->velocity.at(i) << endl;
-		//cout << position.at(i) << endl;
-
-		//cout << MAX_VELOCITY << endl;
 		if(currVelocity < MIN_VELOCITY){
 			velocity.at(i) = MIN_VELOCITY;
 		}
@@ -309,7 +308,7 @@ void Swarm::initSwarm(int swarmSize, int numDimensions,
 		ptr->initParticle(numDimensions, testFunction);
 
 		//sets the min adn max value for each particle
-		swarm.push_back(ptr);
+		this->swarm.push_back(ptr);
 	}
 }
 
@@ -327,10 +326,10 @@ void Swarm::findGlobalBest(){
 void Swarm::globalTopology(){
 	for(int i = 0; i < swarm.size(); i ++){
 		for(int j = 0; j < swarm.size(); j++){
-			swarm[i]->neighborsArray.push_back(swarm[j]);
+			swarm[i]->neighborsArray.push_back(swarm.at(j));
 
 		}
-		swarm[i]->neighborsArray.push_back(swarm[i]);
+		swarm[i]->neighborsArray.push_back(swarm.at(i));
 	}
 }
 
@@ -411,7 +410,6 @@ double evalRosenbrock (vector<double> position) {
 	for(int i = 1; i < position.size() -1; i++){
 		sum += (100.0 * pow(position[i+1] -  position[i] * position[i], 2) + pow(position[i] - 1, 2));
 	}
-
 	return sum;
 }
 
