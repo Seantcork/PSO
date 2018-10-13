@@ -384,17 +384,17 @@ double evalAckley (vector<double> positions) {
     double secondSum = 0;
 
     for(int i = 0; i < positions.size(); i++){
-    	firstSum += positions[i];
+    	firstSum += pow(positions[i], 2);
     }
-    firstSum = -0.2 * sqrt((1/positions.size()) * firstSum);
+    firstSum = -0.2 * (sqrt((1/positions.size()) * firstSum));
 
     for(int i = 0; i < positions.size(); i++){
     	secondSum += cos(2 * M_PI * positions[i]);
     }
 
-    secondSum = exp(secondSum) + 20 + E;
+    secondSum = exp(((1/positions.size()) * secondSum);
 
-    return -20 * firstSum - secondSum;
+    return -20 * firstSum - secondSum + 20 + E;
 }  
 
 
@@ -403,8 +403,8 @@ double evalAckley (vector<double> positions) {
 double evalRosenbrock (vector<double> position) {
 	double sum = 0;
 
-	for(int i = 0; i < position.size() -1; i++){
-		sum += 100.0 * pow(position[i+1] - pow(position[i], 2), 2) + pow(position[i] -1, 2);
+	for(int i = 1; i < position.size() -1; i++){
+		sum += 100.0 * pow(position[i+1] - pow(position[i], 2), 2) + pow(position[i] - 1, 2);
 	}
 
 	return sum;
@@ -438,6 +438,7 @@ void PSO(Swarm swarm, int numIterations, string testFunction){
 			swarm.swarm.at(j)->updateVelocity();
 			// cout << "Post update velocity" << endl;	
 		}
+		//swarm.findGlobalBest();
 	}
 	cout << "Best Fitness found: " << swarm.gBestFitness << endl;
 
@@ -455,7 +456,6 @@ int main(int argc, char* argv[]){
 
 	Swarm *swarm = new Swarm;
 	swarm->initSwarm(swarmSize, numDimensions, neighborhoodTopology, testFunction);
-	cout << "Pre PSO Run" << endl;
 	PSO(*swarm, numIterations, testFunction);
 
 
