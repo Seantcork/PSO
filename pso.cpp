@@ -7,9 +7,10 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <limits>       // std::numeric_limits
+
 using namespace std;
 
-# define M_PI    3.14159265358979323846
 
 #define E 2.71828
 const double CONSTRICTION_FACTOR = 0.7298;
@@ -60,8 +61,9 @@ class Swarm {
 
 	public:
 		vector<shared_ptr<Particle> > swarm;
+		
 		double swarmSize;
-
+		int numDimensions;
 
 		vector<double> gBestArray;
 		double gBestFitness;
@@ -89,8 +91,8 @@ void Particle::initParticle(int numDimensions, string testFunction){
 		uniform_real_distribution<double> genPosition(15.0, 30.0);
 		uniform_real_distribution<double> genVelocity(-2.0, 2.0);
 		for(int i = 0; i < numDimensions; i ++){
-			position.push_back(genPosition(engine));
-			velocity.push_back(genVelocity(engine));
+			this->position.push_back(genPosition(engine));
+			this->velocity.push_back(genVelocity(engine));
 		}
 	}
 
@@ -98,8 +100,8 @@ void Particle::initParticle(int numDimensions, string testFunction){
 		uniform_real_distribution<double> genPosition(16.0, 32.0);
 		uniform_real_distribution<double> genVelocity(-2.0, 4.0);
 		for(int i = 0; i < numDimensions; i ++){
-			position.push_back(genPosition(engine));
-			velocity.push_back(genVelocity(engine));
+			this->position.push_back(genPosition(engine));
+			this->velocity.push_back(genVelocity(engine));
 
 		}
 	}
@@ -107,9 +109,10 @@ void Particle::initParticle(int numDimensions, string testFunction){
 	else if(testFunction.compare(RASTRIGIN_FUNCTION) == 0){
 		uniform_real_distribution<double> genPosition(2.56, 5.12);
 		uniform_real_distribution<double> genVelocity(-2.0, 4.0);
+		
 		for(int i = 0; i < numDimensions; i ++){
-			position.push_back(genPosition(engine));
-			velocity.push_back(genVelocity(engine));
+			this->position.push_back(genPosition(engine));
+			this->velocity.push_back(genVelocity(engine));
 
 		}
 	}
@@ -119,7 +122,8 @@ void Particle::initParticle(int numDimensions, string testFunction){
 	}
 
 	//Particles pBest is set as its initial position
-	pBestArray = position;
+	this->pBestArray = this->position;
+	this->nBestArray = this->position;
 
 	
 }
@@ -131,12 +135,12 @@ void Particle::calculateFitness(string testFunction){
 	if(testFunction.compare(ROSENBROCK_FUNCTION) == 0) {
 		currFitness = evalRosenbrock(position);
 		if(currFitness > pBestFitness){
-			pBestFitness = currFitness;
-			pBestArray = position;
+			this->pBestFitness = currFitness;
+			this->pBestArray = position;
 		}
 		if(currFitness > nBestFitness) {
-			nBestFitness = currFitness;
-			nBestArray = position;
+			this->nBestFitness = currFitness;
+			this->nBestArray = position;
 			updateNeighborhoodBest(currFitness, position);
 		}
 	}
@@ -144,12 +148,12 @@ void Particle::calculateFitness(string testFunction){
 	else if (testFunction.compare(ACKLEY_FUNCTION) == 0) {
 		currFitness = evalAckley(position);
 		if(currFitness > pBestFitness){
-			pBestFitness = currFitness;
-			pBestArray = position;
+			this->pBestFitness = currFitness;
+			this->pBestArray = position;
 		}
 		if(currFitness > nBestFitness) {
-			nBestFitness = currFitness;
-			nBestArray = position;
+			this->nBestFitness = currFitness;
+			this->nBestArray = position;
 			updateNeighborhoodBest(currFitness, position);
 		}
 	}
@@ -157,12 +161,12 @@ void Particle::calculateFitness(string testFunction){
 	else if (testFunction.compare(RASTRIGIN_FUNCTION) == 0){
 		currFitness = evalRastrigin(position);
 		if(currFitness > pBestFitness) {
-			pBestFitness = currFitness;
-			pBestArray = position;
+			this->pBestFitness = currFitness;
+			this->pBestArray = position;
 		}
 		if(currFitness > nBestFitness) {
-			nBestFitness = currFitness;
-			nBestArray = position;
+			this->nBestFitness = currFitness;
+			this->nBestArray = position;
 			updateNeighborhoodBest(currFitness, position);
 		}
 	}
@@ -185,12 +189,9 @@ void Particle::updateVelocity(){
 	mt19937 engine(seeder());
 	uniform_real_distribution<double> randAcceleration(0.0, 3.0);
 	for(int i = 0; i < position.size(); i++) {
-		// velocity.at(i) = velocity.at(i) + 
-		// (randAcceleration(engine) * (pBestArray.at(i) - position.at(i))) + 
-		// (randAcceleration(engine) * (nBestArray.at(i) - position.at(i)));
 		velocity.at(i) = CONSTRICTION_FACTOR * (velocity.at(i) +
-			((C1*randAcceleration(engine) * (pBestArray.at(i) - position.at(i))) + 
-			((C2*randAcceleration(engine)) * (nBestArray.at(i) - position.at(i)) ) ) ); 
+		((C1*randAcceleration(engine) * (pBestArray.at(i) - position.at(i))) + 
+		((C2*randAcceleration(engine)) * (nBestArray.at(i) - position.at(i))))); 
 	}
 }
 
@@ -219,7 +220,7 @@ void Particle::updateNeighborhoodBest(double bestFitness, vector<double> bestFit
 void Swarm::initSwarm(int swarmSize, int numDimensions, 
 			string neighborhoodTopology, string testFunction){
 	this->swarmSize = swarmSize;
-	gBestFitness = DBL_MAX;
+	gBestFitness = numeric_limits<double>::max();
 	for(int i = 0; i < swarmSize; i++){
 		shared_ptr<Particle> ptr(new Particle());
 		ptr->initParticle(numDimensions, testFunction);
@@ -228,7 +229,7 @@ void Swarm::initSwarm(int swarmSize, int numDimensions,
 }
 
 void Swarm::findGlobalBest(){
-	for (int i = 0; i < swarmSize; i++){
+	for (int i = 0; i < swarm.size(); i++){
 		if (swarm[i]->pBestFitness < gBestFitness){
 			gBestArray = swarm[i]->pBestArray;
 			gBestFitness = swarm[i]->pBestFitness;
@@ -239,12 +240,12 @@ void Swarm::findGlobalBest(){
 
 //not sure we need this
 void Swarm::globalTopology(){
-	for(int i = 0; i < swarm(); i ++){
+	for(int i = 0; i < swarm.size(); i ++){
 		for(int j = 0; j < swarm.size(); j++){
-			swarm[i].neighbors.push_back(swarm[j]);
+			swarm[i]->neighborsArray.push_back(swarm[j]);
 
 		}
-		swarm[i].neighbors.push_back(swarm[i]);
+		swarm[i]->neighborsArray.push_back(swarm[i]);
 	}
 }
 
@@ -257,22 +258,22 @@ void Swarm::ringTopology(){
 		
 		//takes care of first elements
 		if (i == 0){
-			swarm[i].neighbors.push_back(swarm[swarmSize-1]);
-			swarm[i].neighbors.push_back(swarm[i]);
-			swarm[i].neighbors.push_back(swarm[i+1])
+			swarm[i]->neighborsArray.push_back(swarm[swarmSize-1]);
+			swarm[i]->neighborsArray.push_back(swarm[i]);
+			swarm[i]->neighborsArray.push_back(swarm[i+1]);
 		}
 
 		//takes care of last element in the swarm
 		else if (i == swarmSize - 1){
-			swarm[i].neighbors.push_back(swarm[swarm.size()-2]);
-			swarm[i].neighbors.push_back(swarm[swarm.size()-1]);
-			swarm[i].neighbors.push_back(swarm[0]);
+			swarm[i]->neighborsArray.push_back(swarm[swarm.size()-2]);
+			swarm[i]->neighborsArray.push_back(swarm[swarm.size()-1]);
+			swarm[i]->neighborsArray.push_back(swarm[0]);
 		}
 
 		else {
-			swarm[i].neighbors.push_back(swarm[i-1]);
-			swarm[i].neighbors.push_back(swarm[i]);
-			swarm[i].neighbors.push_back(swarm[i+1]);
+			swarm[i]->neighborsArray.push_back(swarm[i-1]);
+			swarm[i]->neighborsArray.push_back(swarm[i]);
+			swarm[i]->neighborsArray.push_back(swarm[i+1]);
 		}
 	}
 
@@ -286,7 +287,6 @@ void Swarm::vonNeumanTopology(){
 void Swarm::randomTopology(){
 	std::random_device seeder;
 	std::mt19937 engine(seeder());
-	std::uniform_int_distribution<int> gen(1, rankSum);
 
 
 }
@@ -295,7 +295,7 @@ void Swarm::randomTopology(){
 
 //returns distance between particles
 double distance(Particle a, Particle b){
-
+	return 0.0;
 }
 
 
@@ -325,7 +325,7 @@ double evalRosenbrock (vector<double> position) {
 	double sum = 0;
 
 	for(int i = 0; i < position.size() -1; i++){
-		sum+ = 100.0 * pow(position[i+1] - pow(position[i], 2), 2) + pow(position[i] -1, 2);
+		sum += 100.0 * pow(position[i+1] - pow(position[i], 2), 2) + pow(position[i] -1, 2);
 	}
 
 	return sum;
@@ -340,7 +340,7 @@ double evalRastrigin (vector<double> position) {
 	double retVal = 0;
 
 	for(int i = 0; i < position.size(); i++){
-		retval += (pow(position[i], 2) - 10* cos(2* M_PI * position[i]) + 10);
+		retVal += (pow(position[i], 2) - 10* cos(2* M_PI * position[i]) + 10);
 	}
     return retVal;
 }
@@ -350,12 +350,17 @@ double evalRastrigin (vector<double> position) {
 
 void PSO(Swarm swarm, int numIterations, string testFunction){
 	for(int i = 0; i < numIterations; i++ ){
-		for(int j = 0; j < swarm->swarmSize; j++){
-			swarm.swarm.at(j).updatePosition();
-			swarm.swarm.at(j).calculateFitness(testFunction);
-			swarm.swarm.at(j).updateVelocity();
+		// cout << "Iteration number: " << i << endl;
+		for(int j = 0; j < swarm.swarmSize; j++){
+			swarm.swarm.at(j)->updatePosition();
+			// cout << "Post update position" << endl;	
+			swarm.swarm.at(j)->calculateFitness(testFunction);
+			// cout << "Post calc fitness" << endl;	
+			swarm.swarm.at(j)->updateVelocity();
+			// cout << "Post update velocity" << endl;	
 		}
 	}
+	cout << "Best Fitness found: " << swarm.gBestFitness << endl;
 
 }
 
@@ -369,10 +374,11 @@ int main(int argc, char* argv[]){
 	string testFunction = string(argv[4]);
 	int numDimensions = atoi(argv[5]);
 
-	Swarm swarm = new Swarm;
-	swarm->initSwarm(neighborhoodTopology, swarmSize, testFunction, numDimensions);
+	Swarm *swarm = new Swarm;
+	swarm->initSwarm(swarmSize, numDimensions, neighborhoodTopology, testFunction);
+	cout << "Pre PSO Run" << endl;
+	PSO(*swarm, numIterations, testFunction);
 
-	PSO(swarm, numIterations)
 
 	return 1;
 
