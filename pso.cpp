@@ -124,18 +124,11 @@ void Swarm::randomTopology(){
 
 }
 
-//parses comand line and makes sure to enter the right things
-void evaluate(){
-
-	string neighborhoodTopology = string(argv[1]);
-	int swarmSize = atoi(argv[2]);
-	int numIterations = atoi(argv[3]);
-	string testFunction = string(argv[4]);
-	int numDimensions = atoi(argv[5]);
-
-	 
+void Swarm::initSwarm(){
 
 }
+
+
 
 //returns distance between particles
 double distance(particle a, particle b){
@@ -193,13 +186,29 @@ public double evalRastrigin (vector<double> position) {
 
 
 
-void PSO(){
+void PSO(Swarm swarm){
 
 }
 
 
 
 int main(int argc, char* argv[]){
+
+	string neighborhoodTopology = string(argv[1]);
+	int swarmSize = atoi(argv[2]);
+	int numIterations = atoi(argv[3]);
+	string testFunction = string(argv[4]);
+	int numDimensions = atoi(argv[5]);
+
+	Swarm swarm = new Swarm;
+	swarm->initSwarm(neighborhoodTopology, swarmSize, testFunction, numDimensions);
+
+	PSO(swarm)
+
+	 
+
+
+}
 
 	return 1;
 }
