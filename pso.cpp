@@ -1,4 +1,12 @@
-/*Authors Sean Cork, Kamaal Palmer, Luca Ostertag-Hill*/
+/*
+
+	Authors Sean Cork, Kamaal Palmer, Luca Ostertag-Hill
+	Nature Inspired Computation Project 2: PSO
+	October 13, 2018
+
+*/
+
+
 #include <math.h>
 #include <fstream>
 #include <cstdlib>
