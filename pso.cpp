@@ -95,13 +95,15 @@ void Particle::updateVelocity(){
 */
 void Swarm::initSwarm(int swarmSize, int numDimensions, 
 			string neighborhoodTopology, string testFunction){
-	
+	this->swarmSize = swarmSize;
+	this->globalFitness = DBL_MAX;
 }
 
 void Swarm::findGlobalBest(){
 	for (int i = 0; i < swarmSize; i++){
 		if (swarm[i]->fitness > globalFitness){
 			gBest = swarm[i]->pBest;
+			globalFitness = swarm[i]->fitness;
 		}
 	}
 
