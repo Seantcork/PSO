@@ -63,7 +63,7 @@ class Swarm {
 /*
 	Functions for neighborhood class
 */
-void Neighborhood::findNeighborhoodBest(){
+void particle::findNeighborhoodBest(){
 
 }
 
@@ -188,9 +188,8 @@ public double evalRosenbrock (vector<double> position) {
 
 
 
-
-  // returns the value of the Rastrigin Function at point (x, y)
-  //   minimum is 0.0, which occurs at (0.0,...,0.0)
+ // returns the value of the Rastrigin Function at point (x, y)
+ //   minimum is 0.0, which occurs at (0.0,...,0.0)
 public double evalRastrigin (vector<double> position) {
 
 	double retVal = 0;
