@@ -14,6 +14,16 @@ using namespace std;
 #define E 2.71828
 const double CONSTRICTION_FACTOR = 0.7298;
 
+const string GLOBAL_TOPOLOGY = "gl";
+const string RING_TOPOLOGY = "ri";
+const string VON_NEUMANN_TOPOLOGY = "vn";
+const string RANDOM_TOPOLOGY = "ra";
+
+const string ROSENBROCK_FUNCTION = "rok";
+const string ACKLEY_FUNCTION = "ack";
+const string RASTRIGIN_FUNCTION = "ras";
+
+
 class Particle {
 	public:
 		vector<double> position;
@@ -76,39 +86,34 @@ void particle::findNeighborhoodBest(){
 void Particle::initParticle(int numDimensions, string testFunction){
 	random_device seeder;
 	mt19937 engine(seeder());
-	//std::uniform_int_distribution<int> gen(1, rankSum);
 
 	//initialize particle positions
-	if(testFunction.compare("rok") == 0){
-		uniform_real_distribution<double> gen(15.0, 30.0);
+	if(testFunction.compare(ROSENBROCK_FUNCTION) == 0){
+		uniform_real_distribution<double> genPosition(15.0, 30.0);
+		uniform_real_distribution<double> genVelocity(-2.0, 2.0);
 		for(int i = 0; i < numDimensions; i ++){
-			this->position.push_back(gen(engine));
-		}
-		uniform_real_distribution<double> gen(-2.0, 2.0);
-		for(int i = 0; i < numDimensions; i++){
-			this->velocity.push_back(gen(engine));
+			this->position.push_back(genPosition(engine));
+			this->velocity.push_back(genVelocity(engine));
 		}
 	}
 
-	if(testFunction.compare("ack")){
-		uniform_real_distribution<double> gen(16.0, 32.0);
+	if(testFunction.compare(ACKLEY_FUNCTION)){
+		uniform_real_distribution<double> genPosition(16.0, 32.0);
+		uniform_real_distribution<double> genVelocity(-2.0, 4.0);
 		for(int i = 0; i < numDimensions; i ++){
-			this->position.push_back(gen(engine));
-		}
-		uniform_real_distribution<double> gen(-2.0, 4.0);
-		for(int i = 0; i < numDimensions; i++){
-			this->velocity.push_back(gen(engine));
+			this->position.push_back(genPosition(engine));
+			this->velocity.push_back(genVelocity(engine));
+
 		}
 	}
 	
-	if(testFunction.compare("ras")){
-		uniform_real_distribution<double> gen(2.56, 5.12);
+	if(testFunction.compare(RASTRIGIN_FUNCTION)){
+		uniform_real_distribution<double> genPosition(2.56, 5.12);
+		uniform_real_distribution<double> genVelocity(-2.0, 4.0);
 		for(int i = 0; i < numDimensions; i ++){
-			this->position.push_back(gen(engine));
-		}
-		uniform_real_distribution<double> gen(-2.0, 4.0);
-		for(int i = 0; i < numDimensions; i++){
-			this->velocity.push_back(gen(engine));
+			this->position.push_back(genPosition(engine));
+			this->velocity.push_back(genVelocity(engine));
+
 		}
 	}
 	cerr << "Optimization Function does not exist" << endl;
