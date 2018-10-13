@@ -389,20 +389,19 @@ double evalAckley (vector<double> positions) {
 
     double firstSum = 0;
     double secondSum = 0;
+    double dimensions = positions.size();
+    double division = 1;
 
     for(int i = 0; i < positions.size(); i++){
-    	firstSum+= pow(positions.at(i), 2);
+    	firstSum+= (positions[i] * positions[i]);
     }
-    firstSum = -0.2 * (sqrt((1/positions.size()) * firstSum));
-    cout << firstSum << endl;
 
     for(int i = 0; i < positions.size(); i++){
     	secondSum += cos(2 * M_PI * positions[i]);
     }
+    
 
-    secondSum = exp(((1/positions.size()) * secondSum));
-
-    return -20.0 * firstSum - secondSum + 20.0 + E;
+    return -20 * exp(-0.2 * sqrt(firstSum/dimensions)) - exp(secondSum/dimensions) + 20.0 + E;
 }  
 
 
