@@ -179,14 +179,14 @@ void Particle::calculateFitness(string testFunction){
 	// Evaluate the fitness and update the values if its better than pBest or nBest
 	if(testFunction.compare(ROSENBROCK_FUNCTION) == 0) {
 		currFitness = evalRosenbrock(this->position);
-		if(currFitness < pBestFitness){
+		if(currFitness < this->pBestFitness){
 			this->pBestFitness = currFitness;
-			this->pBestArray = position;
+			this->pBestArray = this->position;
 		}
 
 		//if the current best is better than the current known neighborhood best
 		//update it
-		if(currFitness < nBestFitness) {
+		if(currFitness < this->nBestFitness) {
 			this->nBestFitness = currFitness;
 			this->nBestArray = this->position;
 			updateNeighborhoodBest(currFitness, this->position);
@@ -195,11 +195,11 @@ void Particle::calculateFitness(string testFunction){
 
 	else if (testFunction.compare(ACKLEY_FUNCTION) == 0) {
 		currFitness = evalAckley(position);
-		if(currFitness < pBestFitness){
+		if(currFitness < this->pBestFitness){
 			this->pBestFitness = currFitness;
 			this->pBestArray = this->position;
 		}
-		if(currFitness < nBestFitness) {
+		if(currFitness < this->nBestFitness) {
 			this->nBestFitness = currFitness;
 			this->nBestArray = this->position;
 			updateNeighborhoodBest(currFitness, this->position);
@@ -208,11 +208,11 @@ void Particle::calculateFitness(string testFunction){
 
 	else if (testFunction.compare(RASTRIGIN_FUNCTION) == 0){
 		currFitness = evalRastrigin(position);
-		if(currFitness < pBestFitness) {
+		if(currFitness < this->pBestFitness) {
 			this->pBestFitness = currFitness;
 			this->pBestArray = this->position;
 		}
-		if(currFitness < nBestFitness) {
+		if(currFitness < this->nBestFitness) {
 			this->nBestFitness = currFitness;
 			this->nBestArray = this->position;
 			updateNeighborhoodBest(currFitness, this->position);
@@ -228,8 +228,8 @@ void Particle::calculateFitness(string testFunction){
 //Purpose: updates the position with respect to the current velocity
 //Return value: 
 void Particle::updatePosition(){
-	for(int i = 0; i < position.size(); i++) {
-		position.at(i) = position.at(i) + velocity.at(i);
+	for(int i = 0; i < this->position.size(); i++) {
+		this->position.at(i) = this->position.at(i) + this->velocity.at(i);
 	}
 
 }
@@ -245,18 +245,18 @@ void Particle::updateVelocity(){
 	for(int i = 0; i < position.size(); i++) { 
 		//for E element 
 		uniform_real_distribution<double> randAcceleration(0.0,(pBestArray.at(i) - position.at(i)));
-		currVelocity = CONSTRICTION_FACTOR * (velocity.at(i) +
-		((C1*randAcceleration(engine) * (pBestArray.at(i) - position.at(i))) + 
-		((C2*randAcceleration(engine)) * (nBestArray.at(i) - position.at(i))))); 
+		currVelocity = CONSTRICTION_FACTOR * (this->velocity.at(i) +
+		((C1*randAcceleration(engine) * (pBestArray.at(i) - this->position.at(i))) + 
+		((C2*randAcceleration(engine)) * (nBestArray.at(i) - this->position.at(i))))); 
 
 		if(currVelocity < MIN_VELOCITY){
-			velocity.at(i) = MIN_VELOCITY;
+			this->velocity.at(i) = MIN_VELOCITY;
 		}
 		else if(currVelocity > MAX_VELOCITY){
-			velocity.at(i) = MAX_VELOCITY;
+			this->velocity.at(i) = MAX_VELOCITY;
 		}
 		else{
-			velocity.at(i) = currVelocity;
+			this->velocity.at(i) = currVelocity;
 		}
 
 	}
@@ -271,14 +271,14 @@ void Particle::findNeighborhoodBest(){
 	vector<double> bestArray;
 	double bestFitness = numeric_limits<double>::max();
 	for(int i = 0; i < neighborsArray.size(); i++){
-		if(neighborsArray[i]->pBestFitness < nBestFitness) {
-			nBestArray = neighborsArray[i]->position;
-			nBestFitness = neighborsArray[i]->pBestFitness;
+		if(this->neighborsArray[i]->pBestFitness < this->nBestFitness) {
+			this->nBestArray = this->neighborsArray[i]->position;
+			this->nBestFitness = this->neighborsArray[i]->pBestFitness;
 		}
 	}
 	for(int i = 0; i < neighborsArray.size(); i++){
-		nBestArray = bestArray;
-		nBestFitness = bestFitness;
+		this->nBestArray = bestArray;
+		this->nBestFitness = bestFitness;
 	}
 }
 
@@ -289,8 +289,8 @@ void Particle::findNeighborhoodBest(){
 void Particle::updateNeighborhoodBest(double bestFitness, vector<double> bestFitArray) { 
 
 	for(int i = 0; i < neighborsArray.size(); i++ ) {
-		neighborsArray.at(i)->nBestArray = bestFitArray;
-		neighborsArray.at(i)->nBestFitness = bestFitness;
+		this->neighborsArray.at(i)->nBestArray = bestFitArray;
+		this->neighborsArray.at(i)->nBestFitness = bestFitness;
 	}
 
 }
@@ -327,7 +327,7 @@ void Swarm::findGlobalBest(){
 void Swarm::globalTopology(){
 	for(int i = 0; i < swarm.size(); i ++){
 		for(int j = 0; j < swarm.size(); j++){
-			swarm[i]->neighborsArray.push_back(swarm.at(j));
+			this->swarm[i]->neighborsArray.push_back(swarm.at(j));
 
 		}
 		swarm[i]->neighborsArray.push_back(swarm.at(i));
