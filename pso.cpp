@@ -222,6 +222,8 @@ void Particle::calculateFitness(string testFunction){
 	else {
 		cerr << "Optimization Function does not exist" << endl;
 	}
+	// cout << "currFitness = " << currFitness << endl;
+
 }
 
 
@@ -230,6 +232,7 @@ void Particle::calculateFitness(string testFunction){
 //Return value: 
 void Particle::updatePosition(){
 	for(int i = 0; i < this->position.size(); i++) {
+		// cout << "Position changed to: " << this->position.at(i) + this->velocity.at(i) << endl;
 		this->position.at(i) = this->position.at(i) + this->velocity.at(i);
 	}
 
@@ -245,10 +248,11 @@ void Particle::updateVelocity(){
 	mt19937 engine(seeder());
 	for(int i = 0; i < position.size(); i++) { 
 		//for E element 
-		uniform_real_distribution<double> randAcceleration(0.0,(pBestArray.at(i) - position.at(i)));
+		// This value is really important to getting good values on our runs
+		uniform_real_distribution<double> randAcceleration(0,2.0);
 		currVelocity = CONSTRICTION_FACTOR * (this->velocity.at(i) +
-		((C1*randAcceleration(engine) * (pBestArray.at(i) - this->position.at(i))) + 
-		((C2*randAcceleration(engine)) * (nBestArray.at(i) - this->position.at(i))))); 
+		(C1*randAcceleration(engine) * (pBestArray.at(i) - this->position.at(i))) + 
+		((C2*randAcceleration(engine)) * (nBestArray.at(i) - this->position.at(i)))); 
 
 		if(currVelocity < MIN_VELOCITY){
 			this->velocity.at(i) = MIN_VELOCITY;
@@ -308,7 +312,7 @@ void Swarm::initSwarm(int swarmSize, int numDimensions,
 		shared_ptr<Particle> ptr(new Particle());
 		ptr->initParticle(numDimensions, testFunction);
 
-		//sets the min adn max value for each particle
+		//sets the min and max value for each particle
 		this->swarm.push_back(ptr);
 	}
 }
@@ -318,7 +322,6 @@ void Swarm::findGlobalBest(){
 		if (swarm[i]->pBestFitness < gBestFitness){
 			this->gBestArray = swarm[i]->pBestArray;
 			this->gBestFitness = swarm[i]->pBestFitness;
-			cout << "Global Best Found !" << endl;
 		}
 	}
 
@@ -377,8 +380,6 @@ void Swarm::randomTopology(){
 
 }
 
-
-
 //returns distance between particles
 double distance(Particle a, Particle b){
 	return 0.0;
@@ -387,10 +388,10 @@ double distance(Particle a, Particle b){
 
 double evalAckley (vector<double> positions) {
 
-    double firstSum = 0;
-    double secondSum = 0;
+
+    double firstSum = 0.0;
+    double secondSum = 0.0;
     double dimensions = positions.size();
-    double division = 1;
 
     for(int i = 0; i < positions.size(); i++){
     	firstSum+= (positions[i] * positions[i]);
@@ -401,10 +402,8 @@ double evalAckley (vector<double> positions) {
     }
     
 
-    return -20 * exp(-0.2 * sqrt(firstSum/dimensions)) - exp(secondSum/dimensions) + 20.0 + E;
+    return -20 * exp(-0.2 * sqrt(firstSum/dimensions)) - exp(secondSum/dimensions) + 20.0 + exp(1);
 }  
-
-
 
  //evaluates rosenbrock for the specified number of dimensions
 double evalRosenbrock (vector<double> position) {
@@ -415,10 +414,8 @@ double evalRosenbrock (vector<double> position) {
 	return sum;
 }
 
-
-
  // returns the value of the Rastrigin Function at point (x, y)
- //   minimum is 0.0, which occurs at (0.0,...,0.0)
+ // minimum is 0.0, which occurs at (0.0,...,0.0)
 double evalRastrigin (vector<double> position) {
 
 	double retVal = 0;
@@ -429,23 +426,14 @@ double evalRastrigin (vector<double> position) {
     return retVal;
 }
 
-
-
-
 void PSO(Swarm swarm, int numIterations, string testFunction){
 	for(int i = 0; i < numIterations; i++ ){
-		// cout << "Iteration number: " << i << endl;
 		for(int j = 0; j < swarm.swarmSize; j++){
 			swarm.swarm.at(j)->updateVelocity();
-			// cout << "Post update velocity" << endl;	
 			swarm.swarm.at(j)->updatePosition();
-			// cout << "Post update position" << endl;	
 			swarm.swarm.at(j)->calculateFitness(testFunction);
-			// cout << "Post calc fitness" << endl;	
 			swarm.swarm.at(j)->updateVelocity();
-			// cout << "Post update velocity" << endl;	
 			swarm.findGlobalBest();
-
 		}
 	}
 	cout << "Best Fitness found: " << swarm.gBestFitness << endl;
