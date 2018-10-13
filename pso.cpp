@@ -91,7 +91,7 @@ void Swarm::initSwarm(int swarmSize, int numDimensions,
 	this->globalFitness = DBL_MAX;
 	for(int i = 0; i < swarmSize; i++){
 		shared_ptr<Particle> ptr(new Particle());
-		ptr->initParticle;
+		ptr->initParticle(numDimensions, testFunction);
 		swarm.push_back(ptr);
 	}
 }
