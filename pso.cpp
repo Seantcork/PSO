@@ -14,29 +14,21 @@ using namespace std;
 #define E 2.71828
 const double CONSTRICTION_FACTOR = 0.7298;
 
-class Particle;
-
-class Neighborhood {
-	public:
-		//update neighbors each time velocity update
-		vector<Particle*> neighbors;
-		double neighborhoodBest;
-		void findNeighborhoodBest();
-}
-
-
 class Particle {
 	public:
 		vector<double> position;
 		vector<double> pBest;
 		vector<double> velocity;
-		Neighborhood neighbors;
+		
+		vector<Particle*> neighbors;
+		double neighborhoodBest;
 
 		double fitness;
 		void calculateFitness();
 
 		void updatePosition();
 		void updateVelocity();
+		void findNeighborhoodBest();
 
 		void initParticle(int numDimensions, string testFunction);	
 }
@@ -45,7 +37,7 @@ class Particle {
 class Swarm {
 
 	public:
-		vector<*Particle> swarm;
+		vector<shared_ptr<Particle> > swarm;
 		double swarmSize;
 
 
@@ -98,13 +90,15 @@ void Swarm::initSwarm(int swarmSize, int numDimensions,
 	this->swarmSize = swarmSize;
 	this->globalFitness = DBL_MAX;
 	for(int i = 0; i < swarmSize; i++){
-		swarm.push_back(Particle);
+		shared_ptr<Particle> ptr(new Particle());
+		ptr->initParticle;
+		swarm.push_back(ptr);
 	}
 }
 
 void Swarm::findGlobalBest(){
 	for (int i = 0; i < swarmSize; i++){
-		if (swarm[i]->fitness > globalFitness){
+		if (swarm[i]->fitness < globalFitness){
 			gBest = swarm[i]->pBest;
 			globalFitness = swarm[i]->fitness;
 		}
@@ -112,11 +106,32 @@ void Swarm::findGlobalBest(){
 
 }
 
-void Swarm::globalTopology(){
+void Swarm::globalTopology(vector<particle> swarm){
+	for(int i = 0; i < swarm(); i ++){
+		for(int j = 0; j < swarm.size(); j++){
+			swarm[i].neighbors.push_back(swarm[j]);
 
+		}
+	}
 }
 
-void Swarm::ringTopology(){
+
+//This function bases neighborhoods on the 
+void Swarm::ringTopology(vector<particle> swarm){
+	//takes care of first elements
+	swarm[0].neighbors.push_back(swarm[swarm.size()]);
+	swarm[0].neighbors.push_back(swarm[1]);
+	
+	//takes care of all the elemetns between the first and last element
+	for(int i = 1; i < swarm.size(); i ++){
+		swarm[i].neighbors.push_back(swarm[i+1]);
+		swarm[i].neighbors.push_back(swarm[i-1]);
+	}
+
+	//takes care of last element in the swarm
+	swarm[swarm.size()].push_back(swarm[swarm.size()-1]);
+	swarm[swarm.size()].push_back(swarm[0]);
+
 
 }
 
@@ -129,18 +144,11 @@ void Swarm::randomTopology(){
 
 }
 
-//parses comand line and makes sure to enter the right things
-void evaluate(){
-
-	string neighborhoodTopology = string(argv[1]);
-	int swarmSize = atoi(argv[2]);
-	int numIterations = atoi(argv[3]);
-	string testFunction = string(argv[4]);
-	int numDimensions = atoi(argv[5]);
-
-	 
+void Swarm::initSwarm(){
 
 }
+
+
 
 //returns distance between particles
 double distance(particle a, particle b){
@@ -205,6 +213,22 @@ void PSO(){
 
 
 int main(int argc, char* argv[]){
+
+	string neighborhoodTopology = string(argv[1]);
+	int swarmSize = atoi(argv[2]);
+	int numIterations = atoi(argv[3]);
+	string testFunction = string(argv[4]);
+	int numDimensions = atoi(argv[5]);
+
+	Swarm swarm = new Swarm;
+	swarm->initSwarm(neighborhoodTopology, swarmSize, testFunction, numDimensions);
+
+	PSO(swarm)
+
+	 
+
+
+}
 
 	return 1;
 }
