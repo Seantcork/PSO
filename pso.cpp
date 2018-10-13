@@ -26,14 +26,15 @@ const string RASTRIGIN_FUNCTION = "ras";
 
 class Particle {
 	public:
+		double pBestFitness;
 		vector<double> position;
 		vector<double> velocity;
-		vector<double> pBest;
+		vector<double> pBestArray;
 		
-		vector<Particle*> neighbors;
-		double neighborhoodBest;
+		double nBestFitness;
+		vector<double> nBestArray;
+		vector<shared_ptr<Particle> > neighborsArray;
 
-		double fitness;
 		void calculateFitness(string testFunction);
 
 		void updatePosition();
@@ -41,18 +42,18 @@ class Particle {
 		void findNeighborhoodBest();
 
 		void initParticle(int numDimensions, string testFunction);	
-}
+};
 
 
 class Swarm {
 
 	public:
-		vector<shared_ptr<Particle> > swarm;
+		vector<shared_ptr<Particle> > swarmArray;
 		double swarmSize;
 
 
-		vector<double> gBest;
-		double globalFitness;
+		vector<double> gBestArray;
+		double gBestFitness;
 		void findGlobalBest();
 
 		void globalTopology();
@@ -62,20 +63,17 @@ class Swarm {
 
 		void initSwarm(int swarmSize, int numDimensions, 
 			string neighborhoodTopology, string testFunction);
-}
+};
 
 
 /*
 	Functions for neighborhood class
 */
 void particle::findNeighborhoodBest(){
-	vector<double> minPos;
-	double minFitness = 1000000;
-
-	for(int i = 0; i < neighbors.size(); i++){
-		if(neighbors[i].fitness < minFitness) {
-			minPos = neighbors[i].position;
-			minFitness = neighbors[i].fitness;
+	for(int i = 0; i < neighborsArray.size(); i++){
+		if(neighbors[i]->pBestFitness < nBestFitness) {
+			nBestArray = neighbors[i]->position;
+			nBestFitness = neighbors[i]->pBestFitness;
 		}
 	}
 }
