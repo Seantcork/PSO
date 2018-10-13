@@ -155,8 +155,8 @@ void Particle::initParticle(int numDimensions, string testFunction){
 	}
 
 
-	this->pBestFitness = 100000000000;
-	this->nBestFitness = 100000000000;
+	this->pBestFitness = numeric_limits<double>::max();
+	this->nBestFitness = numeric_limits<double>::max();
 	//Particles pBest is set as its initial position
 	this->pBestArray = this->position;
 
@@ -174,7 +174,7 @@ Return value: none
 
 */
 void Particle::calculateFitness(string testFunction){
-	double currFitness = 100000000000000;
+	double currFitness = numeric_limits<double>::max();
 	// Determine which test function to run
 	// Evaluate the fitness and update the values if its better than pBest or nBest
 	if(testFunction.compare(ROSENBROCK_FUNCTION) == 0) {
@@ -269,7 +269,7 @@ void Particle::updateVelocity(){
 void Particle::findNeighborhoodBest(){
 
 	vector<double> bestArray;
-	double bestFitness = 100000000;
+	double bestFitness = numeric_limits<double>::max();
 	for(int i = 0; i < neighborsArray.size(); i++){
 		if(neighborsArray[i]->pBestFitness < nBestFitness) {
 			nBestArray = neighborsArray[i]->position;
@@ -302,7 +302,7 @@ void Particle::updateNeighborhoodBest(double bestFitness, vector<double> bestFit
 void Swarm::initSwarm(int swarmSize, int numDimensions, 
 			string neighborhoodTopology, string testFunction){
 	this->swarmSize = swarmSize;
-	this->gBestFitness = 100000000;
+	this->gBestFitness = numeric_limits<double>::max();
 	for(int i = 0; i < swarmSize; i++){
 		shared_ptr<Particle> ptr(new Particle());
 		ptr->initParticle(numDimensions, testFunction);
@@ -317,6 +317,7 @@ void Swarm::findGlobalBest(){
 		if (swarm[i]->pBestFitness < gBestFitness){
 			this->gBestArray = swarm[i]->pBestArray;
 			this->gBestFitness = swarm[i]->pBestFitness;
+			cout << "Global Best Found !" << endl;
 		}
 	}
 
@@ -399,7 +400,7 @@ double evalAckley (vector<double> positions) {
 
     secondSum = exp(((1/positions.size()) * secondSum));
 
-    return -20 * firstSum - secondSum + 20 + E;
+    return -20.0 * firstSum - secondSum + 20.0 + E;
 }  
 
 
@@ -442,8 +443,9 @@ void PSO(Swarm swarm, int numIterations, string testFunction){
 			// cout << "Post calc fitness" << endl;	
 			swarm.swarm.at(j)->updateVelocity();
 			// cout << "Post update velocity" << endl;	
+			swarm.findGlobalBest();
+
 		}
-		swarm.findGlobalBest();
 	}
 	cout << "Best Fitness found: " << swarm.gBestFitness << endl;
 
