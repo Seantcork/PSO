@@ -1,4 +1,4 @@
-// Authors Sean Cork, Kamaal Palmer, Luca Ostertag-Hill
+/*Authors Sean Cork, Kamaal Palmer, Luca Ostertag-Hill*/
 #include <math.h>
 #include <fstream>
 #include <cstdlib>
@@ -7,21 +7,22 @@
 #include <string>
 #include <vector>
 #include <iostream>
+using namespace std;
 
 # define M_PI    3.14159265358979323846
 
 #define E 2.71828
-const double CONSTIRCTION_FACTOR = 0.7298;
+const double CONSTRICTION_FACTOR = 0.7298;
 
+class Particle;
 
 class Neighborhood {
 	public:
 		//update neighbors each time velocity update
-		vector<*Particle> neighbors;
+		vector<Particle*> neighbors;
 		double neighborhoodBest;
 		void findNeighborhoodBest();
 }
-
 
 
 class Particle {
@@ -29,6 +30,7 @@ class Particle {
 		vector<double> position;
 		vector<double> pBest;
 		vector<double> velocity;
+		Neighborhood neighbors;
 
 		double fitness;
 		void calculateFitness();
@@ -71,7 +73,7 @@ void Neighborhood::findNeighborhoodBest(){
 /*
 	Functions for particle class
 */
-void Particle::initParticle(){
+void Particle::initParticle(int numDimensions, string testFunction){
 
 }
 
@@ -98,7 +100,7 @@ void Swarm::initSwarm(int swarmSize, int numDimensions,
 
 void Swarm::findGlobalBest(){
 	for (int i = 0; i < swarmSize; i++){
-		if swarm[i]->fitness > globalFitness{
+		if (swarm[i]->fitness > globalFitness){
 			gBest = swarm[i]->pBest;
 		}
 	}
@@ -187,7 +189,6 @@ public double evalRastrigin (vector<double> position) {
 	}
     return retVal;
 }
-
 
 
 
