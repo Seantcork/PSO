@@ -35,6 +35,7 @@ const string RANDOM_TOPOLOGY = "ra";
 const string ROSENBROCK_FUNCTION = "rok";
 const string ACKLEY_FUNCTION = "ack";
 const string RASTRIGIN_FUNCTION = "ras";
+
 double evalAckley (vector<double> positions);
 double evalRosenbrock (vector<double> position);
 double evalRastrigin (vector<double> position);
@@ -391,7 +392,7 @@ double evalAckley (vector<double> positions) {
     double secondSum = 0.0;
 
     for(int i = 0; i < positions.size(); i++){
-    	firstSum += pow(positions[i], 2);
+    	firstSum+= pow(positions.at(i), 2);
     }
 
     for(int i = 0; i < positions.size(); i++){
