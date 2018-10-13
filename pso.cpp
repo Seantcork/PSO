@@ -97,6 +97,9 @@ void Swarm::initSwarm(int swarmSize, int numDimensions,
 			string neighborhoodTopology, string testFunction){
 	this->swarmSize = swarmSize;
 	this->globalFitness = DBL_MAX;
+	for(int i = 0; i < swarmSize; i++){
+		swarm.push_back(Particle);
+	}
 }
 
 void Swarm::findGlobalBest(){
