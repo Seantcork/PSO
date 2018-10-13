@@ -16,14 +16,6 @@ const double CONSTRICTION_FACTOR = 0.7298;
 
 class Particle;
 
-class Neighborhood {
-	public:
-		//update neighbors each time velocity update
-		vector<Particle*> neighbors;
-		double neighborhoodBest;
-		void findNeighborhoodBest();
-}
-
 
 class Particle {
 	public:
@@ -60,6 +52,11 @@ class Swarm {
 
 		void initSwarm(int swarmSize, int numDimensions, 
 			string neighborhoodTopology, string testFunction);
+
+
+		vector<Particle*> neighbors;
+		double neighborhoodBest;
+		void findNeighborhoodBest();
 }
 
 
@@ -95,25 +92,44 @@ void Particle::updateVelocity(){
 */
 void Swarm::initSwarm(int swarmSize, int numDimensions, 
 			string neighborhoodTopology, string testFunction){
-	this->swarmSize = swarmSize;
-	this->globalFitness = DBL_MAX;
+	
 }
 
 void Swarm::findGlobalBest(){
 	for (int i = 0; i < swarmSize; i++){
 		if (swarm[i]->fitness > globalFitness){
 			gBest = swarm[i]->pBest;
-			globalFitness = swarm[i]->fitness;
 		}
 	}
 
 }
 
-void Swarm::globalTopology(){
+void Swarm::globalTopology(vector<particle> swarm){
+	for(int i = 0; i < swarm(); i ++){
+		for(int j = 0; j < swarm.size(); j++){
+			swarm[i].neighbors.push_back(swarm[j]);
 
+		}
+	}
 }
 
-void Swarm::ringTopology(){
+
+//This function bases neighborhoods on the 
+void Swarm::ringTopology(vector<particle> swarm){
+	//takes care of first elements
+	swarm[0].neighbors.push_back(swarm[swarm.size()]);
+	swarm[0].neighbors.push_back(swarm[1]);
+	
+	//takes care of all the elemetns between the first and last element
+	for(int i = 1; i < swarm.size(); i ++){
+		swarm[i].neighbors.push_back(swarm[i+1]);
+		swarm[i].neighbors.push_back(swarm[i-1]);
+	}
+
+	//takes care of last element in the swarm
+	swarm[swarm.size()].push_back(swarm[swarm.size()-1]);
+	swarm[swarm.size()].push_back(swarm[0]);
+
 
 }
 
@@ -188,7 +204,7 @@ public double evalRastrigin (vector<double> position) {
 
 
 
-void PSO(Swarm swarm){
+void PSO(){
 
 }
 
