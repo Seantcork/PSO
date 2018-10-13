@@ -48,7 +48,7 @@ class Particle {
 class Swarm {
 
 	public:
-		vector<shared_ptr<Particle> > swarmArray;
+		vector<shared_ptr<Particle> > swarm;
 		double swarmSize;
 
 
@@ -65,18 +65,6 @@ class Swarm {
 			string neighborhoodTopology, string testFunction);
 };
 
-
-/*
-	Functions for neighborhood class
-*/
-void particle::findNeighborhoodBest(){
-	for(int i = 0; i < neighborsArray.size(); i++){
-		if(neighbors[i]->pBestFitness < nBestFitness) {
-			nBestArray = neighbors[i]->position;
-			nBestFitness = neighbors[i]->pBestFitness;
-		}
-	}
-}
 
 /*
 	Functions for particle class
@@ -137,6 +125,15 @@ void Particle::updateVelocity(){
 
 }
 
+void particle::findNeighborhoodBest(){
+	for(int i = 0; i < neighborsArray.size(); i++){
+		if(neighbors[i]->pBestFitness < nBestFitness) {
+			nBestArray = neighbors[i]->position;
+			nBestFitness = neighbors[i]->pBestFitness;
+		}
+	}
+}
+
 
 /*
 	Functions for swarm class
@@ -144,7 +141,7 @@ void Particle::updateVelocity(){
 void Swarm::initSwarm(int swarmSize, int numDimensions, 
 			string neighborhoodTopology, string testFunction){
 	this->swarmSize = swarmSize;
-	this->globalFitness = DBL_MAX;
+	gBestFitness = DBL_MAX;
 	for(int i = 0; i < swarmSize; i++){
 		shared_ptr<Particle> ptr(new Particle());
 		ptr->initParticle(numDimensions, testFunction);
@@ -154,15 +151,16 @@ void Swarm::initSwarm(int swarmSize, int numDimensions,
 
 void Swarm::findGlobalBest(){
 	for (int i = 0; i < swarmSize; i++){
-		if (swarm[i]->fitness < globalFitness){
-			gBest = swarm[i]->pBest;
-			globalFitness = swarm[i]->fitness;
+		if (swarm[i]->pBestFitness < gBestFitness){
+			gBestArray = swarm[i]->pBestArray;
+			gBestFitness = swarm[i]->pBestFitness;
 		}
 	}
 
 }
 
-void Swarm::globalTopology(vector<particle> swarm){
+//not sure we need this
+void Swarm::globalTopology(){
 	for(int i = 0; i < swarm(); i ++){
 		for(int j = 0; j < swarm.size(); j++){
 			swarm[i].neighbors.push_back(swarm[j]);
@@ -174,22 +172,31 @@ void Swarm::globalTopology(vector<particle> swarm){
 
 
 //This function bases neighborhoods on the 
-void Swarm::ringTopology(vector<particle> swarm){
-	//takes care of first elements
-	swarm[0].neighbors.push_back(swarm[swarm.size()]);
-	swarm[0].neighbors.push_back(swarm[1]);
-	swarm[0].neighbors.push_back(swarm[0])
+void Swarm::ringTopology(){
+	
 	//takes care of all the elemetns between the first and last element
-	for(int i = 1; i < swarm.size(); i ++){
-		swarm[i].neighbors.push_back(swarm[i+1]);
-		swarm[i].neighbors.push_back(swarm[i-1]);
-		swarm[i].push_back(swarm[i])
-	}
+	for(int i = 0; i < swarmSize; i++){
+		
+		//takes care of first elements
+		if (i == 0){
+			swarm[i].neighbors.push_back(swarm[swarmSize-1]);
+			swarm[i].neighbors.push_back(swarm[i]);
+			swarm[i].neighbors.push_back(swarm[i+1])
+		}
 
-	//takes care of last element in the swarm
-	swarm[swarm.size()].neighbors.push_back(swarm[swarm.size()]);
-	swarm[swarm.size()].neighbors.push_back(swarm[swarm.size()-1]);
-	swarm[swarm.size()].neighbors.push_back(swarm[0]);
+		//takes care of last element in the swarm
+		else if (i == swarmSize - 1){
+			swarm[i].neighbors.push_back(swarm[swarm.size()-2]);
+			swarm[i].neighbors.push_back(swarm[swarm.size()-1]);
+			swarm[i].neighbors.push_back(swarm[0]);
+		}
+
+		else {
+			swarm[i].neighbors.push_back(swarm[i-1]);
+			swarm[i].neighbors.push_back(swarm[i]);
+			swarm[i].neighbors.push_back(swarm[i+1]);
+		}
+	}
 
 
 }
