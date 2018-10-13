@@ -14,6 +14,10 @@ using namespace std;
 #define E 2.71828
 const double CONSTRICTION_FACTOR = 0.7298;
 
+const double P_BEST_ATTRACTION = 0.5;
+
+const double G_BEST_ATTRACTION = 0.5;
+
 const string GLOBAL_TOPOLOGY = "gl";
 const string RING_TOPOLOGY = "ri";
 const string VON_NEUMANN_TOPOLOGY = "vn";
@@ -22,6 +26,11 @@ const string RANDOM_TOPOLOGY = "ra";
 const string ROSENBROCK_FUNCTION = "rok";
 const string ACKLEY_FUNCTION = "ack";
 const string RASTRIGIN_FUNCTION = "ras";
+
+double evalAckley (vector<double> positions);
+double evalRosenbrock (vector<double> position);
+double evalRastrigin (vector<double> position);
+
 
 
 class Particle {
@@ -39,7 +48,9 @@ class Particle {
 
 		void updatePosition();
 		void updateVelocity();
+
 		void findNeighborhoodBest();
+		void updateNeighborhoodBest(double currFitness, vector<double> bestFitArray);
 
 		void initParticle(int numDimensions, string testFunction);	
 };
@@ -83,7 +94,7 @@ void Particle::initParticle(int numDimensions, string testFunction){
 		}
 	}
 
-	else if(testFunction.compare(ACKLEY_FUNCTION)){
+	else if(testFunction.compare(ACKLEY_FUNCTION) == 0){
 		uniform_real_distribution<double> genPosition(16.0, 32.0);
 		uniform_real_distribution<double> genVelocity(-2.0, 4.0);
 		for(int i = 0; i < numDimensions; i ++){
@@ -93,7 +104,7 @@ void Particle::initParticle(int numDimensions, string testFunction){
 		}
 	}
 	
-	else if(testFunction.compare(RASTRIGIN_FUNCTION)){
+	else if(testFunction.compare(RASTRIGIN_FUNCTION) == 0){
 		uniform_real_distribution<double> genPosition(2.56, 5.12);
 		uniform_real_distribution<double> genVelocity(-2.0, 4.0);
 		for(int i = 0; i < numDimensions; i ++){
@@ -108,30 +119,94 @@ void Particle::initParticle(int numDimensions, string testFunction){
 	}
 
 	//Particles pBest is set as its initial position
-	pBest = position;
+	pBestArray = position;
 
 	
 }
 
 void Particle::calculateFitness(string testFunction){
+	double currFitness = 0;
+	// Determine which test function to run
+	// Evaluate the fitness and update the values if its better than pBest or nBest
+	if(testFunction.compare(ROSENBROCK_FUNCTION) == 0) {
+		currFitness = evalRosenbrock(position);
+		if(currFitness > pBestFitness){
+			pBestFitness = currFitness;
+			pBestArray = position;
+		}
+		if(currFitness > nBestFitness) {
+			nBestFitness = currFitness;
+			nBestArray = position;
+			updateNeighborhoodBest(currFitness, position);
+		}
+	}
 
+	else if (testFunction.compare(ACKLEY_FUNCTION) == 0) {
+		currFitness = evalAckley(position);
+		if(currFitness > pBestFitness){
+			pBestFitness = currFitness;
+			pBestArray = position;
+		}
+		if(currFitness > nBestFitness) {
+			nBestFitness = currFitness;
+			nBestArray = position;
+			updateNeighborhoodBest(currFitness, position);
+		}
+	}
+
+	else if (testFunction.compare(RASTRIGIN_FUNCTION) == 0){
+		currFitness = evalRastrigin(position);
+		if(currFitness > pBestFitness) {
+			pBestFitness = currFitness;
+			pBestArray = position;
+		}
+		if(currFitness > nBestFitness) {
+			nBestFitness = currFitness;
+			nBestArray = position;
+			updateNeighborhoodBest(currFitness, position);
+		}
+	}
+	else {
+		cerr << "Optimization Function does not exist" << endl;
+	}
 }
 
 void Particle::updatePosition(){
+	for(int i = 0; i < position.size(); i++) {
+		position.at(i) = position.at(i) + velocity.at(i);
+	}
 
 }
 
+
+// Possible here that we want a max velocity -- Discuss at next group meeting
 void Particle::updateVelocity(){
-
+	random_device seeder;
+	mt19937 engine(seeder());
+	uniform_real_distribution<double> randAcceleration(0.0, 3.0);
+	for(int i = 0; i < position.size(); i++) {
+		velocity.at(i) = velocity.at(i) + 
+		(randAcceleration(engine) * (pBestArray.at(i) - position.at(i))) + 
+		(randAcceleration(engine) * (nBestArray.at(i) - position.at(i)));
+	}
 }
 
-void particle::findNeighborhoodBest(){
+void Particle::findNeighborhoodBest(){
 	for(int i = 0; i < neighborsArray.size(); i++){
-		if(neighbors[i]->pBestFitness < nBestFitness) {
-			nBestArray = neighbors[i]->position;
-			nBestFitness = neighbors[i]->pBestFitness;
+		if(neighborsArray[i]->pBestFitness < nBestFitness) {
+			nBestArray = neighborsArray[i]->position;
+			nBestFitness = neighborsArray[i]->pBestFitness;
 		}
 	}
+}
+
+void Particle::updateNeighborhoodBest(double bestFitness, vector<double> bestFitArray) { 
+
+	for(int i = 0; i < neighborsArray.size(); i++ ) {
+		neighborsArray.at(i)->nBestArray = bestFitArray;
+		neighborsArray.at(i)->nBestFitness = bestFitness;
+	}
+
 }
 
 
@@ -216,23 +291,23 @@ void Swarm::randomTopology(){
 
 
 //returns distance between particles
-double distance(particle a, particle b){
+double distance(Particle a, Particle b){
 
 }
 
 
 double evalAckley (vector<double> positions) {
 
-    double firstSum = 0
-    double secondSum = 0
+    double firstSum = 0;
+    double secondSum = 0;
 
-    for(int i = 0; i < position.size(); i++){
-    	firstSum += position[i];
+    for(int i = 0; i < positions.size(); i++){
+    	firstSum += positions[i];
     }
     firstSum = -0.2 * sqrt((1/positions.size()) * firstSum);
 
-    for(int i = 0; i < position.size(); i++){
-    	secondSum += cos(2 * M_PI * position[i])
+    for(int i = 0; i < positions.size(); i++){
+    	secondSum += cos(2 * M_PI * positions[i]);
     }
 
     secondSum = exp(secondSum) + 20 + E;
@@ -243,7 +318,7 @@ double evalAckley (vector<double> positions) {
 
 
  //evaluates rosenbrock for the specified number of dimensions
-public double evalRosenbrock (vector<double> position) {
+double evalRosenbrock (vector<double> position) {
 	double sum = 0;
 
 	for(int i = 0; i < position.size() -1; i++){
@@ -257,12 +332,12 @@ public double evalRosenbrock (vector<double> position) {
 
  // returns the value of the Rastrigin Function at point (x, y)
  //   minimum is 0.0, which occurs at (0.0,...,0.0)
-public double evalRastrigin (vector<double> position) {
+double evalRastrigin (vector<double> position) {
 
 	double retVal = 0;
 
 	for(int i = 0; i < position.size(); i++){
-		retval += (pow(position[i], 2) - 10* cos(2* M_PI * position[i]) + 10)
+		retval += (pow(position[i], 2) - 10* cos(2* M_PI * position[i]) + 10);
 	}
     return retVal;
 }
@@ -289,10 +364,9 @@ int main(int argc, char* argv[]){
 
 	PSO(swarm)
 
-	 
+	 	return 1;
+
 
 
 }
 
-	return 1;
-}
