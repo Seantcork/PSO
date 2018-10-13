@@ -59,14 +59,65 @@ class Swarm {
 	Functions for neighborhood class
 */
 void particle::findNeighborhoodBest(){
+	vector<double> minPos;
+	double minFitness = 1000000;
 
+	for(int i = 0; i < this->neighbors.size(); i++){
+		if(this->neighbors[i].fitness < minFitness) {
+			minPos = this->neighbors[i].position;
+			minFitness = this->neighbors[i].fitness;
+		}
+	}
 }
 
 /*
 	Functions for particle class
 */
 void Particle::initParticle(int numDimensions, string testFunction){
+	std::random_device seeder;
+	std::mt19937 engine(seeder());
+	//std::uniform_int_distribution<int> gen(1, rankSum);
 
+	//initialize particle positions
+	if(testFunction.compare("rok") == 0){
+		std::uniform_int_distribution<double> gen(15.0, 30.0);
+		for(int i = 0; i < numDimensions; i ++){
+			int rand = gen(engine);
+			this->position.push_back(rand)
+		}
+		std::uniform_int_distribution<double> gen(-2.0, 2.0);
+		for(int i = 0; i < numDimensions; i++){
+			int rand = gen(engine);
+			this->velocity.push_back(rand)
+		}
+	}
+
+	if(testFunction.compare("ack")){
+		std::uniform_int_distribution<double> gen(16.0, 32.0);
+		for(int i = 0; i < numDimensions; i ++){
+			int rand = gen(engine);
+			this->position.push_back(rand)
+		}
+		std::uniform_int_distribution<double> gen(-2.0, 4.0);
+		for(int i = 0; i < numDimensions; i++){
+			int rand = gen(engine);
+			this->velocity.push_back(rand)
+		}
+	}
+	
+	if(testFunction.compare("ras")){
+		std::uniform_int_distribution<double> gen(2.56, 5.12);
+		for(int i = 0; i < numDimensions; i ++){
+			int rand = gen(engine);
+			this->position.push_back(rand)
+		}
+		std::uniform_int_distribution<double> gen(-2.0, 4.0);
+		for(int i = 0; i < numDimensions; i++){
+			int rand = gen(engine);
+			this->velocity.push_back(rand)
+		}
+	}
+	cerr << "Optimization Function does not exist" << endl;
 }
 
 void Particle::calculateFitness(){
@@ -112,6 +163,7 @@ void Swarm::globalTopology(vector<particle> swarm){
 			swarm[i].neighbors.push_back(swarm[j]);
 
 		}
+		swarm[i].neighbors.push_back(swarm[i]);
 	}
 }
 
@@ -121,16 +173,18 @@ void Swarm::ringTopology(vector<particle> swarm){
 	//takes care of first elements
 	swarm[0].neighbors.push_back(swarm[swarm.size()]);
 	swarm[0].neighbors.push_back(swarm[1]);
-	
+	swarm[0].neighbors.push_back(swarm[0])
 	//takes care of all the elemetns between the first and last element
 	for(int i = 1; i < swarm.size(); i ++){
 		swarm[i].neighbors.push_back(swarm[i+1]);
 		swarm[i].neighbors.push_back(swarm[i-1]);
+		swarm[i].push_back(swarm[i])
 	}
 
 	//takes care of last element in the swarm
-	swarm[swarm.size()].push_back(swarm[swarm.size()-1]);
-	swarm[swarm.size()].push_back(swarm[0]);
+	swarm[swarm.size()].neighbors.push_back(swarm[swarm.size()]);
+	swarm[swarm.size()].neighbors.push_back(swarm[swarm.size()-1]);
+	swarm[swarm.size()].neighbors.push_back(swarm[0]);
 
 
 }
@@ -140,11 +194,10 @@ void Swarm::vonNeumanTopology(){
 }
 
 void Swarm::randomTopology(){
+	std::random_device seeder;
+	std::mt19937 engine(seeder());
+	std::uniform_int_distribution<int> gen(1, rankSum);
 
-
-}
-
-void Swarm::initSwarm(){
 
 }
 
