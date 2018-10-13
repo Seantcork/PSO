@@ -113,8 +113,8 @@ void Particle::initParticle(int numDimensions, string testFunction){
 	//initialize particle positions
 	//Check for each test function
 	if(testFunction.compare(ROSENBROCK_FUNCTION) == 0){
-		MAX_VELOCITY = 2.048;
-		MIN_VELOCITY = -2.048;
+		this->MAX_VELOCITY = 2.048;
+		this->MIN_VELOCITY = -2.048;
 		//random number generations for each different test fucntions
 		uniform_real_distribution<double> genPosition(15.0, 30.0);
 		uniform_real_distribution<double> genVelocity(-2.0, 2.0);
@@ -127,8 +127,8 @@ void Particle::initParticle(int numDimensions, string testFunction){
 	else if(testFunction.compare(ACKLEY_FUNCTION) == 0){
 		uniform_real_distribution<double> genPosition(16.0, 32.0);
 		uniform_real_distribution<double> genVelocity(-2.0, 4.0);
-		MAX_VELOCITY = 32.768;
-		MIN_VELOCITY = -32.768;
+		this->MAX_VELOCITY = 32.768;
+		this->MIN_VELOCITY = -32.768;
 		for(int i = 0; i < numDimensions; i ++){
 			this->position.push_back(genPosition(engine));
 			this->velocity.push_back(genVelocity(engine));
@@ -139,8 +139,8 @@ void Particle::initParticle(int numDimensions, string testFunction){
 	else if(testFunction.compare(RASTRIGIN_FUNCTION) == 0){
 		uniform_real_distribution<double> genPosition(2.56, 5.12);
 		uniform_real_distribution<double> genVelocity(-2.0, 4.0);
-		MAX_VELOCITY = 5.12;
-		MIN_VELOCITY = -5.12;
+		this->MAX_VELOCITY = 5.12;
+		this->MIN_VELOCITY = -5.12;
 		for(int i = 0; i < numDimensions; i ++){
 			this->position.push_back(genPosition(engine));
 			this->velocity.push_back(genVelocity(engine));
@@ -171,11 +171,11 @@ Return value: none
 
 */
 void Particle::calculateFitness(string testFunction){
-	double currFitness = 0;
+	double currFitness = 100000000000000;
 	// Determine which test function to run
 	// Evaluate the fitness and update the values if its better than pBest or nBest
 	if(testFunction.compare(ROSENBROCK_FUNCTION) == 0) {
-		currFitness = evalRosenbrock(position);
+		currFitness = evalRosenbrock(this->position);
 		if(currFitness < pBestFitness){
 			this->pBestFitness = currFitness;
 			this->pBestArray = position;
@@ -185,8 +185,8 @@ void Particle::calculateFitness(string testFunction){
 		//update it
 		if(currFitness < nBestFitness) {
 			this->nBestFitness = currFitness;
-			this->nBestArray = position;
-			updateNeighborhoodBest(currFitness, position);
+			this->nBestArray = this->position;
+			updateNeighborhoodBest(currFitness, this->position);
 		}
 	}
 
@@ -194,12 +194,12 @@ void Particle::calculateFitness(string testFunction){
 		currFitness = evalAckley(position);
 		if(currFitness < pBestFitness){
 			this->pBestFitness = currFitness;
-			this->pBestArray = position;
+			this->pBestArray = this->position;
 		}
 		if(currFitness < nBestFitness) {
 			this->nBestFitness = currFitness;
-			this->nBestArray = position;
-			updateNeighborhoodBest(currFitness, position);
+			this->nBestArray = this->position;
+			updateNeighborhoodBest(currFitness, this->position);
 		}
 	}
 
@@ -207,12 +207,12 @@ void Particle::calculateFitness(string testFunction){
 		currFitness = evalRastrigin(position);
 		if(currFitness < pBestFitness) {
 			this->pBestFitness = currFitness;
-			this->pBestArray = position;
+			this->pBestArray = this->position;
 		}
 		if(currFitness < nBestFitness) {
 			this->nBestFitness = currFitness;
-			this->nBestArray = position;
-			updateNeighborhoodBest(currFitness, position);
+			this->nBestArray = this->position;
+			updateNeighborhoodBest(currFitness, this->position);
 		}
 	}
 	else {
@@ -236,7 +236,7 @@ void Particle::updatePosition(){
 //Parameters: none
 //Return value: none
 void Particle::updateVelocity(){
-	double currVelocity = 0;
+	double currVelocity;
 	random_device seeder;
 	mt19937 engine(seeder());
 	for(int i = 0; i < position.size(); i++) { 
@@ -245,6 +245,11 @@ void Particle::updateVelocity(){
 		currVelocity = CONSTRICTION_FACTOR * (velocity.at(i) +
 		((C1*randAcceleration(engine) * (pBestArray.at(i) - position.at(i))) + 
 		((C2*randAcceleration(engine)) * (nBestArray.at(i) - position.at(i))))); 
+
+		//cout << this->velocity.at(i) << endl;
+		//cout << position.at(i) << endl;
+
+		//cout << MAX_VELOCITY << endl;
 		if(currVelocity < MIN_VELOCITY){
 			velocity.at(i) = MIN_VELOCITY;
 		}
@@ -254,6 +259,7 @@ void Particle::updateVelocity(){
 		else{
 			velocity.at(i) = currVelocity;
 		}
+
 	}
 }
 
@@ -297,7 +303,7 @@ void Particle::updateNeighborhoodBest(double bestFitness, vector<double> bestFit
 void Swarm::initSwarm(int swarmSize, int numDimensions, 
 			string neighborhoodTopology, string testFunction){
 	this->swarmSize = swarmSize;
-	gBestFitness = numeric_limits<double>::max();
+	this->gBestFitness = 100000000;
 	for(int i = 0; i < swarmSize; i++){
 		shared_ptr<Particle> ptr(new Particle());
 		ptr->initParticle(numDimensions, testFunction);
@@ -310,8 +316,8 @@ void Swarm::initSwarm(int swarmSize, int numDimensions,
 void Swarm::findGlobalBest(){
 	for (int i = 0; i < swarm.size(); i++){
 		if (swarm[i]->pBestFitness < gBestFitness){
-			gBestArray = swarm[i]->pBestArray;
-			gBestFitness = swarm[i]->pBestFitness;
+			this->gBestArray = swarm[i]->pBestArray;
+			this->gBestFitness = swarm[i]->pBestFitness;
 		}
 	}
 
@@ -392,7 +398,7 @@ double evalAckley (vector<double> positions) {
     	secondSum += cos(2 * M_PI * positions[i]);
     }
 
-    secondSum = exp(((1/positions.size()) * secondSum);
+    secondSum = exp(((1/positions.size()) * secondSum));
 
     return -20 * firstSum - secondSum + 20 + E;
 }  
@@ -402,9 +408,8 @@ double evalAckley (vector<double> positions) {
  //evaluates rosenbrock for the specified number of dimensions
 double evalRosenbrock (vector<double> position) {
 	double sum = 0;
-
 	for(int i = 1; i < position.size() -1; i++){
-		sum += 100.0 * pow(position[i+1] - pow(position[i], 2), 2) + pow(position[i] - 1, 2);
+		sum += (100.0 * pow(position[i+1] -  position[i] * position[i], 2) + pow(position[i] - 1, 2));
 	}
 
 	return sum;
@@ -431,6 +436,8 @@ void PSO(Swarm swarm, int numIterations, string testFunction){
 	for(int i = 0; i < numIterations; i++ ){
 		// cout << "Iteration number: " << i << endl;
 		for(int j = 0; j < swarm.swarmSize; j++){
+			swarm.swarm.at(j)->updateVelocity();
+			// cout << "Post update velocity" << endl;	
 			swarm.swarm.at(j)->updatePosition();
 			// cout << "Post update position" << endl;	
 			swarm.swarm.at(j)->calculateFitness(testFunction);
@@ -438,7 +445,7 @@ void PSO(Swarm swarm, int numIterations, string testFunction){
 			swarm.swarm.at(j)->updateVelocity();
 			// cout << "Post update velocity" << endl;	
 		}
-		//swarm.findGlobalBest();
+		swarm.findGlobalBest();
 	}
 	cout << "Best Fitness found: " << swarm.gBestFitness << endl;
 
