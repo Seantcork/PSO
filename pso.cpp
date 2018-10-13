@@ -74,18 +74,18 @@ void particle::findNeighborhoodBest(){
 	Functions for particle class
 */
 void Particle::initParticle(int numDimensions, string testFunction){
-	std::random_device seeder;
-	std::mt19937 engine(seeder());
+	random_device seeder;
+	mt19937 engine(seeder());
 	//std::uniform_int_distribution<int> gen(1, rankSum);
 
 	//initialize particle positions
 	if(testFunction.compare("rok") == 0){
-		std::uniform_int_distribution<double> gen(15.0, 30.0);
+		uniform_real_distribution<double> gen(15.0, 30.0);
 		for(int i = 0; i < numDimensions; i ++){
 			int rand = gen(engine);
 			this->position.push_back(rand)
 		}
-		std::uniform_int_distribution<double> gen(-2.0, 2.0);
+		uniform_real_distribution<double> gen(-2.0, 2.0);
 		for(int i = 0; i < numDimensions; i++){
 			int rand = gen(engine);
 			this->velocity.push_back(rand)
@@ -93,12 +93,12 @@ void Particle::initParticle(int numDimensions, string testFunction){
 	}
 
 	if(testFunction.compare("ack")){
-		std::uniform_int_distribution<double> gen(16.0, 32.0);
+		uniform_real_distribution<double> gen(16.0, 32.0);
 		for(int i = 0; i < numDimensions; i ++){
 			int rand = gen(engine);
 			this->position.push_back(rand)
 		}
-		std::uniform_int_distribution<double> gen(-2.0, 4.0);
+		uniform_real_distribution<double> gen(-2.0, 4.0);
 		for(int i = 0; i < numDimensions; i++){
 			int rand = gen(engine);
 			this->velocity.push_back(rand)
@@ -106,12 +106,12 @@ void Particle::initParticle(int numDimensions, string testFunction){
 	}
 	
 	if(testFunction.compare("ras")){
-		std::uniform_int_distribution<double> gen(2.56, 5.12);
+		uniform_real_distribution<double> gen(2.56, 5.12);
 		for(int i = 0; i < numDimensions; i ++){
 			int rand = gen(engine);
 			this->position.push_back(rand)
 		}
-		std::uniform_int_distribution<double> gen(-2.0, 4.0);
+		uniform_real_distribution<double> gen(-2.0, 4.0);
 		for(int i = 0; i < numDimensions; i++){
 			int rand = gen(engine);
 			this->velocity.push_back(rand)
