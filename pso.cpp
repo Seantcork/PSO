@@ -28,13 +28,20 @@ const string RANDOM_TOPOLOGY = "ra";
 const string ROSENBROCK_FUNCTION = "rok";
 const string ACKLEY_FUNCTION = "ack";
 const string RASTRIGIN_FUNCTION = "ras";
-
 double evalAckley (vector<double> positions);
 double evalRosenbrock (vector<double> position);
 double evalRastrigin (vector<double> position);
 
 
+/*
+This class contains all of the necesary components for the Particle Class. This class keeps
+track of the particles position, velocity, its personal best position, personal best fitness. It also contains the neighborhood best
+for its array and the nbest position.
+This class includes the fucntions: Calculate fitness, which calculates the fitness of the position of the particle
+with respect to the evaluation function. It 
 
+
+*/
 class Particle {
 	public:
 		double pBestFitness;
@@ -196,11 +203,18 @@ void Particle::updateVelocity(){
 }
 
 void Particle::findNeighborhoodBest(){
+
+	vector<double> bestArray;
+	double bestFitness;
 	for(int i = 0; i < neighborsArray.size(); i++){
 		if(neighborsArray[i]->pBestFitness < nBestFitness) {
 			nBestArray = neighborsArray[i]->position;
 			nBestFitness = neighborsArray[i]->pBestFitness;
 		}
+	}
+	for(int i = 0; i M< neighborsArray.size(); i++){
+		nBestArray = bestArray;
+		nBestFitness = bestFitness;
 	}
 }
 
