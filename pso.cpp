@@ -255,18 +255,11 @@ void Particle::updateVelocity(){
 //Parameters: None
 //Return value none
 void Particle::findNeighborhoodBest(){
-
-	vector<double> bestArray;
-	double bestFitness = numeric_limits<double>::max();
 	for(int i = 0; i < neighborsArray.size(); i++){
 		if(this->neighborsArray[i]->pBestFitness < this->nBestFitness) {
 			this->nBestArray = this->neighborsArray[i]->position;
 			this->nBestFitness = this->neighborsArray[i]->pBestFitness;
 		}
-	}
-	for(int i = 0; i < neighborsArray.size(); i++){
-		this->nBestArray = bestArray;
-		this->nBestFitness = bestFitness;
 	}
 }
 
@@ -301,7 +294,7 @@ void Swarm::initSwarm(int swarmSize, int numDimensions,
 }
 
 void Swarm::findGlobalBest(){
-	for (int i = 0; i < swarm.size(); i++){
+	for (int i = 0; i < swarmSize; i++){
 		if (swarm[i]->pBestFitness < gBestFitness){
 			this->gBestArray = swarm[i]->pBestArray;
 			this->gBestFitness = swarm[i]->pBestFitness;
@@ -312,12 +305,10 @@ void Swarm::findGlobalBest(){
 
 //not sure we need this
 void Swarm::globalTopology(){
-	for(int i = 0; i < swarm.size(); i ++){
-		for(int j = 0; j < swarm.size(); j++){
+	for(int i = 0; i < swarmSize; i ++){
+		for(int j = 0; j < swarmSize; j++){
 			this->swarm[i]->neighborsArray.push_back(swarm.at(j));
-
 		}
-		swarm[i]->neighborsArray.push_back(swarm.at(i));
 	}
 }
 
@@ -363,12 +354,6 @@ void Swarm::randomTopology(){
 
 }
 
-//returns distance between particles
-double distance(Particle a, Particle b){
-	return 0.0;
-}
-
-
 double evalAckley (vector<double> positions) {
 
 
@@ -410,19 +395,21 @@ double evalRastrigin (vector<double> position) {
 }
 
 void PSO(string neighborhoodTopology, int swarmSize, int numIterations, string testFunction, int numDimensions){
-	Swarm *swarm = new Swarm;
-	swarm->initSwarm(swarmSize, numDimensions, neighborhoodTopology, testFunction);
+	
+	shared_ptr<Particle> swarmObject(new Swarm());
+
+	swarmObject->initSwarm(swarmSize, numDimensions, neighborhoodTopology, testFunction);
 
 	for(int i = 0; i < numIterations; i++ ){
 		for(int j = 0; j < swarm.swarmSize; j++){
-			swarm->swarm.at(j)->updateVelocity();
-			swarm->swarm.at(j)->updatePosition();
-			swarm->swarm.at(j)->calculateFitness(testFunction);
-			swarm->swarm.at(j)->findNeighborhoodBest();
-			swarm->findGlobalBest();
+			swarmObject->swarm.at(j)->updateVelocity();
+			swarmObject->swarm.at(j)->updatePosition();
+			swarmObject->swarm.at(j)->calculateFitness(testFunction);
+			swarmObject->swarm.at(j)->findNeighborhoodBest();
+			swarmObject->findGlobalBest();
 		}
 	}
-	cout << "Best Fitness found: " << swarm->gBestFitness << endl;
+	cout << "Best Fitness found: " << swarmObject->gBestFitness << endl;
 
 }
 
