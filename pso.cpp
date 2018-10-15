@@ -341,6 +341,25 @@ void Swarm::initSwarm(int swarmSize, int numDimensions,
 		//sets the min and max value for each particle
 		this->swarm.push_back(ptr);
 	}
+
+	if (neighborhoodTopology.compare(GLOBAL_TOPOLOGY) == 0){
+		this->globalTopology();
+	}
+
+	else if (neighborhoodTopology.compare(RING_TOPOLOGY) == 0){
+		this->ringTopology();
+	}
+	else if (neighborhoodTopology.compare(VON_NEUMANN_TOPOLOGY) == 0){
+		this->vonNeumanTopology();
+	}
+	else if (neighborhoodTopology.compare(RANDOM_TOPOLOGY) == 0){
+		this->randomTopology();
+	}
+	else {
+		cerr << "Topology type not found" << endl;
+	}
+
+
 }
 
 void Swarm::findGlobalBest(){
