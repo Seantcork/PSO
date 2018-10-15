@@ -447,25 +447,36 @@ void Swarm::vonNeumanTopology(){
 }
 
 void Swarm::randomTopology(){
-	for(int i =0; i < swarmSize; i++){
-		swarm[i]->neighborsArray.clear();
-	}
-	
-	std::random_device seeder;
-	std::mt19937 engine(seeder());
+
+	random_device seeder;
+	mt19937 engine(seeder());
 	uniform_int_distribution<int> randIndex(0, swarmSize-1);
 	pair< set<int>::iterator, bool> inSet;
+
+	uniform_real_distribution<double> randDouble(0, 1);
+	double randomChance;
+	
 	set<int> used; 
 	
-	for(int i = 0; i < RANDOM_K; i++){
-		int index = randIndex(engine);
-		inSet = used.insert(index);
-		while(inSet.second == false){
-			index = randIndex(engine);
-			inSet = used.insert(index);
+
+	for(int i = 0; i < swarmSize; i++){
+		if( swarm.neighborsArray.size() == 0 || (swarm[i].neighborsArray.size() != 0 && randDouble(engine) <= 0.2)){
+			swarm[i]->neighborsArray.clear();
+			swarm[i]->neighborsArray.push_back(swarm[i]);
+			inSet.insert(i);
+			for(int j = 0; j < RANDOM_K -1){
+				
+				int index = randIndex(engine);
+				
+				inSet = used.insert(index);
+				
+				while(inSet.second == false){
+					index = randIndex(engine);
+					inSet = used.insert(index);
+				}
+				swarm[i]->neighborsArray.push_back(swarm[index]);
+			}
 		}
-		swarm[i]->neighborsArray.push_back(swarm[index]);
-		swarm[i]->neighborsArray.push_back(swarm[i]);
 	}
 }
 
@@ -475,11 +486,6 @@ void PSO(string neighborhoodTopology, int swarmSize, int numIterations, string t
 
 	swarmObject->initSwarm(swarmSize, numDimensions, neighborhoodTopology, testFunction);
 
-
-	std::random_device seeder;
-	std::mt19937 engine(seeder());
-	uniform_real_distribution<double> randDouble(0, 1);
-	double randomChance;
 
 	if(neighborhoodTopology.compare("ra") == 0){
 		for(int i = 0; i < numIterations; i++ ){
