@@ -394,30 +394,40 @@ void Swarm::vonNeumanTopology(){
 	for(int i = 0; i < swarmSize; i++){
 
 		/* Determine each particles left and right neighbors */
+
+		/* In case where index is in left column of array */
 		if(i % swarmNumCols == 0) {
 			swarm[i]->neighbors.push_back(swarm[i+swarmNumCols-1]);
 			swarm[i]->neighbors.push_back(swarm[i+1]);
 		}
 
+		/* In case where index is in right column of array */
 		else if(i % swarmNumCols == swarmNumCols - 1) {
 			swarm[i]->neighbors.push_back(swarm[i-1]);
 			swarm[i]->neighbors.push_back(swarm[i-swarmNumCols+1]);
 		}
 
+		/* In case where index is in any middle column of array */
 		else {
 			swarm[i]->neighbors.push_back(swarm[i-1]);
 			swarm[i]->neighbors.push_back(swarm[i+1]);
 		}
 
 		/* Determine each particles top and bottom neighbors */
+
+		/* In case where index is in top row of array */
 		if(i / swarmNumCols == 0) {
 			swarm[i]->neighbors.push_back(swarm[i + ((swarmNumRows - 1) * swarmNumCols)]);
 			swarm[i]->neighbors.push_back(swarm[i+swarmNumCols]);
 		}
+
+		/* In case where index is in bottom row of array */
 		else if(i / swarmNumCols == swarmNumRows - 1) {
 			swarm[i]->neighbors.push_back(swarm[i-swarmNumCols]);
 			swarm[i]->neighbors.push_back(swarm[i - ((swarmNumRows - 1) * swarmNumCols)]);
 		}
+
+		/* In case where index is in any middle row of array */
 		else {
 			swarm[i]->neighbors.push_back(swarm[i-swarmNumCols]);
 			swarm[i]->neighbors.push_back(swarm[i+swarmNumCols]);
