@@ -397,8 +397,8 @@ void Swarm::ringTopology(){
 
 		//takes care of last element in the swarm
 		else if (i == swarmSize - 1){
-			swarm[i]->neighborsArray.push_back(swarm[swarm.size()-2]);
-			swarm[i]->neighborsArray.push_back(swarm[swarm.size()-1]);
+			swarm[i]->neighborsArray.push_back(swarm[swarmSize-2]);
+			swarm[i]->neighborsArray.push_back(swarm[swarmSize-1]);
 			swarm[i]->neighborsArray.push_back(swarm[0]);
 		}
 
