@@ -86,7 +86,7 @@ class Swarm {
 	public:
 		vector<shared_ptr<Particle> > swarm;
 		
-		double swarmSize;
+		int swarmSize;
 		int numDimensions;
 
 		vector<double> gBestArray;
@@ -386,7 +386,7 @@ void Swarm::vonNeumanTopology(){
 	int swarmNumRows = 3;
 
 	while(swarmSize % swarmNumRows != 0){
-		swarmNumRows ++;
+		swarmNumRows++;
 	}
 
 	int swarmNumCols = swarmSize / swarmNumRows;
@@ -395,36 +395,36 @@ void Swarm::vonNeumanTopology(){
 
 		/* Determine each particles left and right neighbors */
 		if(i % swarmNumCols == 0) {
-			swarm[i]->neighbors.push_back(swarm[i+swarmNumCols-1]);
-			swarm[i]->neighbors.push_back(swarm[i+1]);
+			swarm[i]->neighborsArray.push_back(swarm[i+swarmNumCols-1]);
+			swarm[i]->neighborsArray.push_back(swarm[i+1]);
 		}
 
 		else if(i % swarmNumCols == swarmNumCols - 1) {
-			swarm[i]->neighbors.push_back(swarm[i-1]);
-			swarm[i]->neighbors.push_back(swarm[i-swarmNumCols+1]);
+			swarm[i]->neighborsArray.push_back(swarm[i-1]);
+			swarm[i]->neighborsArray.push_back(swarm[i-swarmNumCols+1]);
 		}
 
 		else {
-			swarm[i]->neighbors.push_back(swarm[i-1]);
-			swarm[i]->neighbors.push_back(swarm[i+1]);
+			swarm[i]->neighborsArray.push_back(swarm[i-1]);
+			swarm[i]->neighborsArray.push_back(swarm[i+1]);
 		}
 
 		/* Determine each particles top and bottom neighbors */
 		if(i / swarmNumCols == 0) {
-			swarm[i]->neighbors.push_back(swarm[i + ((swarmNumRows - 1) * swarmNumCols)]);
-			swarm[i]->neighbors.push_back(swarm[i+swarmNumCols]);
+			swarm[i]->neighborsArray.push_back(swarm[i + ((swarmNumRows - 1) * swarmNumCols)]);
+			swarm[i]->neighborsArray.push_back(swarm[i+swarmNumCols]);
 		}
 		else if(i / swarmNumCols == swarmNumRows - 1) {
-			swarm[i]->neighbors.push_back(swarm[i-swarmNumCols]);
-			swarm[i]->neighbors.push_back(swarm[i - ((swarmNumRows - 1) * swarmNumCols)]);
+			swarm[i]->neighborsArray.push_back(swarm[i-swarmNumCols]);
+			swarm[i]->neighborsArray.push_back(swarm[i - ((swarmNumRows - 1) * swarmNumCols)]);
 		}
 		else {
-			swarm[i]->neighbors.push_back(swarm[i-swarmNumCols]);
-			swarm[i]->neighbors.push_back(swarm[i+swarmNumCols]);
+			swarm[i]->neighborsArray.push_back(swarm[i-swarmNumCols]);
+			swarm[i]->neighborsArray.push_back(swarm[i+swarmNumCols]);
 		}
 
 		/* always push back the particle itself into its neighborhood */
-		swarm[i]->neighbors.push_back(swarm[i]);
+		swarm[i]->neighborsArray.push_back(swarm[i]);
 
 	}
 
