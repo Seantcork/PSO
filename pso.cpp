@@ -232,7 +232,6 @@ void Particle::calculateFitness(string testFunction){
 //Return value: 
 void Particle::updatePosition(){
 	for(int i = 0; i < this->position.size(); i++) {
-		// cout << "Position changed to: " << this->position.at(i) + this->velocity.at(i) << endl;
 		this->position.at(i) = this->position.at(i) + this->velocity.at(i);
 	}
 
@@ -388,20 +387,18 @@ double distance(Particle a, Particle b){
 
 double evalAckley (vector<double> positions) {
 
-
     double firstSum = 0.0;
     double secondSum = 0.0;
     double dimensions = positions.size();
 
     for(int i = 0; i < positions.size(); i++){
-    	firstSum+= (positions[i] * positions[i]);
+    	firstSum += (positions[i] * positions[i]);
     }
 
     for(int i = 0; i < positions.size(); i++){
     	secondSum += cos(2 * M_PI * positions[i]);
     }
     
-
     return -20 * exp(-0.2 * sqrt(firstSum/dimensions)) - exp(secondSum/dimensions) + 20.0 + exp(1);
 }  
 
@@ -450,9 +447,13 @@ int main(int argc, char* argv[]){
 	string testFunction = string(argv[4]);
 	int numDimensions = atoi(argv[5]);
 
+	cout << "Topology type: " << neighborhoodTopology << " swarmSize: " << swarmSize << " Number of Iterations: "  << numIterations 
+	<< " testFunction: " << testFunction << " numDimensions: " << numDimensions << endl;
+
 	Swarm *swarm = new Swarm;
 	swarm->initSwarm(swarmSize, numDimensions, neighborhoodTopology, testFunction);
 	PSO(*swarm, numIterations, testFunction);
+	cout << endl;
 
 
 	return 1;
