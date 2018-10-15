@@ -23,9 +23,9 @@ using namespace std;
 #define E 2.71828
 const double CONSTRICTION_FACTOR = 0.7298;
 
-const double C1 = 2.05;
+const double PHI_1 = 2.05;
 
-const double C2 = 2.05;
+const double PHI_2 = 2.05;
 
 const string GLOBAL_TOPOLOGY = "gl";
 const string RING_TOPOLOGY = "ri";
@@ -114,8 +114,8 @@ void Particle::initParticle(int numDimensions, string testFunction){
 	//initialize particle positions
 	//Check for each test function
 	if(testFunction.compare(ROSENBROCK_FUNCTION) == 0){
-		this->maxVelocity = 2.048;
-		this->minVelocity = -2.048;
+		maxVelocity = 2.048;
+		minVelocity = -2.048;
 		//random number generations for each different test fucntions
 		uniform_real_distribution<double> genPosition(15.0, 30.0);
 		uniform_real_distribution<double> genVelocity(-2.0, 2.0);
@@ -158,12 +158,12 @@ void Particle::initParticle(int numDimensions, string testFunction){
 
 	this->pBestFitness = numeric_limits<double>::max();
 	this->nBestFitness = numeric_limits<double>::max();
+	
 	//Particles pBest is set as its initial position
 	this->pBestArray = this->position;
 
 	//the nBestArray is also at its initial position
 	this->nBestArray = this->position;
-
 	
 }
 
@@ -226,25 +226,33 @@ void Particle::updatePosition(){
 //Parameters: none
 //Return value: none
 void Particle::updateVelocity(){
-	double currVelocity;
+	double newVelocity;
+	double pBestBias;
+	double nBestBias;
+
+
 	random_device seeder;
 	mt19937 engine(seeder());
 	for(int i = 0; i < position.size(); i++) { 
-		//for E element 
-		// This value is really important to getting good values on our runs
-		uniform_real_distribution<double> randAcceleration(0,2.0);
-		currVelocity = CONSTRICTION_FACTOR * (this->velocity.at(i) +
-		(C1*randAcceleration(engine) * (pBestArray.at(i) - this->position.at(i))) + 
-		((C2*randAcceleration(engine)) * (nBestArray.at(i) - this->position.at(i)))); 
+		//generate random distribution for phi1 and phi2
+		uniform_real_distribution<double> phi1(0,PHI_1);
+		uniform_real_distribution<double> phi2(0,PHI_2);
 
-		if(currVelocity < minVelocity){
+		//calculate the pbestBias by using phi1 and nbestBias with phi2
+		pBestBias = phi1(engine) * (pBestArray.at(i) - position.at(i));
+		nBestBias = phi2(engine) * (nBestArray.at(i) - position.at(i));
+
+		//calculate the new velocity using the constriction factor and old velocity
+		newVelocity = CONSTRICTION_FACTOR * (velocity.at(i) + pBestBias + nBestBias);
+
+		if(newVelocity < minVelocity){
 			this->velocity.at(i) = minVelocity;
 		}
-		else if(currVelocity > maxVelocity){
+		else if(newVelocity > maxVelocity){
 			this->velocity.at(i) = maxVelocity;
 		}
 		else{
-			this->velocity.at(i) = currVelocity;
+			this->velocity.at(i) = newVelocity;
 		}
 
 	}
@@ -406,8 +414,8 @@ void PSO(string neighborhoodTopology, int swarmSize, int numIterations, string t
 			swarmObject->swarm.at(j)->updatePosition();
 			swarmObject->swarm.at(j)->calculateFitness(testFunction);
 			swarmObject->swarm.at(j)->findNeighborhoodBest();
-			swarmObject->findGlobalBest();
 		}
+		swarmObject->findGlobalBest();
 	}
 	cout << "Best Fitness found: " << swarmObject->gBestFitness << endl;
 
