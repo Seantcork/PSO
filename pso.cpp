@@ -251,7 +251,6 @@ double Particle::evalRastrigin () {
 //Return value: 
 void Particle::updatePosition(){
 	for(int i = 0; i < this->position.size(); i++) {
-		// cout << "Position changed to: " << this->position.at(i) + this->velocity.at(i) << endl;
 		this->position.at(i) = this->position.at(i) + this->velocity.at(i);
 	}
 
@@ -388,7 +387,7 @@ void Swarm::ringTopology(){
 }
 
 void Swarm::vonNeumanTopology(){
-
+	
 }
 
 void Swarm::randomTopology(){
@@ -426,7 +425,8 @@ int main(int argc, char* argv[]){
 	int numIterations = atoi(argv[3]);
 	string testFunction = string(argv[4]);
 	int numDimensions = atoi(argv[5]);
-
+	cout << "Topology type: " << neighborhoodTopology << " swarmSize: " << swarmSize << " Number of Iterations: "  << numIterations 
+	<< " testFunction: " << testFunction << " numDimensions: " << numDimensions << endl;
 	
 	PSO(neighborhoodTopology, swarmSize, numIterations, testFunction,numDimensions);
 
