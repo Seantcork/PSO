@@ -489,19 +489,15 @@ void Swarm::randomTopology(){
 	mt19937 engine(seeder());
 	uniform_int_distribution<int> randIndex(0, swarmSize-1);
 	pair< set<int>::iterator, bool> inSet;
-
 	uniform_real_distribution<double> randDouble(0, 1);
-	double randomChance;
-	
 	set<int> used; 
-	
 
 	for(int i = 0; i < swarmSize; i++){
-		if( swarm.neighborsArray.size() == 0 || (swarm[i].neighborsArray.size() != 0 && randDouble(engine) <= 0.2)){
+		if( swarm[i]->neighborsArray.size() == 0 || (swarm[i]->neighborsArray.size() != 0 && randDouble(engine) <= 0.2)) {
 			swarm[i]->neighborsArray.clear();
 			swarm[i]->neighborsArray.push_back(swarm[i]);
-			inSet.insert(i);
-			for(int j = 0; j < RANDOM_K -1){
+			used.insert(i);
+			for(int j = 0; j < RANDOM_K-1; j++){
 				
 				int index = randIndex(engine);
 				
@@ -513,6 +509,7 @@ void Swarm::randomTopology(){
 				}
 				swarm[i]->neighborsArray.push_back(swarm[index]);
 			}
+			used.clear();
 		}
 	}
 }
@@ -523,26 +520,11 @@ void PSO(string neighborhoodTopology, int swarmSize, int numIterations, string t
 
 	swarmObject->initSwarm(swarmSize, numDimensions, neighborhoodTopology, testFunction);
 
-
-	if(neighborhoodTopology.compare("ra") == 0){
-		for(int i = 0; i < numIterations; i++ ){
-			for(int j = 0; j < swarmSize; j++){
-				randomChance = randDouble(engine);
-				if(randomChance <= 0.2){
-					swarmObject->randomTopology();
-				}
-				swarmObject->swarm.at(j)->updateVelocity();
-				swarmObject->swarm.at(j)->updatePosition();
-				swarmObject->swarm.at(j)->calculateFitness(testFunction);
-				swarmObject->swarm.at(j)->findNeighborhoodBest();
-			}
-			swarmObject->findGlobalBest();
-		}
-	}
-
-
 	for(int i = 0; i < numIterations; i++ ){
 		for(int j = 0; j < swarmSize; j++){
+			if(neighborhoodTopology.compare("ra") == 0){
+				swarmObject->randomTopology();
+			}
 			swarmObject->swarm.at(j)->updateVelocity();
 			swarmObject->swarm.at(j)->updatePosition();
 			swarmObject->swarm.at(j)->calculateFitness(testFunction);
@@ -550,7 +532,7 @@ void PSO(string neighborhoodTopology, int swarmSize, int numIterations, string t
 		}
 		swarmObject->findGlobalBest();
 		if(i % 1000 == 0) {
-			cout << "Best Fitness on Iteration " << i << " is " swarmObject->gBestFitness << endl;
+			cout << "Best Fitness on Iteration " << i << " is " << swarmObject->gBestFitness << endl;
 		}
 	}
 	cout << "Best Overall Fitness found: " << swarmObject->gBestFitness << endl;
