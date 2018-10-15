@@ -34,6 +34,12 @@ const string RANDOM_TOPOLOGY = "ra";
 const string ROSENBROCK_FUNCTION = "rok";
 const string ACKLEY_FUNCTION = "ack";
 const string RASTRIGIN_FUNCTION = "ras";
+const int RANDOM_K = 5;
+
+double evalAckley (vector<double> positions);
+double evalRosenbrock (vector<double> position);
+double evalRastrigin (vector<double> position);
+
 
 /*
 This class contains all of the necesary components for the Particle Class. This class keeps
@@ -387,14 +393,24 @@ void Swarm::ringTopology(){
 }
 
 void Swarm::vonNeumanTopology(){
-	
+
 }
 
 void Swarm::randomTopology(){
 	std::random_device seeder;
 	std::mt19937 engine(seeder());
-
-
+	uniform_int_distribution<int> randIndex(0, swarmSize-1);
+	pair<set<int>::iterator, bool> inSet
+	set<int> used; 
+	for(int i = 0; int i < RANDOM_K; i++){
+		int index = engine(randIndex);
+		inSet = used.insert(0, index);
+		while(inSet.second == false){
+			index = engine(randIndex);
+			inSet = used.insert(0, index);
+		}
+		swarm[i]->neighborsArray.push_back(swarm[index]);
+	}
 }
 
 void PSO(string neighborhoodTopology, int swarmSize, int numIterations, string testFunction, int numDimensions){
@@ -411,9 +427,11 @@ void PSO(string neighborhoodTopology, int swarmSize, int numIterations, string t
 			swarmObject->swarm.at(j)->findNeighborhoodBest();
 		}
 		swarmObject->findGlobalBest();
+		if(i % 1000 == 0) {
+			cout << "Best Fitness on Iteration " << i << " is swarmObject->gBestFitness" << endl;
+		}
 	}
-	cout << "Best Fitness found: " << swarmObject->gBestFitness << endl;
-
+	cout << "Best Overall Fitness found: " << swarmObject->gBestFitness << endl;
 }
 
 
