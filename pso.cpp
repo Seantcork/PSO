@@ -16,6 +16,7 @@
 #include <vector>
 #include <iostream>
 #include <limits>       // std::numeric_limits
+#include <set>
 
 using namespace std;
 
@@ -397,22 +398,22 @@ void Swarm::vonNeumanTopology(){
 }
 
 void Swarm::randomTopology(){
-	for(int i =0; i < Swarm.swarmSize; i++){
-		swarm[i].neighborsArray.clear()
+	for(int i =0; i < swarmSize; i++){
+		swarm[i]->neighborsArray.clear();
 	}
 	
 	std::random_device seeder;
 	std::mt19937 engine(seeder());
 	uniform_int_distribution<int> randIndex(0, swarmSize-1);
-	pair<set<int>::iterator, bool> inSet
+	pair< set<int>::iterator, bool> inSet;
 	set<int> used; 
 	
-	for(int i = 0; int i < RANDOM_K; i++){
-		int index = engine(randIndex);
-		inSet = used.insert(0, index);
+	for(int i = 0; i < RANDOM_K; i++){
+		int index = randIndex(engine);
+		inSet = used.insert(index);
 		while(inSet.second == false){
-			index = engine(randIndex);
-			inSet = used.insert(0, index);
+			index = randIndex(engine);
+			inSet = used.insert(index);
 		}
 		swarm[i]->neighborsArray.push_back(swarm[index]);
 		swarm[i]->neighborsArray.push_back(swarm[i]);
@@ -429,13 +430,13 @@ void PSO(string neighborhoodTopology, int swarmSize, int numIterations, string t
 	std::random_device seeder;
 	std::mt19937 engine(seeder());
 	uniform_real_distribution<double> randDouble(0, 1);
-	double = randomChance;
+	double randomChance;
 
 	if(neighborhoodTopology.compare("ra") == 0){
 		for(int i = 0; i < numIterations; i++ ){
-			for(int j = 0; j < swarm.swarmSize; j++){
+			for(int j = 0; j < swarmSize; j++){
 				randomChance = randDouble(engine);
-				if(randDouble <= 0.2){
+				if(randomChance <= 0.2){
 					swarmObject->randomTopology();
 				}
 				swarmObject->swarm.at(j)->updateVelocity();
@@ -445,6 +446,7 @@ void PSO(string neighborhoodTopology, int swarmSize, int numIterations, string t
 			}
 			swarmObject->findGlobalBest();
 		}
+	}
 
 
 	for(int i = 0; i < numIterations; i++ ){
