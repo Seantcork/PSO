@@ -351,7 +351,7 @@ void Swarm::ringTopology(){
 }
 
 void Swarm::vonNeumanTopology(){
-	
+
 }
 
 void Swarm::randomTopology(){
@@ -401,21 +401,23 @@ double evalRastrigin (vector<double> position) {
 
 void PSO(string neighborhoodTopology, int swarmSize, int numIterations, string testFunction, int numDimensions){
 	
-	shared_ptr<Particle> swarmObject(new Swarm());
+	shared_ptr<Swarm> swarmObject(new Swarm());
 
 	swarmObject->initSwarm(swarmSize, numDimensions, neighborhoodTopology, testFunction);
 
 	for(int i = 0; i < numIterations; i++ ){
-		for(int j = 0; j < swarm.swarmSize; j++){
+		for(int j = 0; j < swarmSize; j++){
 			swarmObject->swarm.at(j)->updateVelocity();
 			swarmObject->swarm.at(j)->updatePosition();
 			swarmObject->swarm.at(j)->calculateFitness(testFunction);
 			swarmObject->swarm.at(j)->findNeighborhoodBest();
 		}
 		swarmObject->findGlobalBest();
+		if(i % 1000 == 0) {
+			cout << "Best Fitness on Iteration " << i << " is swarmObject->gBestFitness" << endl;
+		}
 	}
-	cout << "Best Fitness found: " << swarmObject->gBestFitness << endl;
-
+	cout << "Best Overall Fitness found: " << swarmObject->gBestFitness << endl;
 }
 
 
