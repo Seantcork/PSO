@@ -271,7 +271,6 @@ void Particle::updateVelocity(){
 	double pBestBias;
 	double nBestBias;
 
-
 	random_device seeder;
 	mt19937 engine(seeder());
 	for(int i = 0; i < position.size(); i++) { 
@@ -365,7 +364,7 @@ void Swarm::globalTopology(){
 //This function bases neighborhoods on the 
 void Swarm::ringTopology(){
 	
-	//takes care of all the elemetns between the first and last element
+	//takes care of all the elements between the first and last element
 	for(int i = 0; i < swarmSize; i++){
 		
 		//takes care of first elements
@@ -408,7 +407,7 @@ void Swarm::randomTopology(){
 	set<int> used; 
 	
 	for(int i = 0; int i < RANDOM_K; i++){
-		int index = engine(randIndex);
+		int index = rand(randIndex);
 		inSet = used.insert(0, index);
 		while(inSet.second == false){
 			index = engine(randIndex);
@@ -425,30 +424,15 @@ void PSO(string neighborhoodTopology, int swarmSize, int numIterations, string t
 
 	swarmObject->initSwarm(swarmSize, numDimensions, neighborhoodTopology, testFunction);
 
-
 	std::random_device seeder;
 	std::mt19937 engine(seeder());
 	uniform_real_distribution<double> randDouble(0, 1);
-	double = randomChance;
 
-	if(neighborhoodTopology.compare("ra") == 0){
-		for(int i = 0; i < numIterations; i++ ){
-			for(int j = 0; j < swarm.swarmSize; j++){
-				randomChance = randDouble(engine);
-				if(randDouble <= 0.2){
+	for(int i = 0; i < numIterations; i++ ) {
+		for(int j = 0; j < swarmSize; j++) {
+			if(neighborhoodTopology.compare("ra") == 0 && randDouble(engine) <= 0.2){
 					swarmObject->randomTopology();
-				}
-				swarmObject->swarm.at(j)->updateVelocity();
-				swarmObject->swarm.at(j)->updatePosition();
-				swarmObject->swarm.at(j)->calculateFitness(testFunction);
-				swarmObject->swarm.at(j)->findNeighborhoodBest();
 			}
-			swarmObject->findGlobalBest();
-		}
-
-
-	for(int i = 0; i < numIterations; i++ ){
-		for(int j = 0; j < swarmSize; j++){
 			swarmObject->swarm.at(j)->updateVelocity();
 			swarmObject->swarm.at(j)->updatePosition();
 			swarmObject->swarm.at(j)->calculateFitness(testFunction);
