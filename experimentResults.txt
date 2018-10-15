@@ -1,1981 +1,1470 @@
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.38017e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 4.98301e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.00428e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.22553e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.29576e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.53681e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.25329e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.13683e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.81861e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.53144e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.91675e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.61238e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.86994e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.72476e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.18689e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.23946e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.4097e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.50965e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.54849e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.43508e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0215
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9643
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9769
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0391
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9686
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9724
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9863
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9753
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9856
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9012
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0129
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9958
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0731
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0738
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0022
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0659
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9912
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0158
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8788
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0642
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 557.139
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 537.423
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 496.605
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 576.183
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 559.173
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 568.266
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 570.736
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 576.012
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 527.776
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 547.099
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 570.889
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 570.18
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 541.144
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 568.592
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 584.632
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 505.273
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 567.222
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 565.588
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 498.723
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 573.045
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.58211e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.36795e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.24029e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.17276e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.10676e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.98476e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.63599e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.31136e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.40877e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.25631e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.79165e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.72207e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.46923e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.30338e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.20415e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.45517e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.14493e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.22329e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.27292e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.08091e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9996
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0333
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9067
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.114
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.7886
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.98
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0104
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0608
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8221
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.7555
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0252
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0131
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9813
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0408
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9295
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9254
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.7374
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9935
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.1078
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0131
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 584.03
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 553.645
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 573.169
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 542.913
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 545.687
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 558.652
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 553.577
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 548.769
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 558.555
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 575.677
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 592.101
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 528.939
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 548.625
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 556.37
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 564.405
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 558.545
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 552.366
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 568.147
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 542.255
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 577.099
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.05884e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.99891e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.19865e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.65e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.95421e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.17461e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 4.14853e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.29483e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.53181e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.4731e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.06492e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.8526e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.4832e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.29235e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.31664e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.89945e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.9327e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.75557e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.9868e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.97413e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9371
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9824
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.1027
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8391
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0126
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.986
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9738
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9414
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9682
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8288
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0744
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9756
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.929
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0296
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9748
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0547
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.1041
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9172
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.977
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8093
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 602.554
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 546.68
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 536.288
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 530.234
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 563.466
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 572.492
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 534.424
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 597.983
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 545.643
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 557.016
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 536.906
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 549.742
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 582.135
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 530.954
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 541.234
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 592.595
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 520.082
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 560.044
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 526.995
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 531.593
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.35967e+08
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.93329e+08
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.41681e+08
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.97363e+08
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 7.00823e+08
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.66122e+08
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.3016e+08
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.97723e+08
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.58863e+08
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.74009e+08
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 7.30132e+08
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.96478e+08
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.10875e+08
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.18633e+08
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.80594e+08
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 7.22594e+08
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.21745e+08
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.35395e+08
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.75267e+08
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.03976e+08
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0267
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0396
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0639
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9811
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0211
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9939
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9968
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0464
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.7789
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9211
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.1089
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0071
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9329
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9858
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.969
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9342
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.1432
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9921
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0387
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9883
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 540.16
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 555.647
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 586.69
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 526.815
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 505.906
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 541.842
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 561.827
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 575.123
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 541.704
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 530.087
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 589.257
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 600.684
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 557.129
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 544.668
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 582.029
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 560.119
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 575.718
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 524.194
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 548.965
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 568.935
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.27233e+08
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.33894e+08
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.1505e+08
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.36126e+08
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.01459e+08
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 4.17283e+08
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.27093e+08
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.44941e+08
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.81112e+08
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.19359e+08
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.58939e+08
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.46319e+08
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.3772e+08
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.90899e+08
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.39555e+08
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.28304e+08
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.21435e+08
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.75362e+08
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.4856e+08
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.28635e+08
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0259
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9821
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8967
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8854
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.95
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8194
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.872
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9475
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9831
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0124
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0046
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8499
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0436
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9781
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9816
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9962
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9293
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0139
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9287
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.854
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 553.44
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 536.801
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 562.823
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 478.674
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 525.814
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 558.642
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 544.549
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 519.098
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 559.801
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 550.952
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 526.77
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 541.939
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 529.011
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 544.904
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 561.372
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 560.403
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 597.692
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 544.559
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 554.869
-Topology type: gl swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 527.612
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.05288e+08
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.2133e+08
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.22046e+08
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.86335e+08
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.46493e+08
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.90958e+08
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.11121e+08
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.83565e+08
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.86702e+08
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.2804e+08
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.12578e+08
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.95408e+08
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.53567e+08
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.60762e+08
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.80178e+08
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.97091e+08
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.37681e+08
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.41262e+08
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.41455e+08
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.19266e+08
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9999
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9976
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9865
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9186
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0076
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8445
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9844
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9272
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9201
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0298
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9452
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9006
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9534
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9429
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8825
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8509
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0159
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9189
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9433
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9069
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 576.775
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 538.425
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 531.464
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 498.262
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 559.447
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 504.828
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 537.702
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 553.995
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 497.609
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 559.242
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 566.72
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 525.921
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 552.221
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 479.765
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 494.531
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 539.273
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 527.176
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 519.692
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 501.248
-Topology type: ri swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 527.961
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.94687e+08
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.43958e+08
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.0058e+08
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.85246e+08
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.24029e+08
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.06063e+08
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.93497e+08
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.49497e+08
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.53891e+08
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.07788e+08
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.70948e+08
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.8112e+08
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.57489e+08
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.4169e+08
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.19284e+08
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.58235e+08
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.7959e+08
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.88557e+08
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.68962e+08
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.64421e+08
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.969
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8733
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.054
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.7899
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8725
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9871
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9623
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9383
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9109
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.944
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8698
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0276
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0232
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9596
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9299
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9949
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9371
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9332
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9084
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0339
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 555.985
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 518.727
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 555.83
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 576.925
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 542.999
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 542.148
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 554.84
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 536.757
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 549.314
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 536.865
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 502.01
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 557.03
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 550.135
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 510.565
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 527.592
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 560.549
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 562.477
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 548.227
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 510.011
-Topology type: vn swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 544.859
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 4.95031e+08
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.64507e+08
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.94376e+08
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 4.7914e+08
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 4.8993e+08
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.79871e+08
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.03543e+08
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.51613e+08
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 4.96037e+08
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.89669e+08
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.21055e+08
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.9778e+08
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.32975e+08
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.94388e+08
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.25666e+08
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.52716e+08
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.12279e+08
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.51852e+08
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.10571e+08
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.70196e+08
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9066
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9692
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.794
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8557
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9011
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9679
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9311
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8927
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8654
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9244
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0478
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.013
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8515
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8826
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9948
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9226
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9355
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9629
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8604
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9571
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 496.541
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 567.916
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 542.972
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 561.757
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 551.461
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 554.558
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 544.83
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 556.708
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 527.379
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 529.173
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 551.979
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 560.925
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 587.186
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 535.351
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 541.884
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 488.956
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 542.257
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 535.316
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 543.393
-Topology type: ra swarmSize: 30 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 555.931
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 4.97015e+08
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 4.88031e+08
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.53869e+08
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.21263e+08
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.09906e+08
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.00832e+08
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.28747e+08
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.16658e+08
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 4.94694e+08
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.50562e+08
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.55765e+08
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 4.32399e+08
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.6299e+08
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.47775e+08
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.38653e+08
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.64596e+08
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.06838e+08
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.40066e+08
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.92167e+08
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.63398e+08
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8252
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8755
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8826
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9434
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9683
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8813
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8917
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8058
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9543
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9132
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8979
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.7319
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8037
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9027
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.7813
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9188
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8921
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9476
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.7603
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9072
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 555.104
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 556.902
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 550.371
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 532.216
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 539.884
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 552.346
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 508.426
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 564.723
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 541.857
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 549.819
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 553.583
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 515.123
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 554.034
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 515.795
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 466.862
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 494.407
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 557.131
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 542.234
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 549.879
-Topology type: gl swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 519.184
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.88798e+08
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.95563e+08
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.0844e+08
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.83933e+08
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.1919e+08
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.00998e+08
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.53349e+08
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.64769e+08
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 4.95114e+08
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.47579e+08
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.56518e+08
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.43341e+08
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.93873e+08
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.92232e+08
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.75081e+08
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.53225e+08
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.72361e+08
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.14692e+08
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.87136e+08
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.2374e+08
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.5854
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.965
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9057
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9295
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9558
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8753
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9347
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8195
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9482
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.973
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8953
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.989
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8711
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9162
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8673
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9338
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8864
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9785
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9582
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9756
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 542.563
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 513.126
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 528.58
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 560.668
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 526.797
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 498.849
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 551.083
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 510.757
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 546.613
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 502.421
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 524.062
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 514.079
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 531.247
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 554.486
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 539.45
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 511.463
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 538.87
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 540.949
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 532.102
-Topology type: ri swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 527.297
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.64368e+08
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 4.72038e+08
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.11977e+08
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.52093e+08
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 4.59543e+08
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.18036e+08
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 4.92875e+08
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.59596e+08
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 4.94119e+08
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.78534e+08
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.45667e+08
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 4.60742e+08
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.34485e+08
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.03646e+08
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.22377e+08
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.11124e+08
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.67941e+08
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.06214e+08
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.72778e+08
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.57791e+08
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8506
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0067
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9545
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8568
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9251
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9796
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9328
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8053
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8487
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9653
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9539
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8116
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9151
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9169
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9779
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9197
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9553
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 21.0306
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9142
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9114
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 528.26
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 510.969
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 533.916
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 541.718
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 511.404
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 527.158
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 532.979
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 501.278
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 559.193
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 560.771
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 539.72
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 505.058
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 537.062
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 559.243
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 524.965
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 479.501
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 444.322
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 545.434
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 523.454
-Topology type: vn swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 474.898
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.73162e+08
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.84822e+08
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.5304e+08
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.61043e+08
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.69459e+08
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.40576e+08
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.92816e+08
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.61472e+08
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.79978e+08
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.48741e+08
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.62335e+08
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.30286e+08
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 6.17449e+08
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 4.88748e+08
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.30051e+08
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.36965e+08
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.53106e+08
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.85593e+08
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.89351e+08
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness found: 5.74896e+08
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9551
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9926
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8956
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9913
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9713
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8869
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9426
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9828
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.7985
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8889
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8631
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8603
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9553
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.6427
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9215
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9562
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9411
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8921
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.8654
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness found: 20.9355
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 552.802
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 554.825
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 495.002
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 529.498
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 508.573
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 541.815
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 542.176
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 493.951
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 490.919
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 546.191
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 547.112
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 545.313
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 544.906
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 548.216
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 515.998
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 531.767
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 521.561
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 500.336
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 548.711
-Topology type: ra swarmSize: 49 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness found: 538.118
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.66789e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.60043e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.09607e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.65056e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.61356e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 4.86744e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.85519e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.20011e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.86125e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 7.12893e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.2873e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 7.00812e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.11641e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.59273e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.25529e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.65089e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.85065e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.07939e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.75642e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.25245e+08
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0697
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.8656
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.9234
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.9731
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.931
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0293
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0585
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.06
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.033
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0301
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0638
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0821
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.1104
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0281
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0466
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.8562
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.908
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.8455
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0418
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0903
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 557.316
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 565.359
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 538.832
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 524.204
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 554.733
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 550.457
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 534.457
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 561.673
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 571.489
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 545.61
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 536.106
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 559.74
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 545.104
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 574.376
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 557.249
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 506.204
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 529.655
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 541.052
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 565.684
-Topology type: gl swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 547.676
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.25658e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.73448e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.91274e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.56793e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.4568e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.30874e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.78338e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.27889e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.62354e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.96394e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.33271e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.6085e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.89256e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.47904e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.01088e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.16717e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.32095e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.89815e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.56372e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.03486e+08
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.9746
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0122
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.9346
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.812
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0412
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.033
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.8651
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.8857
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.9607
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0547
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.9388
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.1015
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0404
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.9544
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.9506
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.9084
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.9888
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0017
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.9216
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.9693
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 529.576
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 568.758
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 571.71
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 532.112
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 548.444
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 582.742
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 502.413
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 557.843
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 554.731
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 577.131
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 506.668
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 564.349
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 566.29
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 498.833
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 566.124
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 520.958
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 497.858
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 479.654
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 535.791
-Topology type: ri swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 518.995
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.65261e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.49354e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.55066e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.59879e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.54982e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.24597e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.62912e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.58104e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.0115e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.4839e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.46461e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.86583e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.84024e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.75358e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.58127e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.40214e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.75139e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.08051e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 5.64916e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 6.45159e+08
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.9777
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.9244
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0887
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.9785
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.8945
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.9737
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0095
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0219
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0196
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.982
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0855
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.964
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.9236
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0126
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.8779
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.8649
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0303
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 21.0598
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.9887
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ack numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 20.7708
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 558.686
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 542.275
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 561.446
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 550.764
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 516.454
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 555.487
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 559.379
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 528.069
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 560.944
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 509.689
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 575.16
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 534.221
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 529.288
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 536.168
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 569.627
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 542.535
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 591.261
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 549.753
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 542.315
-Topology type: vn swarmSize: 16 Number of Iterations: 100 testFunction: ras numDimensions: 30
-Best Fitness on Iteration 0 is swarmObject->gBestFitness
-Best Overall Fitness found: 549.594
-Topology type: ra swarmSize: 16 Number of Iterations: 100 testFunction: rok numDimensions: 30
+Topology type: gl swarmSize: 16 Number of Iterations: 10000 testFunction: rok numDimensions: 30
+Best Fitness on Iteration 0 is 6.04635e+08
+Best Fitness on Iteration 1000 is 334.447
+Best Fitness on Iteration 2000 is 295.039
+Best Fitness on Iteration 3000 is 213.556
+Best Fitness on Iteration 4000 is 25.6053
+Best Fitness on Iteration 5000 is 22.2557
+Best Fitness on Iteration 6000 is 19.7201
+Best Fitness on Iteration 7000 is 17.5298
+Best Fitness on Iteration 8000 is 15.6438
+Best Fitness on Iteration 9000 is 14.3313
+Best Overall Fitness found: 12.9467
+Topology type: gl swarmSize: 16 Number of Iterations: 10000 testFunction: rok numDimensions: 30
+Best Fitness on Iteration 0 is 6.28298e+08
+Best Fitness on Iteration 1000 is 74.4945
+Best Fitness on Iteration 2000 is 71.8344
+Best Fitness on Iteration 3000 is 69.4806
+Best Fitness on Iteration 4000 is 4.48116
+Best Fitness on Iteration 5000 is 0.400626
+Best Fitness on Iteration 6000 is 0.141724
+Best Fitness on Iteration 7000 is 0.0514049
+Best Fitness on Iteration 8000 is 0.0198784
+Best Fitness on Iteration 9000 is 0.00744779
+Best Overall Fitness found: 0.00350084
+Topology type: gl swarmSize: 16 Number of Iterations: 10000 testFunction: rok numDimensions: 30
+Best Fitness on Iteration 0 is 6.40348e+08
+Best Fitness on Iteration 1000 is 28.1389
+Best Fitness on Iteration 2000 is 26.7743
+Best Fitness on Iteration 3000 is 25.4775
+Best Fitness on Iteration 4000 is 23.1495
+Best Fitness on Iteration 5000 is 21.0979
+Best Fitness on Iteration 6000 is 18.6583
+Best Fitness on Iteration 7000 is 16.44
+Best Fitness on Iteration 8000 is 14.1373
+Best Fitness on Iteration 9000 is 11.9408
+Best Overall Fitness found: 10.1368
+Topology type: gl swarmSize: 16 Number of Iterations: 10000 testFunction: ack numDimensions: 30
+Best Fitness on Iteration 0 is 21.3153
+Best Fitness on Iteration 1000 is 19.8169
+Best Fitness on Iteration 2000 is 19.8161
+Best Fitness on Iteration 3000 is 19.8161
+Best Fitness on Iteration 4000 is 19.8161
+Best Fitness on Iteration 5000 is 19.8161
+Best Fitness on Iteration 6000 is 19.8161
+Best Fitness on Iteration 7000 is 19.8161
+Best Fitness on Iteration 8000 is 19.8161
+Best Fitness on Iteration 9000 is 19.8161
+Best Overall Fitness found: 19.8161
+Topology type: gl swarmSize: 16 Number of Iterations: 10000 testFunction: ack numDimensions: 30
+Best Fitness on Iteration 0 is 21.3468
+Best Fitness on Iteration 1000 is 19.8409
+Best Fitness on Iteration 2000 is 19.8409
+Best Fitness on Iteration 3000 is 19.8409
+Best Fitness on Iteration 4000 is 19.8409
+Best Fitness on Iteration 5000 is 19.8409
+Best Fitness on Iteration 6000 is 19.8409
+Best Fitness on Iteration 7000 is 19.8409
+Best Fitness on Iteration 8000 is 19.8409
+Best Fitness on Iteration 9000 is 19.8409
+Best Overall Fitness found: 19.8409
+Topology type: gl swarmSize: 16 Number of Iterations: 10000 testFunction: ack numDimensions: 30
+Best Fitness on Iteration 0 is 21.272
+Best Fitness on Iteration 1000 is 19.8796
+Best Fitness on Iteration 2000 is 19.8796
+Best Fitness on Iteration 3000 is 19.8796
+Best Fitness on Iteration 4000 is 19.8796
+Best Fitness on Iteration 5000 is 19.8796
+Best Fitness on Iteration 6000 is 19.8796
+Best Fitness on Iteration 7000 is 19.8796
+Best Fitness on Iteration 8000 is 19.8796
+Best Fitness on Iteration 9000 is 19.8796
+Best Overall Fitness found: 19.8796
+Topology type: gl swarmSize: 16 Number of Iterations: 10000 testFunction: ras numDimensions: 30
+Best Fitness on Iteration 0 is 826.154
+Best Fitness on Iteration 1000 is 122.38
+Best Fitness on Iteration 2000 is 122.38
+Best Fitness on Iteration 3000 is 122.38
+Best Fitness on Iteration 4000 is 122.38
+Best Fitness on Iteration 5000 is 122.38
+Best Fitness on Iteration 6000 is 122.38
+Best Fitness on Iteration 7000 is 122.38
+Best Fitness on Iteration 8000 is 122.38
+Best Fitness on Iteration 9000 is 122.38
+Best Overall Fitness found: 122.38
+Topology type: gl swarmSize: 16 Number of Iterations: 10000 testFunction: ras numDimensions: 30
+Best Fitness on Iteration 0 is 806.707
+Best Fitness on Iteration 1000 is 105.465
+Best Fitness on Iteration 2000 is 105.465
+Best Fitness on Iteration 3000 is 105.465
+Best Fitness on Iteration 4000 is 105.465
+Best Fitness on Iteration 5000 is 105.465
+Best Fitness on Iteration 6000 is 105.465
+Best Fitness on Iteration 7000 is 105.465
+Best Fitness on Iteration 8000 is 105.465
+Best Fitness on Iteration 9000 is 105.465
+Best Overall Fitness found: 105.465
+Topology type: gl swarmSize: 16 Number of Iterations: 10000 testFunction: ras numDimensions: 30
+Best Fitness on Iteration 0 is 946.056
+Best Fitness on Iteration 1000 is 109.445
+Best Fitness on Iteration 2000 is 109.445
+Best Fitness on Iteration 3000 is 109.445
+Best Fitness on Iteration 4000 is 109.445
+Best Fitness on Iteration 5000 is 109.445
+Best Fitness on Iteration 6000 is 109.445
+Best Fitness on Iteration 7000 is 109.445
+Best Fitness on Iteration 8000 is 109.445
+Best Fitness on Iteration 9000 is 109.445
+Best Overall Fitness found: 109.445
+Topology type: ri swarmSize: 16 Number of Iterations: 10000 testFunction: rok numDimensions: 30
+Best Fitness on Iteration 0 is 6.70077e+08
+Best Fitness on Iteration 1000 is 517.875
+Best Fitness on Iteration 2000 is 6.32589
+Best Fitness on Iteration 3000 is 4.98808
+Best Fitness on Iteration 4000 is 4.00796
+Best Fitness on Iteration 5000 is 3.03956
+Best Fitness on Iteration 6000 is 2.03415
+Best Fitness on Iteration 7000 is 1.19591
+Best Fitness on Iteration 8000 is 0.728255
+Best Fitness on Iteration 9000 is 0.447927
+Best Overall Fitness found: 0.26122
+Topology type: ri swarmSize: 16 Number of Iterations: 10000 testFunction: rok numDimensions: 30
+Best Fitness on Iteration 0 is 5.85559e+08
+Best Fitness on Iteration 1000 is 129.666
+Best Fitness on Iteration 2000 is 126.427
+Best Fitness on Iteration 3000 is 122.232
+Best Fitness on Iteration 4000 is 117.85
+Best Fitness on Iteration 5000 is 113.24
+Best Fitness on Iteration 6000 is 109.788
+Best Fitness on Iteration 7000 is 106.711
+Best Fitness on Iteration 8000 is 103.395
+Best Fitness on Iteration 9000 is 99.5964
+Best Overall Fitness found: 95.1133
+Topology type: ri swarmSize: 16 Number of Iterations: 10000 testFunction: rok numDimensions: 30
+Best Fitness on Iteration 0 is 7.09462e+08
+Best Fitness on Iteration 1000 is 9.86074
+Best Fitness on Iteration 2000 is 6.81779
+Best Fitness on Iteration 3000 is 5.89461
+Best Fitness on Iteration 4000 is 5.42184
+Best Fitness on Iteration 5000 is 4.84767
+Best Fitness on Iteration 6000 is 4.27195
+Best Fitness on Iteration 7000 is 3.79452
+Best Fitness on Iteration 8000 is 3.37951
+Best Fitness on Iteration 9000 is 2.84174
+Best Overall Fitness found: 2.47225
+Topology type: ri swarmSize: 16 Number of Iterations: 10000 testFunction: ack numDimensions: 30
+Best Fitness on Iteration 0 is 21.3803
+Best Fitness on Iteration 1000 is 19.9284
+Best Fitness on Iteration 2000 is 19.857
+Best Fitness on Iteration 3000 is 19.857
+Best Fitness on Iteration 4000 is 19.8543
+Best Fitness on Iteration 5000 is 19.8543
+Best Fitness on Iteration 6000 is 19.8543
+Best Fitness on Iteration 7000 is 19.8543
+Best Fitness on Iteration 8000 is 19.8543
+Best Fitness on Iteration 9000 is 19.8543
+Best Overall Fitness found: 19.8543
+Topology type: ri swarmSize: 16 Number of Iterations: 10000 testFunction: ack numDimensions: 30
+Best Fitness on Iteration 0 is 21.3046
+Best Fitness on Iteration 1000 is 20.1628
+Best Fitness on Iteration 2000 is 19.9284
+Best Fitness on Iteration 3000 is 19.9168
+Best Fitness on Iteration 4000 is 19.913
+Best Fitness on Iteration 5000 is 19.9105
+Best Fitness on Iteration 6000 is 19.9095
+Best Fitness on Iteration 7000 is 19.9095
+Best Fitness on Iteration 8000 is 19.9095
+Best Fitness on Iteration 9000 is 19.9095
+Best Overall Fitness found: 19.9095
+Topology type: ri swarmSize: 16 Number of Iterations: 10000 testFunction: ack numDimensions: 30
+Best Fitness on Iteration 0 is 21.3429
+Best Fitness on Iteration 1000 is 19.8838
+Best Fitness on Iteration 2000 is 19.8422
+Best Fitness on Iteration 3000 is 19.8388
+Best Fitness on Iteration 4000 is 19.837
+Best Fitness on Iteration 5000 is 19.837
+Best Fitness on Iteration 6000 is 19.837
+Best Fitness on Iteration 7000 is 19.837
+Best Fitness on Iteration 8000 is 19.837
+Best Fitness on Iteration 9000 is 19.837
+Best Overall Fitness found: 19.837
+Topology type: ri swarmSize: 16 Number of Iterations: 10000 testFunction: ras numDimensions: 30
+Best Fitness on Iteration 0 is 841.512
+Best Fitness on Iteration 1000 is 77.0048
+Best Fitness on Iteration 2000 is 76.6118
+Best Fitness on Iteration 3000 is 76.6117
+Best Fitness on Iteration 4000 is 76.6117
+Best Fitness on Iteration 5000 is 76.6117
+Best Fitness on Iteration 6000 is 76.6117
+Best Fitness on Iteration 7000 is 76.6117
+Best Fitness on Iteration 8000 is 76.6117
+Best Fitness on Iteration 9000 is 76.6117
+Best Overall Fitness found: 76.6117
+Topology type: ri swarmSize: 16 Number of Iterations: 10000 testFunction: ras numDimensions: 30
+Best Fitness on Iteration 0 is 847.439
+Best Fitness on Iteration 1000 is 119.891
+Best Fitness on Iteration 2000 is 94.5208
+Best Fitness on Iteration 3000 is 94.5208
+Best Fitness on Iteration 4000 is 94.5208
+Best Fitness on Iteration 5000 is 94.5208
+Best Fitness on Iteration 6000 is 94.5208
+Best Fitness on Iteration 7000 is 94.5208
+Best Fitness on Iteration 8000 is 94.5208
+Best Fitness on Iteration 9000 is 94.5208
+Best Overall Fitness found: 94.5208
+Topology type: ri swarmSize: 16 Number of Iterations: 10000 testFunction: ras numDimensions: 30
+Best Fitness on Iteration 0 is 787.063
+Best Fitness on Iteration 1000 is 88.8
+Best Fitness on Iteration 2000 is 88.5511
+Best Fitness on Iteration 3000 is 88.5511
+Best Fitness on Iteration 4000 is 88.5511
+Best Fitness on Iteration 5000 is 88.5511
+Best Fitness on Iteration 6000 is 88.5511
+Best Fitness on Iteration 7000 is 88.5511
+Best Fitness on Iteration 8000 is 88.5511
+Best Fitness on Iteration 9000 is 88.5511
+Best Overall Fitness found: 88.5511
+Topology type: vn swarmSize: 16 Number of Iterations: 10000 testFunction: rok numDimensions: 30
+Swarm number rows: 4
+Swarm number cols: 4
+Particle i: 0
+Right neighbor is: 3
+Left neighbor is: 1
+Right neighbor is: 12
+Left neighbor is: 4
+
+Particle i: 1
+Right neighbor is: 0
+Left neighbor is: 2
+Right neighbor is: 13
+Left neighbor is: 5
+
+Particle i: 2
+Right neighbor is: 1
+Left neighbor is: 3
+Right neighbor is: 14
+Left neighbor is: 6
+
+Particle i: 3
+Right neighbor is: 2
+Left neighbor is: 0
+Right neighbor is: 15
+Left neighbor is: 7
+
+Particle i: 4
+Right neighbor is: 7
+Left neighbor is: 5
+Right neighbor is: 0
+Left neighbor is: 8
+
+Particle i: 5
+Right neighbor is: 4
+Left neighbor is: 6
+Right neighbor is: 1
+Left neighbor is: 9
+
+Particle i: 6
+Right neighbor is: 5
+Left neighbor is: 7
+Right neighbor is: 2
+Left neighbor is: 10
+
+Particle i: 7
+Right neighbor is: 6
+Left neighbor is: 4
+Right neighbor is: 3
+Left neighbor is: 11
+
+Particle i: 8
+Right neighbor is: 11
+Left neighbor is: 9
+Right neighbor is: 4
+Left neighbor is: 12
+
+Particle i: 9
+Right neighbor is: 8
+Left neighbor is: 10
+Right neighbor is: 5
+Left neighbor is: 13
+
+Particle i: 10
+Right neighbor is: 9
+Left neighbor is: 11
+Right neighbor is: 6
+Left neighbor is: 14
+
+Particle i: 11
+Right neighbor is: 10
+Left neighbor is: 8
+Right neighbor is: 7
+Left neighbor is: 15
+
+Particle i: 12
+Right neighbor is: 15
+Left neighbor is: 13
+Right neighbor is: 8
+Left neighbor is: 0
+
+Particle i: 13
+Right neighbor is: 12
+Left neighbor is: 14
+Right neighbor is: 9
+Left neighbor is: 1
+
+Particle i: 14
+Right neighbor is: 13
+Left neighbor is: 15
+Right neighbor is: 10
+Left neighbor is: 2
+
+Particle i: 15
+Right neighbor is: 14
+Left neighbor is: 12
+Right neighbor is: 11
+Left neighbor is: 3
+
+Best Fitness on Iteration 0 is 5.5367e+08
+Best Fitness on Iteration 1000 is 99.8409
+Best Fitness on Iteration 2000 is 95.7802
+Best Fitness on Iteration 3000 is 93.6794
+Best Fitness on Iteration 4000 is 91.2868
+Best Fitness on Iteration 5000 is 88.8748
+Best Fitness on Iteration 6000 is 86.9583
+Best Fitness on Iteration 7000 is 85.054
+Best Fitness on Iteration 8000 is 82.6565
+Best Fitness on Iteration 9000 is 14.6741
+Best Overall Fitness found: 13.1094
+Topology type: vn swarmSize: 16 Number of Iterations: 10000 testFunction: rok numDimensions: 30
+Swarm number rows: 4
+Swarm number cols: 4
+Particle i: 0
+Right neighbor is: 3
+Left neighbor is: 1
+Right neighbor is: 12
+Left neighbor is: 4
+
+Particle i: 1
+Right neighbor is: 0
+Left neighbor is: 2
+Right neighbor is: 13
+Left neighbor is: 5
+
+Particle i: 2
+Right neighbor is: 1
+Left neighbor is: 3
+Right neighbor is: 14
+Left neighbor is: 6
+
+Particle i: 3
+Right neighbor is: 2
+Left neighbor is: 0
+Right neighbor is: 15
+Left neighbor is: 7
+
+Particle i: 4
+Right neighbor is: 7
+Left neighbor is: 5
+Right neighbor is: 0
+Left neighbor is: 8
+
+Particle i: 5
+Right neighbor is: 4
+Left neighbor is: 6
+Right neighbor is: 1
+Left neighbor is: 9
+
+Particle i: 6
+Right neighbor is: 5
+Left neighbor is: 7
+Right neighbor is: 2
+Left neighbor is: 10
+
+Particle i: 7
+Right neighbor is: 6
+Left neighbor is: 4
+Right neighbor is: 3
+Left neighbor is: 11
+
+Particle i: 8
+Right neighbor is: 11
+Left neighbor is: 9
+Right neighbor is: 4
+Left neighbor is: 12
+
+Particle i: 9
+Right neighbor is: 8
+Left neighbor is: 10
+Right neighbor is: 5
+Left neighbor is: 13
+
+Particle i: 10
+Right neighbor is: 9
+Left neighbor is: 11
+Right neighbor is: 6
+Left neighbor is: 14
+
+Particle i: 11
+Right neighbor is: 10
+Left neighbor is: 8
+Right neighbor is: 7
+Left neighbor is: 15
+
+Particle i: 12
+Right neighbor is: 15
+Left neighbor is: 13
+Right neighbor is: 8
+Left neighbor is: 0
+
+Particle i: 13
+Right neighbor is: 12
+Left neighbor is: 14
+Right neighbor is: 9
+Left neighbor is: 1
+
+Particle i: 14
+Right neighbor is: 13
+Left neighbor is: 15
+Right neighbor is: 10
+Left neighbor is: 2
+
+Particle i: 15
+Right neighbor is: 14
+Left neighbor is: 12
+Right neighbor is: 11
+Left neighbor is: 3
+
+Best Fitness on Iteration 0 is 7.16117e+08
+Best Fitness on Iteration 1000 is 152.327
+Best Fitness on Iteration 2000 is 142.256
+Best Fitness on Iteration 3000 is 136.327
+Best Fitness on Iteration 4000 is 117.932
+Best Fitness on Iteration 5000 is 97.0415
+Best Fitness on Iteration 6000 is 14.0951
+Best Fitness on Iteration 7000 is 12.7338
+Best Fitness on Iteration 8000 is 11.3355
+Best Fitness on Iteration 9000 is 10.0538
+Best Overall Fitness found: 8.77807
+Topology type: vn swarmSize: 16 Number of Iterations: 10000 testFunction: rok numDimensions: 30
+Swarm number rows: 4
+Swarm number cols: 4
+Particle i: 0
+Right neighbor is: 3
+Left neighbor is: 1
+Right neighbor is: 12
+Left neighbor is: 4
+
+Particle i: 1
+Right neighbor is: 0
+Left neighbor is: 2
+Right neighbor is: 13
+Left neighbor is: 5
+
+Particle i: 2
+Right neighbor is: 1
+Left neighbor is: 3
+Right neighbor is: 14
+Left neighbor is: 6
+
+Particle i: 3
+Right neighbor is: 2
+Left neighbor is: 0
+Right neighbor is: 15
+Left neighbor is: 7
+
+Particle i: 4
+Right neighbor is: 7
+Left neighbor is: 5
+Right neighbor is: 0
+Left neighbor is: 8
+
+Particle i: 5
+Right neighbor is: 4
+Left neighbor is: 6
+Right neighbor is: 1
+Left neighbor is: 9
+
+Particle i: 6
+Right neighbor is: 5
+Left neighbor is: 7
+Right neighbor is: 2
+Left neighbor is: 10
+
+Particle i: 7
+Right neighbor is: 6
+Left neighbor is: 4
+Right neighbor is: 3
+Left neighbor is: 11
+
+Particle i: 8
+Right neighbor is: 11
+Left neighbor is: 9
+Right neighbor is: 4
+Left neighbor is: 12
+
+Particle i: 9
+Right neighbor is: 8
+Left neighbor is: 10
+Right neighbor is: 5
+Left neighbor is: 13
+
+Particle i: 10
+Right neighbor is: 9
+Left neighbor is: 11
+Right neighbor is: 6
+Left neighbor is: 14
+
+Particle i: 11
+Right neighbor is: 10
+Left neighbor is: 8
+Right neighbor is: 7
+Left neighbor is: 15
+
+Particle i: 12
+Right neighbor is: 15
+Left neighbor is: 13
+Right neighbor is: 8
+Left neighbor is: 0
+
+Particle i: 13
+Right neighbor is: 12
+Left neighbor is: 14
+Right neighbor is: 9
+Left neighbor is: 1
+
+Particle i: 14
+Right neighbor is: 13
+Left neighbor is: 15
+Right neighbor is: 10
+Left neighbor is: 2
+
+Particle i: 15
+Right neighbor is: 14
+Left neighbor is: 12
+Right neighbor is: 11
+Left neighbor is: 3
+
+Best Fitness on Iteration 0 is 6.59525e+08
+Best Fitness on Iteration 1000 is 90.1952
+Best Fitness on Iteration 2000 is 88.3524
+Best Fitness on Iteration 3000 is 20.7823
+Best Fitness on Iteration 4000 is 18.3829
+Best Fitness on Iteration 5000 is 14.7579
+Best Fitness on Iteration 6000 is 12.9043
+Best Fitness on Iteration 7000 is 10.8199
+Best Fitness on Iteration 8000 is 9.14142
+Best Fitness on Iteration 9000 is 7.89508
+Best Overall Fitness found: 6.97972
+Topology type: vn swarmSize: 16 Number of Iterations: 10000 testFunction: ack numDimensions: 30
+Swarm number rows: 4
+Swarm number cols: 4
+Particle i: 0
+Right neighbor is: 3
+Left neighbor is: 1
+Right neighbor is: 12
+Left neighbor is: 4
+
+Particle i: 1
+Right neighbor is: 0
+Left neighbor is: 2
+Right neighbor is: 13
+Left neighbor is: 5
+
+Particle i: 2
+Right neighbor is: 1
+Left neighbor is: 3
+Right neighbor is: 14
+Left neighbor is: 6
+
+Particle i: 3
+Right neighbor is: 2
+Left neighbor is: 0
+Right neighbor is: 15
+Left neighbor is: 7
+
+Particle i: 4
+Right neighbor is: 7
+Left neighbor is: 5
+Right neighbor is: 0
+Left neighbor is: 8
+
+Particle i: 5
+Right neighbor is: 4
+Left neighbor is: 6
+Right neighbor is: 1
+Left neighbor is: 9
+
+Particle i: 6
+Right neighbor is: 5
+Left neighbor is: 7
+Right neighbor is: 2
+Left neighbor is: 10
+
+Particle i: 7
+Right neighbor is: 6
+Left neighbor is: 4
+Right neighbor is: 3
+Left neighbor is: 11
+
+Particle i: 8
+Right neighbor is: 11
+Left neighbor is: 9
+Right neighbor is: 4
+Left neighbor is: 12
+
+Particle i: 9
+Right neighbor is: 8
+Left neighbor is: 10
+Right neighbor is: 5
+Left neighbor is: 13
+
+Particle i: 10
+Right neighbor is: 9
+Left neighbor is: 11
+Right neighbor is: 6
+Left neighbor is: 14
+
+Particle i: 11
+Right neighbor is: 10
+Left neighbor is: 8
+Right neighbor is: 7
+Left neighbor is: 15
+
+Particle i: 12
+Right neighbor is: 15
+Left neighbor is: 13
+Right neighbor is: 8
+Left neighbor is: 0
+
+Particle i: 13
+Right neighbor is: 12
+Left neighbor is: 14
+Right neighbor is: 9
+Left neighbor is: 1
+
+Particle i: 14
+Right neighbor is: 13
+Left neighbor is: 15
+Right neighbor is: 10
+Left neighbor is: 2
+
+Particle i: 15
+Right neighbor is: 14
+Left neighbor is: 12
+Right neighbor is: 11
+Left neighbor is: 3
+
+Best Fitness on Iteration 0 is 21.3321
+Best Fitness on Iteration 1000 is 20.1841
+Best Fitness on Iteration 2000 is 19.8181
+Best Fitness on Iteration 3000 is 19.818
+Best Fitness on Iteration 4000 is 19.818
+Best Fitness on Iteration 5000 is 19.818
+Best Fitness on Iteration 6000 is 19.818
+Best Fitness on Iteration 7000 is 19.818
+Best Fitness on Iteration 8000 is 19.818
+Best Fitness on Iteration 9000 is 19.818
+Best Overall Fitness found: 19.818
+Topology type: vn swarmSize: 16 Number of Iterations: 10000 testFunction: ack numDimensions: 30
+Swarm number rows: 4
+Swarm number cols: 4
+Particle i: 0
+Right neighbor is: 3
+Left neighbor is: 1
+Right neighbor is: 12
+Left neighbor is: 4
+
+Particle i: 1
+Right neighbor is: 0
+Left neighbor is: 2
+Right neighbor is: 13
+Left neighbor is: 5
+
+Particle i: 2
+Right neighbor is: 1
+Left neighbor is: 3
+Right neighbor is: 14
+Left neighbor is: 6
+
+Particle i: 3
+Right neighbor is: 2
+Left neighbor is: 0
+Right neighbor is: 15
+Left neighbor is: 7
+
+Particle i: 4
+Right neighbor is: 7
+Left neighbor is: 5
+Right neighbor is: 0
+Left neighbor is: 8
+
+Particle i: 5
+Right neighbor is: 4
+Left neighbor is: 6
+Right neighbor is: 1
+Left neighbor is: 9
+
+Particle i: 6
+Right neighbor is: 5
+Left neighbor is: 7
+Right neighbor is: 2
+Left neighbor is: 10
+
+Particle i: 7
+Right neighbor is: 6
+Left neighbor is: 4
+Right neighbor is: 3
+Left neighbor is: 11
+
+Particle i: 8
+Right neighbor is: 11
+Left neighbor is: 9
+Right neighbor is: 4
+Left neighbor is: 12
+
+Particle i: 9
+Right neighbor is: 8
+Left neighbor is: 10
+Right neighbor is: 5
+Left neighbor is: 13
+
+Particle i: 10
+Right neighbor is: 9
+Left neighbor is: 11
+Right neighbor is: 6
+Left neighbor is: 14
+
+Particle i: 11
+Right neighbor is: 10
+Left neighbor is: 8
+Right neighbor is: 7
+Left neighbor is: 15
+
+Particle i: 12
+Right neighbor is: 15
+Left neighbor is: 13
+Right neighbor is: 8
+Left neighbor is: 0
+
+Particle i: 13
+Right neighbor is: 12
+Left neighbor is: 14
+Right neighbor is: 9
+Left neighbor is: 1
+
+Particle i: 14
+Right neighbor is: 13
+Left neighbor is: 15
+Right neighbor is: 10
+Left neighbor is: 2
+
+Particle i: 15
+Right neighbor is: 14
+Left neighbor is: 12
+Right neighbor is: 11
+Left neighbor is: 3
+
+Best Fitness on Iteration 0 is 21.5369
+Best Fitness on Iteration 1000 is 19.8648
+Best Fitness on Iteration 2000 is 19.8646
+Best Fitness on Iteration 3000 is 19.8646
+Best Fitness on Iteration 4000 is 19.8646
+Best Fitness on Iteration 5000 is 19.8646
+Best Fitness on Iteration 6000 is 19.8401
+Best Fitness on Iteration 7000 is 19.8401
+Best Fitness on Iteration 8000 is 19.8401
+Best Fitness on Iteration 9000 is 19.8401
+Best Overall Fitness found: 19.8401
+Topology type: vn swarmSize: 16 Number of Iterations: 10000 testFunction: ack numDimensions: 30
+Swarm number rows: 4
+Swarm number cols: 4
+Particle i: 0
+Right neighbor is: 3
+Left neighbor is: 1
+Right neighbor is: 12
+Left neighbor is: 4
+
+Particle i: 1
+Right neighbor is: 0
+Left neighbor is: 2
+Right neighbor is: 13
+Left neighbor is: 5
+
+Particle i: 2
+Right neighbor is: 1
+Left neighbor is: 3
+Right neighbor is: 14
+Left neighbor is: 6
+
+Particle i: 3
+Right neighbor is: 2
+Left neighbor is: 0
+Right neighbor is: 15
+Left neighbor is: 7
+
+Particle i: 4
+Right neighbor is: 7
+Left neighbor is: 5
+Right neighbor is: 0
+Left neighbor is: 8
+
+Particle i: 5
+Right neighbor is: 4
+Left neighbor is: 6
+Right neighbor is: 1
+Left neighbor is: 9
+
+Particle i: 6
+Right neighbor is: 5
+Left neighbor is: 7
+Right neighbor is: 2
+Left neighbor is: 10
+
+Particle i: 7
+Right neighbor is: 6
+Left neighbor is: 4
+Right neighbor is: 3
+Left neighbor is: 11
+
+Particle i: 8
+Right neighbor is: 11
+Left neighbor is: 9
+Right neighbor is: 4
+Left neighbor is: 12
+
+Particle i: 9
+Right neighbor is: 8
+Left neighbor is: 10
+Right neighbor is: 5
+Left neighbor is: 13
+
+Particle i: 10
+Right neighbor is: 9
+Left neighbor is: 11
+Right neighbor is: 6
+Left neighbor is: 14
+
+Particle i: 11
+Right neighbor is: 10
+Left neighbor is: 8
+Right neighbor is: 7
+Left neighbor is: 15
+
+Particle i: 12
+Right neighbor is: 15
+Left neighbor is: 13
+Right neighbor is: 8
+Left neighbor is: 0
+
+Particle i: 13
+Right neighbor is: 12
+Left neighbor is: 14
+Right neighbor is: 9
+Left neighbor is: 1
+
+Particle i: 14
+Right neighbor is: 13
+Left neighbor is: 15
+Right neighbor is: 10
+Left neighbor is: 2
+
+Particle i: 15
+Right neighbor is: 14
+Left neighbor is: 12
+Right neighbor is: 11
+Left neighbor is: 3
+
+Best Fitness on Iteration 0 is 21.2583
+Best Fitness on Iteration 1000 is 19.7186
+Best Fitness on Iteration 2000 is 19.7085
+Best Fitness on Iteration 3000 is 19.7085
+Best Fitness on Iteration 4000 is 19.7085
+Best Fitness on Iteration 5000 is 19.7085
+Best Fitness on Iteration 6000 is 19.7085
+Best Fitness on Iteration 7000 is 19.7085
+Best Fitness on Iteration 8000 is 19.7085
+Best Fitness on Iteration 9000 is 19.7085
+Best Overall Fitness found: 19.7085
+Topology type: vn swarmSize: 16 Number of Iterations: 10000 testFunction: ras numDimensions: 30
+Swarm number rows: 4
+Swarm number cols: 4
+Particle i: 0
+Right neighbor is: 3
+Left neighbor is: 1
+Right neighbor is: 12
+Left neighbor is: 4
+
+Particle i: 1
+Right neighbor is: 0
+Left neighbor is: 2
+Right neighbor is: 13
+Left neighbor is: 5
+
+Particle i: 2
+Right neighbor is: 1
+Left neighbor is: 3
+Right neighbor is: 14
+Left neighbor is: 6
+
+Particle i: 3
+Right neighbor is: 2
+Left neighbor is: 0
+Right neighbor is: 15
+Left neighbor is: 7
+
+Particle i: 4
+Right neighbor is: 7
+Left neighbor is: 5
+Right neighbor is: 0
+Left neighbor is: 8
+
+Particle i: 5
+Right neighbor is: 4
+Left neighbor is: 6
+Right neighbor is: 1
+Left neighbor is: 9
+
+Particle i: 6
+Right neighbor is: 5
+Left neighbor is: 7
+Right neighbor is: 2
+Left neighbor is: 10
+
+Particle i: 7
+Right neighbor is: 6
+Left neighbor is: 4
+Right neighbor is: 3
+Left neighbor is: 11
+
+Particle i: 8
+Right neighbor is: 11
+Left neighbor is: 9
+Right neighbor is: 4
+Left neighbor is: 12
+
+Particle i: 9
+Right neighbor is: 8
+Left neighbor is: 10
+Right neighbor is: 5
+Left neighbor is: 13
+
+Particle i: 10
+Right neighbor is: 9
+Left neighbor is: 11
+Right neighbor is: 6
+Left neighbor is: 14
+
+Particle i: 11
+Right neighbor is: 10
+Left neighbor is: 8
+Right neighbor is: 7
+Left neighbor is: 15
+
+Particle i: 12
+Right neighbor is: 15
+Left neighbor is: 13
+Right neighbor is: 8
+Left neighbor is: 0
+
+Particle i: 13
+Right neighbor is: 12
+Left neighbor is: 14
+Right neighbor is: 9
+Left neighbor is: 1
+
+Particle i: 14
+Right neighbor is: 13
+Left neighbor is: 15
+Right neighbor is: 10
+Left neighbor is: 2
+
+Particle i: 15
+Right neighbor is: 14
+Left neighbor is: 12
+Right neighbor is: 11
+Left neighbor is: 3
+
+Best Fitness on Iteration 0 is 858.595
+Best Fitness on Iteration 1000 is 102.48
+Best Fitness on Iteration 2000 is 102.48
+Best Fitness on Iteration 3000 is 102.48
+Best Fitness on Iteration 4000 is 102.48
+Best Fitness on Iteration 5000 is 102.48
+Best Fitness on Iteration 6000 is 102.48
+Best Fitness on Iteration 7000 is 102.48
+Best Fitness on Iteration 8000 is 102.48
+Best Fitness on Iteration 9000 is 102.48
+Best Overall Fitness found: 102.48
+Topology type: vn swarmSize: 16 Number of Iterations: 10000 testFunction: ras numDimensions: 30
+Swarm number rows: 4
+Swarm number cols: 4
+Particle i: 0
+Right neighbor is: 3
+Left neighbor is: 1
+Right neighbor is: 12
+Left neighbor is: 4
+
+Particle i: 1
+Right neighbor is: 0
+Left neighbor is: 2
+Right neighbor is: 13
+Left neighbor is: 5
+
+Particle i: 2
+Right neighbor is: 1
+Left neighbor is: 3
+Right neighbor is: 14
+Left neighbor is: 6
+
+Particle i: 3
+Right neighbor is: 2
+Left neighbor is: 0
+Right neighbor is: 15
+Left neighbor is: 7
+
+Particle i: 4
+Right neighbor is: 7
+Left neighbor is: 5
+Right neighbor is: 0
+Left neighbor is: 8
+
+Particle i: 5
+Right neighbor is: 4
+Left neighbor is: 6
+Right neighbor is: 1
+Left neighbor is: 9
+
+Particle i: 6
+Right neighbor is: 5
+Left neighbor is: 7
+Right neighbor is: 2
+Left neighbor is: 10
+
+Particle i: 7
+Right neighbor is: 6
+Left neighbor is: 4
+Right neighbor is: 3
+Left neighbor is: 11
+
+Particle i: 8
+Right neighbor is: 11
+Left neighbor is: 9
+Right neighbor is: 4
+Left neighbor is: 12
+
+Particle i: 9
+Right neighbor is: 8
+Left neighbor is: 10
+Right neighbor is: 5
+Left neighbor is: 13
+
+Particle i: 10
+Right neighbor is: 9
+Left neighbor is: 11
+Right neighbor is: 6
+Left neighbor is: 14
+
+Particle i: 11
+Right neighbor is: 10
+Left neighbor is: 8
+Right neighbor is: 7
+Left neighbor is: 15
+
+Particle i: 12
+Right neighbor is: 15
+Left neighbor is: 13
+Right neighbor is: 8
+Left neighbor is: 0
+
+Particle i: 13
+Right neighbor is: 12
+Left neighbor is: 14
+Right neighbor is: 9
+Left neighbor is: 1
+
+Particle i: 14
+Right neighbor is: 13
+Left neighbor is: 15
+Right neighbor is: 10
+Left neighbor is: 2
+
+Particle i: 15
+Right neighbor is: 14
+Left neighbor is: 12
+Right neighbor is: 11
+Left neighbor is: 3
+
+Best Fitness on Iteration 0 is 897.6
+Best Fitness on Iteration 1000 is 59.6975
+Best Fitness on Iteration 2000 is 59.6975
+Best Fitness on Iteration 3000 is 59.6975
+Best Fitness on Iteration 4000 is 59.6975
+Best Fitness on Iteration 5000 is 59.6975
+Best Fitness on Iteration 6000 is 59.6975
+Best Fitness on Iteration 7000 is 59.6975
+Best Fitness on Iteration 8000 is 59.6975
+Best Fitness on Iteration 9000 is 59.6975
+Best Overall Fitness found: 59.6975
+Topology type: vn swarmSize: 16 Number of Iterations: 10000 testFunction: ras numDimensions: 30
+Swarm number rows: 4
+Swarm number cols: 4
+Particle i: 0
+Right neighbor is: 3
+Left neighbor is: 1
+Right neighbor is: 12
+Left neighbor is: 4
+
+Particle i: 1
+Right neighbor is: 0
+Left neighbor is: 2
+Right neighbor is: 13
+Left neighbor is: 5
+
+Particle i: 2
+Right neighbor is: 1
+Left neighbor is: 3
+Right neighbor is: 14
+Left neighbor is: 6
+
+Particle i: 3
+Right neighbor is: 2
+Left neighbor is: 0
+Right neighbor is: 15
+Left neighbor is: 7
+
+Particle i: 4
+Right neighbor is: 7
+Left neighbor is: 5
+Right neighbor is: 0
+Left neighbor is: 8
+
+Particle i: 5
+Right neighbor is: 4
+Left neighbor is: 6
+Right neighbor is: 1
+Left neighbor is: 9
+
+Particle i: 6
+Right neighbor is: 5
+Left neighbor is: 7
+Right neighbor is: 2
+Left neighbor is: 10
+
+Particle i: 7
+Right neighbor is: 6
+Left neighbor is: 4
+Right neighbor is: 3
+Left neighbor is: 11
+
+Particle i: 8
+Right neighbor is: 11
+Left neighbor is: 9
+Right neighbor is: 4
+Left neighbor is: 12
+
+Particle i: 9
+Right neighbor is: 8
+Left neighbor is: 10
+Right neighbor is: 5
+Left neighbor is: 13
+
+Particle i: 10
+Right neighbor is: 9
+Left neighbor is: 11
+Right neighbor is: 6
+Left neighbor is: 14
+
+Particle i: 11
+Right neighbor is: 10
+Left neighbor is: 8
+Right neighbor is: 7
+Left neighbor is: 15
+
+Particle i: 12
+Right neighbor is: 15
+Left neighbor is: 13
+Right neighbor is: 8
+Left neighbor is: 0
+
+Particle i: 13
+Right neighbor is: 12
+Left neighbor is: 14
+Right neighbor is: 9
+Left neighbor is: 1
+
+Particle i: 14
+Right neighbor is: 13
+Left neighbor is: 15
+Right neighbor is: 10
+Left neighbor is: 2
+
+Particle i: 15
+Right neighbor is: 14
+Left neighbor is: 12
+Right neighbor is: 11
+Left neighbor is: 3
+
+Best Fitness on Iteration 0 is 901.101
+Best Fitness on Iteration 1000 is 82.5819
+Best Fitness on Iteration 2000 is 82.5813
+Best Fitness on Iteration 3000 is 57.7528
+Best Fitness on Iteration 4000 is 57.7075
+Best Fitness on Iteration 5000 is 57.7075
+Best Fitness on Iteration 6000 is 57.7075
+Best Fitness on Iteration 7000 is 57.7075
+Best Fitness on Iteration 8000 is 57.7075
+Best Fitness on Iteration 9000 is 57.7075
+Best Overall Fitness found: 57.7075
+Topology type: ra swarmSize: 16 Number of Iterations: 10000 testFunction: rok numDimensions: 30
+Best Fitness on Iteration 0 is 6.25941e+08
+Best Fitness on Iteration 1000 is 546.309
+Best Fitness on Iteration 2000 is 74.8965
+Best Fitness on Iteration 3000 is 16.9059
+Best Fitness on Iteration 4000 is 6.71229
+Best Fitness on Iteration 5000 is 5.41653
+Best Fitness on Iteration 6000 is 4.75787
+Best Fitness on Iteration 7000 is 4.37915
+Best Fitness on Iteration 8000 is 4.20979
+Best Fitness on Iteration 9000 is 4.10608
+Best Overall Fitness found: 4.0769
+Topology type: ra swarmSize: 16 Number of Iterations: 10000 testFunction: rok numDimensions: 30
+Best Fitness on Iteration 0 is 6.43152e+08
+Best Fitness on Iteration 1000 is 195.228
+Best Fitness on Iteration 2000 is 131.603
+Best Fitness on Iteration 3000 is 12.5871
+Best Fitness on Iteration 4000 is 11.7256
+Best Fitness on Iteration 5000 is 10.4876
+Best Fitness on Iteration 6000 is 9.47839
+Best Fitness on Iteration 7000 is 8.28589
+Best Fitness on Iteration 8000 is 7.14952
+Best Fitness on Iteration 9000 is 5.8559
+Best Overall Fitness found: 4.928
+Topology type: ra swarmSize: 16 Number of Iterations: 10000 testFunction: rok numDimensions: 30
+Best Fitness on Iteration 0 is 5.67467e+08
+Best Fitness on Iteration 1000 is 171.092
+Best Fitness on Iteration 2000 is 154.596
+Best Fitness on Iteration 3000 is 147.214
+Best Fitness on Iteration 4000 is 133.544
+Best Fitness on Iteration 5000 is 112.496
+Best Fitness on Iteration 6000 is 26.5343
+Best Fitness on Iteration 7000 is 25.6543
+Best Fitness on Iteration 8000 is 24.5092
+Best Fitness on Iteration 9000 is 23.2982
+Best Overall Fitness found: 21.9949
+Topology type: ra swarmSize: 16 Number of Iterations: 10000 testFunction: ack numDimensions: 30
+Best Fitness on Iteration 0 is 21.4088
+Best Fitness on Iteration 1000 is 19.8167
+Best Fitness on Iteration 2000 is 19.641
+Best Fitness on Iteration 3000 is 19.6275
+Best Fitness on Iteration 4000 is 19.6275
+Best Fitness on Iteration 5000 is 19.6275
+Best Fitness on Iteration 6000 is 19.6275
+Best Fitness on Iteration 7000 is 19.6275
+Best Fitness on Iteration 8000 is 19.6275
+Best Fitness on Iteration 9000 is 19.6275
+Best Overall Fitness found: 19.6275
+Topology type: ra swarmSize: 16 Number of Iterations: 10000 testFunction: ack numDimensions: 30
+Best Fitness on Iteration 0 is 21.2181
+Best Fitness on Iteration 1000 is 19.9172
+Best Fitness on Iteration 2000 is 19.9171
+Best Fitness on Iteration 3000 is 19.9171
+Best Fitness on Iteration 4000 is 19.9171
+Best Fitness on Iteration 5000 is 19.9171
+Best Fitness on Iteration 6000 is 19.9171
+Best Fitness on Iteration 7000 is 19.9171
+Best Fitness on Iteration 8000 is 19.9171
+Best Fitness on Iteration 9000 is 19.9171
+Best Overall Fitness found: 19.9171
+Topology type: ra swarmSize: 16 Number of Iterations: 10000 testFunction: ack numDimensions: 30
+Best Fitness on Iteration 0 is 21.4017
+Best Fitness on Iteration 1000 is 19.875
+Best Fitness on Iteration 2000 is 19.8658
+Best Fitness on Iteration 3000 is 19.8658
+Best Fitness on Iteration 4000 is 19.8658
+Best Fitness on Iteration 5000 is 19.8658
+Best Fitness on Iteration 6000 is 19.8658
+Best Fitness on Iteration 7000 is 19.8658
+Best Fitness on Iteration 8000 is 19.8658
+Best Fitness on Iteration 9000 is 19.8658
+Best Overall Fitness found: 19.8658
+Topology type: ra swarmSize: 16 Number of Iterations: 10000 testFunction: ras numDimensions: 30
+Best Fitness on Iteration 0 is 922.579
+Best Fitness on Iteration 1000 is 83.5769
+Best Fitness on Iteration 2000 is 83.5764
+Best Fitness on Iteration 3000 is 83.5764
+Best Fitness on Iteration 4000 is 83.5764
+Best Fitness on Iteration 5000 is 83.5764
+Best Fitness on Iteration 6000 is 83.5764
+Best Fitness on Iteration 7000 is 83.5764
+Best Fitness on Iteration 8000 is 83.5764
+Best Fitness on Iteration 9000 is 83.5764
+Best Overall Fitness found: 83.5764
+Topology type: ra swarmSize: 16 Number of Iterations: 10000 testFunction: ras numDimensions: 30
+Best Fitness on Iteration 0 is 852.326
+Best Fitness on Iteration 1000 is 64.6727
+Best Fitness on Iteration 2000 is 64.6722
+Best Fitness on Iteration 3000 is 64.6722
+Best Fitness on Iteration 4000 is 64.6722
+Best Fitness on Iteration 5000 is 64.6722
+Best Fitness on Iteration 6000 is 64.6722
+Best Fitness on Iteration 7000 is 64.6722
+Best Fitness on Iteration 8000 is 64.6722
+Best Fitness on Iteration 9000 is 64.6722
+Best Overall Fitness found: 64.6722
+Topology type: ra swarmSize: 16 Number of Iterations: 10000 testFunction: ras numDimensions: 30
+Best Fitness on Iteration 0 is 789.949
+Best Fitness on Iteration 1000 is 114.422
+Best Fitness on Iteration 2000 is 114.42
+Best Fitness on Iteration 3000 is 114.42
+Best Fitness on Iteration 4000 is 114.42
+Best Fitness on Iteration 5000 is 114.42
+Best Fitness on Iteration 6000 is 114.42
+Best Fitness on Iteration 7000 is 114.42
+Best Fitness on Iteration 8000 is 114.42
+Best Fitness on Iteration 9000 is 114.42
+Best Overall Fitness found: 114.42
+Topology type: gl swarmSize: 30 Number of Iterations: 10000 testFunction: rok numDimensions: 30
+Best Fitness on Iteration 0 is 6.16904e+08
+Best Fitness on Iteration 1000 is 5.90865
+Best Fitness on Iteration 2000 is 3.2057
+Best Fitness on Iteration 3000 is 1.61336
+Best Fitness on Iteration 4000 is 0.82519
+Best Fitness on Iteration 5000 is 0.319323
+Best Fitness on Iteration 6000 is 0.0992982
+Best Fitness on Iteration 7000 is 0.0354793
+Best Fitness on Iteration 8000 is 0.0107633
+Best Fitness on Iteration 9000 is 0.00300725
+Best Overall Fitness found: 0.0011156
+Topology type: gl swarmSize: 30 Number of Iterations: 10000 testFunction: rok numDimensions: 30
+Best Fitness on Iteration 0 is 5.98451e+08
+Best Fitness on Iteration 1000 is 24.3905
+Best Fitness on Iteration 2000 is 20.7432
+Best Fitness on Iteration 3000 is 18.1306
+Best Fitness on Iteration 4000 is 15.3197
+Best Fitness on Iteration 5000 is 13.0234
+Best Fitness on Iteration 6000 is 11
+Best Fitness on Iteration 7000 is 9.19642
+Best Fitness on Iteration 8000 is 7.11919
+Best Fitness on Iteration 9000 is 4.74599
+Best Overall Fitness found: 2.45624
+Topology type: gl swarmSize: 30 Number of Iterations: 10000 testFunction: rok numDimensions: 30
+Best Fitness on Iteration 0 is 5.63926e+08
+Best Fitness on Iteration 1000 is 77.8914
+Best Fitness on Iteration 2000 is 10.7904
+Best Fitness on Iteration 3000 is 7.23825
+Best Fitness on Iteration 4000 is 4.57216
+Best Fitness on Iteration 5000 is 2.17439
+Best Fitness on Iteration 6000 is 0.614158
+Best Fitness on Iteration 7000 is 0.191082
+Best Fitness on Iteration 8000 is 0.0757685
+Best Fitness on Iteration 9000 is 0.030035
+Best Overall Fitness found: 0.0123369
+Topology type: gl swarmSize: 30 Number of Iterations: 10000 testFunction: ack numDimensions: 30
+Best Fitness on Iteration 0 is 21.3861
+Best Fitness on Iteration 1000 is 19.7792
+Best Fitness on Iteration 2000 is 19.7792
+Best Fitness on Iteration 3000 is 19.7792
+Best Fitness on Iteration 4000 is 19.7792
+Best Fitness on Iteration 5000 is 19.7792
+Best Fitness on Iteration 6000 is 19.7792
+Best Fitness on Iteration 7000 is 19.7792
+Best Fitness on Iteration 8000 is 19.7792
+Best Fitness on Iteration 9000 is 19.7792
+Best Overall Fitness found: 19.7792
+Topology type: gl swarmSize: 30 Number of Iterations: 10000 testFunction: ack numDimensions: 30
+Best Fitness on Iteration 0 is 21.2958
+Best Fitness on Iteration 1000 is 19.8393
+Best Fitness on Iteration 2000 is 19.8393
+Best Fitness on Iteration 3000 is 19.8393
+Best Fitness on Iteration 4000 is 19.8393
+Best Fitness on Iteration 5000 is 19.8393
+Best Fitness on Iteration 6000 is 19.8393
+Best Fitness on Iteration 7000 is 19.8393
+Best Fitness on Iteration 8000 is 19.8393
+Best Fitness on Iteration 9000 is 19.8393
+Best Overall Fitness found: 19.8393
+Topology type: gl swarmSize: 30 Number of Iterations: 10000 testFunction: ack numDimensions: 30
+Best Fitness on Iteration 0 is 21.3016
+Best Fitness on Iteration 1000 is 19.8287
+Best Fitness on Iteration 2000 is 19.8285
+Best Fitness on Iteration 3000 is 19.8285
+Best Fitness on Iteration 4000 is 19.8285
+Best Fitness on Iteration 5000 is 19.8285
+Best Fitness on Iteration 6000 is 19.8285
+Best Fitness on Iteration 7000 is 19.8285
+Best Fitness on Iteration 8000 is 19.8285
+Best Fitness on Iteration 9000 is 19.8285
+Best Overall Fitness found: 19.8285
+Topology type: gl swarmSize: 30 Number of Iterations: 10000 testFunction: ras numDimensions: 30
+Best Fitness on Iteration 0 is 781.514
+Best Fitness on Iteration 1000 is 84.5713
+Best Fitness on Iteration 2000 is 84.5713
+Best Fitness on Iteration 3000 is 84.5713
+Best Fitness on Iteration 4000 is 84.5713
+Best Fitness on Iteration 5000 is 84.5713
+Best Fitness on Iteration 6000 is 84.5713
+Best Fitness on Iteration 7000 is 84.5713
+Best Fitness on Iteration 8000 is 84.5713
+Best Fitness on Iteration 9000 is 84.5713
+Best Overall Fitness found: 84.5713
+Topology type: gl swarmSize: 30 Number of Iterations: 10000 testFunction: ras numDimensions: 30
+Best Fitness on Iteration 0 is 872.827
+Best Fitness on Iteration 1000 is 171.132
+Best Fitness on Iteration 2000 is 171.132
+Best Fitness on Iteration 3000 is 171.132
+Best Fitness on Iteration 4000 is 171.132
+Best Fitness on Iteration 5000 is 171.132
+Best Fitness on Iteration 6000 is 171.132
+Best Fitness on Iteration 7000 is 171.132
+Best Fitness on Iteration 8000 is 171.132
+Best Fitness on Iteration 9000 is 171.132
+Best Overall Fitness found: 171.132
+Topology type: gl swarmSize: 30 Number of Iterations: 10000 testFunction: ras numDimensions: 30
+Best Fitness on Iteration 0 is 812.532
+Best Fitness on Iteration 1000 is 82.5814
+Best Fitness on Iteration 2000 is 82.5814
+Best Fitness on Iteration 3000 is 82.5814
+Best Fitness on Iteration 4000 is 82.5814
+Best Fitness on Iteration 5000 is 82.5814
+Best Fitness on Iteration 6000 is 82.5814
+Best Fitness on Iteration 7000 is 82.5814
+Best Fitness on Iteration 8000 is 82.5814
+Best Fitness on Iteration 9000 is 82.5814
+Best Overall Fitness found: 82.5814
+Topology type: ri swarmSize: 30 Number of Iterations: 10000 testFunction: rok numDimensions: 30
+Best Fitness on Iteration 0 is 5.93985e+08
+Best Fitness on Iteration 1000 is 86.2396
+Best Fitness on Iteration 2000 is 14.1388
+Best Fitness on Iteration 3000 is 13.0074
+Best Fitness on Iteration 4000 is 12.1464
+Best Fitness on Iteration 5000 is 10.8144
+Best Fitness on Iteration 6000 is 8.81646
+Best Fitness on Iteration 7000 is 7.87088
+Best Fitness on Iteration 8000 is 5.92574
+Best Fitness on Iteration 9000 is 5.16523
+Best Overall Fitness found: 4.21623
+Topology type: ri swarmSize: 30 Number of Iterations: 10000 testFunction: rok numDimensions: 30
+Best Fitness on Iteration 0 is 6.20231e+08
+Best Fitness on Iteration 1000 is 90.4004
+Best Fitness on Iteration 2000 is 68.7685
+Best Fitness on Iteration 3000 is 20.9094
+Best Fitness on Iteration 4000 is 20.6907
+Best Fitness on Iteration 5000 is 19.8146
+Best Fitness on Iteration 6000 is 18.5114
+Best Fitness on Iteration 7000 is 18.0092
+Best Fitness on Iteration 8000 is 16.9207
+Best Fitness on Iteration 9000 is 16.1221
+Best Overall Fitness found: 14.9931
+Topology type: ri swarmSize: 30 Number of Iterations: 10000 testFunction: rok numDimensions: 30
+Best Fitness on Iteration 0 is 6.40128e+08
+Best Fitness on Iteration 1000 is 8.15069
+Best Fitness on Iteration 2000 is 5.94773
+Best Fitness on Iteration 3000 is 4.93094
+Best Fitness on Iteration 4000 is 4.00752
+Best Fitness on Iteration 5000 is 3.00353
+Best Fitness on Iteration 6000 is 2.51011
+Best Fitness on Iteration 7000 is 1.97075
+Best Fitness on Iteration 8000 is 1.69367
+Best Fitness on Iteration 9000 is 1.33119
+Best Overall Fitness found: 0.956919
+Topology type: ri swarmSize: 30 Number of Iterations: 10000 testFunction: ack numDimensions: 30
+Best Fitness on Iteration 0 is 21.2368
+Best Fitness on Iteration 1000 is 19.842
+Best Fitness on Iteration 2000 is 19.8237
+Best Fitness on Iteration 3000 is 19.8236
+Best Fitness on Iteration 4000 is 19.8223
+Best Fitness on Iteration 5000 is 19.8223
+Best Fitness on Iteration 6000 is 19.8223
+Best Fitness on Iteration 7000 is 19.8223
+Best Fitness on Iteration 8000 is 19.8223
+Best Fitness on Iteration 9000 is 19.8018
+Best Overall Fitness found: 19.8018

@@ -315,19 +315,6 @@ void Particle::findNeighborhoodBest(){
 }
 
 
-// //Purpose: if a new pbest has been found makes sure its the neighborhood best
-// //Parameters: the new pbest, and the new array signifiing its position
-// //Return value: None
-// void Particle::updateNeighborhoodBest(double bestFitness, vector<double> bestFitArray) { 
-
-// 	for(int i = 0; i < neighborsArray.size(); i++ ) {
-// 		this->neighborsArray.at(i)->nBestArray = bestFitArray;
-// 		this->neighborsArray.at(i)->nBestFitness = bestFitness;
-// 	}
-
-// }
-
-
 /*
 	Functions for swarm class
 */
