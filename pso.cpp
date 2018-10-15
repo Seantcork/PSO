@@ -426,7 +426,14 @@ void Swarm::vonNeumanTopology(){
 
 	int swarmNumCols = swarmSize / swarmNumRows;
 
+
+	cout << "Swarm number rows: " << swarmNumRows << endl;
+	cout << "Swarm number cols: " << swarmNumCols << endl;
+
+
 	for(int i = 0; i < swarmSize; i++){
+
+		cout << "Particle i: " << i << endl;
 
 		/* Determine each particles left and right neighbors */
 
@@ -434,18 +441,27 @@ void Swarm::vonNeumanTopology(){
 		if(i % swarmNumCols == 0) {
 			swarm[i]->neighborsArray.push_back(swarm[i+swarmNumCols-1]);
 			swarm[i]->neighborsArray.push_back(swarm[i+1]);
+
+			cout << "Right neighbor is: " << i+swarmNumCols-1 << endl;
+			cout << "Left neighbor is: " << i+1 << endl;
 		}
 
 		/* In case where index is in right column of array */
 		else if(i % swarmNumCols == swarmNumCols - 1) {
 			swarm[i]->neighborsArray.push_back(swarm[i-1]);
 			swarm[i]->neighborsArray.push_back(swarm[i-swarmNumCols+1]);
+
+			cout << "Right neighbor is: " << i-1 << endl;
+			cout << "Left neighbor is: " << i-swarmNumCols+1 << endl;
 		}
 
 		/* In case where index is in any middle column of array */
 		else {
 			swarm[i]->neighborsArray.push_back(swarm[i-1]);
 			swarm[i]->neighborsArray.push_back(swarm[i+1]);
+
+			cout << "Right neighbor is: " << i-1 << endl;
+			cout << "Left neighbor is: " << i+1 << endl;
 		}
 
 		/* Determine each particles top and bottom neighbors */
@@ -454,22 +470,33 @@ void Swarm::vonNeumanTopology(){
 		if(i / swarmNumCols == 0) {
 			swarm[i]->neighborsArray.push_back(swarm[i + ((swarmNumRows - 1) * swarmNumCols)]);
 			swarm[i]->neighborsArray.push_back(swarm[i+swarmNumCols]);
+
+			cout << "Right neighbor is: " << i + ((swarmNumRows - 1) * swarmNumCols) << endl;
+			cout << "Left neighbor is: " << i+swarmNumCols << endl;
 		}
 
 		/* In case where index is in bottom row of array */
 		else if(i / swarmNumCols == swarmNumRows - 1) {
 			swarm[i]->neighborsArray.push_back(swarm[i-swarmNumCols]);
 			swarm[i]->neighborsArray.push_back(swarm[i - ((swarmNumRows - 1) * swarmNumCols)]);
+
+			cout << "Right neighbor is: " << i-swarmNumCols << endl;
+			cout << "Left neighbor is: " << i - ((swarmNumRows - 1) * swarmNumCols) << endl;
 		}
 
 		/* In case where index is in any middle row of array */
 		else {
 			swarm[i]->neighborsArray.push_back(swarm[i-swarmNumCols]);
 			swarm[i]->neighborsArray.push_back(swarm[i+swarmNumCols]);
+
+			cout << "Right neighbor is: " << i-swarmNumCols << endl;
+			cout << "Left neighbor is: " << i+swarmNumCols << endl;
 		}
 
 		/* always push back the particle itself into its neighborhood */
 		swarm[i]->neighborsArray.push_back(swarm[i]);
+
+		cout << "" << endl;
 
 	}
 
