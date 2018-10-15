@@ -24,7 +24,6 @@ using namespace std;
 const double CONSTRICTION_FACTOR = 0.7298;
 
 const double PHI_1 = 2.05;
-
 const double PHI_2 = 2.05;
 
 const string GLOBAL_TOPOLOGY = "gl";
@@ -35,11 +34,6 @@ const string RANDOM_TOPOLOGY = "ra";
 const string ROSENBROCK_FUNCTION = "rok";
 const string ACKLEY_FUNCTION = "ack";
 const string RASTRIGIN_FUNCTION = "ras";
-
-double evalAckley (vector<double> positions);
-double evalRosenbrock (vector<double> position);
-double evalRastrigin (vector<double> position);
-
 
 /*
 This class contains all of the necesary components for the Particle Class. This class keeps
@@ -66,6 +60,9 @@ class Particle {
 		vector<shared_ptr<Particle> > neighborsArray;
 
 		void calculateFitness(string testFunction);
+		double evalAckley ();
+		double evalRosenbrock ();
+		double evalRastrigin ();
 
 		void updatePosition();
 		void updateVelocity();
@@ -207,6 +204,45 @@ void Particle::calculateFitness(string testFunction){
 	}
 	// cout << "currFitness = " << currFitness << endl;
 
+}
+
+double Particle::evalAckley () {
+
+    double firstSum = 0.0;
+    double secondSum = 0.0;
+    double dimensions = position.size();
+
+    for(int i = 0; i < position.size(); i++){
+    	firstSum+= (position[i] * position[i]);
+    }
+
+    for(int i = 0; i < position.size(); i++){
+    	secondSum += cos(2 * M_PI * position[i]);
+    }
+    
+
+    return -20 * exp(-0.2 * sqrt(firstSum/dimensions)) - exp(secondSum/dimensions) + 20.0 + exp(1);
+}  
+
+ //evaluates rosenbrock for the specified number of dimensions
+double Particle::evalRosenbrock () {
+	double sum = 0;
+	for(int i = 1; i < position.size() -1; i++){
+		sum += (100.0 * pow(position[i+1] -  position[i] * position[i], 2) + pow(position[i] - 1, 2));
+	}
+	return sum;
+}
+
+ // returns the value of the Rastrigin Function at point (x, y)
+ // minimum is 0.0, which occurs at (0.0,...,0.0)
+double Particle::evalRastrigin () {
+
+	double retVal = 0;
+
+	for(int i = 0; i < position.size(); i++){
+		retVal += (pow(position[i], 2) - 10* cos(2* M_PI * position[i]) + 10);
+	}
+    return retVal;
 }
 
 
@@ -360,46 +396,6 @@ void Swarm::randomTopology(){
 	std::mt19937 engine(seeder());
 
 
-}
-
-double evalAckley (vector<double> positions) {
-
-
-    double firstSum = 0.0;
-    double secondSum = 0.0;
-    double dimensions = positions.size();
-
-    for(int i = 0; i < positions.size(); i++){
-    	firstSum+= (positions[i] * positions[i]);
-    }
-
-    for(int i = 0; i < positions.size(); i++){
-    	secondSum += cos(2 * M_PI * positions[i]);
-    }
-    
-
-    return -20 * exp(-0.2 * sqrt(firstSum/dimensions)) - exp(secondSum/dimensions) + 20.0 + exp(1);
-}  
-
- //evaluates rosenbrock for the specified number of dimensions
-double evalRosenbrock (vector<double> position) {
-	double sum = 0;
-	for(int i = 1; i < position.size() -1; i++){
-		sum += (100.0 * pow(position[i+1] -  position[i] * position[i], 2) + pow(position[i] - 1, 2));
-	}
-	return sum;
-}
-
- // returns the value of the Rastrigin Function at point (x, y)
- // minimum is 0.0, which occurs at (0.0,...,0.0)
-double evalRastrigin (vector<double> position) {
-
-	double retVal = 0;
-
-	for(int i = 0; i < position.size(); i++){
-		retVal += (pow(position[i], 2) - 10* cos(2* M_PI * position[i]) + 10);
-	}
-    return retVal;
 }
 
 void PSO(string neighborhoodTopology, int swarmSize, int numIterations, string testFunction, int numDimensions){
