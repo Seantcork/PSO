@@ -130,10 +130,10 @@ void Particle::initParticle(int numDimensions, string testFunction){
 	}
 
 	else if(testFunction.compare(ACKLEY_FUNCTION) == 0){
-		uniform_real_distribution<double> genPosition(16.0, 32.0);
-		uniform_real_distribution<double> genVelocity(-2.0, 4.0);
 		maxVelocity = 32.768;
 		minVelocity = -32.768;
+		uniform_real_distribution<double> genPosition(16.0, 32.0);
+		uniform_real_distribution<double> genVelocity(-2.0, 4.0);
 		for(int i = 0; i < numDimensions; i ++){
 			position.push_back(genPosition(engine));
 			velocity.push_back(genVelocity(engine));
@@ -142,10 +142,10 @@ void Particle::initParticle(int numDimensions, string testFunction){
 	}
 	
 	else if(testFunction.compare(RASTRIGIN_FUNCTION) == 0){
-		uniform_real_distribution<double> genPosition(2.56, 5.12);
-		uniform_real_distribution<double> genVelocity(-2.0, 4.0);
 		maxVelocity = 5.12;
 		minVelocity = -5.12;
+		uniform_real_distribution<double> genPosition(2.56, 5.12);
+		uniform_real_distribution<double> genVelocity(-2.0, 4.0);
 		for(int i = 0; i < numDimensions; i ++){
 			position.push_back(genPosition(engine));
 			velocity.push_back(genVelocity(engine));
@@ -179,37 +179,37 @@ Return value: none
 
 */
 void Particle::calculateFitness(string testFunction){
-	double currFitness = 0;
+	double newFitness;
 	// Determine which test function to run
 	// Evaluate the fitness and update the values if its better than pBest or nBest
 	if(testFunction.compare(ROSENBROCK_FUNCTION) == 0) {
-		currFitness = evalRosenbrock();
-		if(currFitness < pBestFitness){
-			pBestFitness = currFitness;
+		newFitness = evalRosenbrock();
+		if(newFitness < pBestFitness){
+			pBestFitness = newFitness;
 			pBestArray = position;
 		}
 
 	}
 
 	else if (testFunction.compare(ACKLEY_FUNCTION) == 0) {
-		currFitness = evalAckley();
-		if(currFitness < pBestFitness){
-			pBestFitness = currFitness;
+		newFitness = evalAckley();
+		if(newFitness < pBestFitness){
+			pBestFitness = newFitness;
 			pBestArray = position;
 		}
 	}
 
 	else if (testFunction.compare(RASTRIGIN_FUNCTION) == 0){
-		currFitness = evalRastrigin();
-		if(currFitness < pBestFitness) {
-			pBestFitness = currFitness;
+		newFitness = evalRastrigin();
+		if(newFitness < pBestFitness) {
+			pBestFitness = newFitness;
 			pBestArray = position;
 		}
 	}
 	else {
 		cerr << "Optimization Function does not exist" << endl;
 	}
-	// cout << "currFitness = " << currFitness << endl;
+	// cout << "newFitness = " << newFitness << endl;
 
 }
 
@@ -219,11 +219,11 @@ double Particle::evalAckley () {
     double secondSum = 0.0;
     double dimensions = position.size();
 
-    for(int i = 0; i < position.size(); i++){
+    for(int i = 0; i < dimensions; i++){
     	firstSum+= (position[i] * position[i]);
     }
 
-    for(int i = 0; i < position.size(); i++){
+    for(int i = 0; i < dimensions; i++){
     	secondSum += cos(2 * M_PI * position[i]);
     }
     
@@ -275,6 +275,7 @@ void Particle::updateVelocity(){
 
 	random_device seeder;
 	mt19937 engine(seeder());
+	
 	for(int i = 0; i < position.size(); i++) { 
 		//generate random distribution for phi1 and phi2
 		uniform_real_distribution<double> phi1(0,PHI_1);
@@ -514,7 +515,7 @@ void PSO(string neighborhoodTopology, int swarmSize, int numIterations, string t
 
 	for(int i = 0; i < numIterations; i++ ){
 		for(int j = 0; j < swarmSize; j++){
-			if(neighborhoodTopology.compare("ra") == 0){
+			if(neighborhoodTopology.compare(RANDOM_TOPOLOGY) == 0){
 				swarmObject->randomTopology();
 			}
 			swarmObject->swarm.at(j)->findNeighborhoodBest();
