@@ -36,6 +36,8 @@ const string ROSENBROCK_FUNCTION = "rok";
 const string ACKLEY_FUNCTION = "ack";
 const string RASTRIGIN_FUNCTION = "ras";
 
+const int RANDOM_K = 5;
+
 double evalAckley (vector<double> positions);
 double evalRosenbrock (vector<double> position);
 double evalRastrigin (vector<double> position);
@@ -350,8 +352,18 @@ void Swarm::vonNeumanTopology(){
 void Swarm::randomTopology(){
 	std::random_device seeder;
 	std::mt19937 engine(seeder());
-
-
+	uniform_int_distribution<int> randIndex(0, swarmSize-1);
+	pair<set<int>::iterator, bool> inSet
+	set<int> used; 
+	for(int i = 0; int i < RANDOM_K; i++){
+		int index = engine(randIndex);
+		inSet = used.insert(0, index);
+		while(inSet.second == false){
+			index = engine(randIndex);
+			inSet = used.insert(0, index);
+		}
+		swarm[i]->neighborsArray.push_back(swarm[index]);
+	}
 }
 
 double evalAckley (vector<double> positions) {
