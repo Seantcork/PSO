@@ -176,7 +176,7 @@ void Particle::calculateFitness(string testFunction){
 	// Determine which test function to run
 	// Evaluate the fitness and update the values if its better than pBest or nBest
 	if(testFunction.compare(ROSENBROCK_FUNCTION) == 0) {
-		currFitness = evalRosenbrock(this->position);
+		currFitness = evalRosenbrock();
 		if(currFitness < this->pBestFitness){
 			this->pBestFitness = currFitness;
 			this->pBestArray = this->position;
@@ -185,7 +185,7 @@ void Particle::calculateFitness(string testFunction){
 	}
 
 	else if (testFunction.compare(ACKLEY_FUNCTION) == 0) {
-		currFitness = evalAckley(position);
+		currFitness = evalAckley();
 		if(currFitness < this->pBestFitness){
 			this->pBestFitness = currFitness;
 			this->pBestArray = this->position;
@@ -193,7 +193,7 @@ void Particle::calculateFitness(string testFunction){
 	}
 
 	else if (testFunction.compare(RASTRIGIN_FUNCTION) == 0){
-		currFitness = evalRastrigin(position);
+		currFitness = evalRastrigin();
 		if(currFitness < this->pBestFitness) {
 			this->pBestFitness = currFitness;
 			this->pBestArray = this->position;
@@ -399,12 +399,12 @@ void Swarm::randomTopology(){
 
 void PSO(string neighborhoodTopology, int swarmSize, int numIterations, string testFunction, int numDimensions){
 	
-	shared_ptr<Particle> swarmObject(new Swarm());
+	shared_ptr<Swarm> swarmObject(new Swarm());
 
 	swarmObject->initSwarm(swarmSize, numDimensions, neighborhoodTopology, testFunction);
 
 	for(int i = 0; i < numIterations; i++ ){
-		for(int j = 0; j < swarm.swarmSize; j++){
+		for(int j = 0; j < swarmSize; j++){
 			swarmObject->swarm.at(j)->updateVelocity();
 			swarmObject->swarm.at(j)->updatePosition();
 			swarmObject->swarm.at(j)->calculateFitness(testFunction);
