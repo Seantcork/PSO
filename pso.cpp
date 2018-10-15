@@ -397,11 +397,16 @@ void Swarm::vonNeumanTopology(){
 }
 
 void Swarm::randomTopology(){
+	for(int i =0; i < Swarm.swarmSize; i++){
+		swarm[i].neighborsArray.clear()
+	}
+	
 	std::random_device seeder;
 	std::mt19937 engine(seeder());
 	uniform_int_distribution<int> randIndex(0, swarmSize-1);
 	pair<set<int>::iterator, bool> inSet
 	set<int> used; 
+	
 	for(int i = 0; int i < RANDOM_K; i++){
 		int index = engine(randIndex);
 		inSet = used.insert(0, index);
@@ -410,6 +415,7 @@ void Swarm::randomTopology(){
 			inSet = used.insert(0, index);
 		}
 		swarm[i]->neighborsArray.push_back(swarm[index]);
+		swarm[i]->neighborsArray.push_back(swarm[i]);
 	}
 }
 
@@ -418,6 +424,28 @@ void PSO(string neighborhoodTopology, int swarmSize, int numIterations, string t
 	shared_ptr<Particle> swarmObject(new Swarm());
 
 	swarmObject->initSwarm(swarmSize, numDimensions, neighborhoodTopology, testFunction);
+
+
+	std::random_device seeder;
+	std::mt19937 engine(seeder());
+	uniform_real_distribution<double> randDouble(0, 1);
+	double = randomChance;
+
+	if(neighborhoodTopology.compare("ra") == 0){
+		for(int i = 0; i < numIterations; i++ ){
+			for(int j = 0; j < swarm.swarmSize; j++){
+				randomChance = randDouble(engine);
+				if(randDouble <= 0.2){
+					swarmObject->randomTopology();
+				}
+				swarmObject->swarm.at(j)->updateVelocity();
+				swarmObject->swarm.at(j)->updatePosition();
+				swarmObject->swarm.at(j)->calculateFitness(testFunction);
+				swarmObject->swarm.at(j)->findNeighborhoodBest();
+			}
+			swarmObject->findGlobalBest();
+		}
+
 
 	for(int i = 0; i < numIterations; i++ ){
 		for(int j = 0; j < swarm.swarmSize; j++){
