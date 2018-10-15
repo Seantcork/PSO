@@ -525,10 +525,10 @@ void PSO(string neighborhoodTopology, int swarmSize, int numIterations, string t
 			if(neighborhoodTopology.compare("ra") == 0){
 				swarmObject->randomTopology();
 			}
+			swarmObject->swarm.at(j)->findNeighborhoodBest();
 			swarmObject->swarm.at(j)->updateVelocity();
 			swarmObject->swarm.at(j)->updatePosition();
 			swarmObject->swarm.at(j)->calculateFitness(testFunction);
-			swarmObject->swarm.at(j)->findNeighborhoodBest();
 		}
 		swarmObject->findGlobalBest();
 		if(i % 1000 == 0) {
