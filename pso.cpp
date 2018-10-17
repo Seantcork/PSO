@@ -217,7 +217,7 @@ double Particle::evalAckley () {
 
     double firstSum = 0.0;
     double secondSum = 0.0;
-    double dimensions = position.size();
+    double dimensions = double(position.size());
 
     for(int i = 0; i < position.size(); i++){
     	firstSum+= (position[i] * position[i]);
