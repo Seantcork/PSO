@@ -599,8 +599,7 @@ void Swarm::randomTopology(){
 			//insert k-1 other random particles
 			for(int j = 0; j < RANDOM_K-1; j++){
 				
-				int index = randIndex(engine);
-				
+				int index = randIndex(engine);				
 				inSet = used.insert(index);
 				
 				while(inSet.second == false){
@@ -609,6 +608,7 @@ void Swarm::randomTopology(){
 				}
 				swarm[i]->neighborsArray.push_back(swarm[index]);
 			}
+
 			used.clear();
 		}
 	}
@@ -628,11 +628,12 @@ void PSO(string neighborhoodTopology, int swarmSize, int numIterations,
 	swarmObject->initSwarm(swarmSize, numDimensions, neighborhoodTopology, testFunction);
 
 	for(int i = 0; i < numIterations; i++ ){
+
+		//if random topology is selected, recreate it with given probability
+		if(neighborhoodTopology.compare(RANDOM_TOPOLOGY) == 0){
+			swarmObject->randomTopology();
+		}
 		for(int j = 0; j < swarmSize; j++){
-			//if random topology is selected, recreate it with given probability
-			if(neighborhoodTopology.compare(RANDOM_TOPOLOGY) == 0){
-				swarmObject->randomTopology();
-			}
 			swarmObject->swarm.at(j)->findNeighborhoodBest();
 			swarmObject->swarm.at(j)->updateVelocity();
 			swarmObject->swarm.at(j)->updatePosition();
