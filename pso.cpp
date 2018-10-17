@@ -6,7 +6,6 @@
 
 */
 
-
 #include <math.h>
 #include <fstream>
 #include <cstdlib>
@@ -20,10 +19,10 @@
 
 using namespace std;
 
-
 #define E 2.71828
 const double CONSTRICTION_FACTOR = 0.7298;
 
+//phi values that scales towards pBest and nBest respectively
 const double PHI_1 = 2.05;
 const double PHI_2 = 2.05;
 
@@ -31,11 +30,12 @@ const string GLOBAL_TOPOLOGY = "gl";
 const string RING_TOPOLOGY = "ri";
 const string VON_NEUMANN_TOPOLOGY = "vn";
 const string RANDOM_TOPOLOGY = "ra";
+//neighborhood size for the random topology
+const int RANDOM_K = 5;
 
 const string ROSENBROCK_FUNCTION = "rok";
 const string ACKLEY_FUNCTION = "ack";
 const string RASTRIGIN_FUNCTION = "ras";
-const int RANDOM_K = 5;
 
 class Particle {
 	/*
@@ -370,7 +370,7 @@ void Particle::updateVelocity(){
 
 
 /*
-	Function that checks if any particle in the neighborhood have a better fitness than the 
+	Function that checks if any particle in the neighborhood has a better fitness than the 
 	current nBest fitness. If so, the function updates the nBest fitness and location.
 */
 void Particle::findNeighborhoodBest(){
@@ -384,21 +384,25 @@ void Particle::findNeighborhoodBest(){
 
 
 /*
-	Functions for swarm class
+	Function that initializes the swarm object. The function creates the user specified
+	number of particles and stores pointers to these particles in a vector. It then 
+	calls the user specified topology to create neighborhoods for each of the particles.
 */
 void Swarm::initSwarm(int swarmSize, int numDimensions, 
 			string neighborhoodTopology, string testFunction){
 	
+	//set user specified swarm size and max out the global best fitness value
 	this->swarmSize = swarmSize;
 	gBestFitness = numeric_limits<double>::max();
 
+	//loop that creates swarmSize particles
 	for(int i = 0; i < swarmSize; i++){
 		shared_ptr<Particle> ptr(new Particle());
 		ptr->initParticle(numDimensions, testFunction);
-
 		swarm.push_back(ptr);
 	}
 
+	/* Checks which neighborhood topology to apply. */
 	if (neighborhoodTopology.compare(GLOBAL_TOPOLOGY) == 0){
 		globalTopology();
 	}
@@ -419,6 +423,11 @@ void Swarm::initSwarm(int swarmSize, int numDimensions,
 
 }
 
+/*
+	Function that checks if any particle in the swarm has a better fitness than the 
+	current global best fitness. If so, the function updates the global best fitness 
+	and location.
+*/
 void Swarm::findGlobalBest(){
 	for (int i = 0; i < swarmSize; i++){
 		if (swarm[i]->pBestFitness < gBestFitness){
@@ -429,7 +438,11 @@ void Swarm::findGlobalBest(){
 
 }
 
-//not sure we need this
+/*
+	Function that represents the global neighborhood topology. This is called when the swarm
+	is initialized to specify the neighborhood of each particle. In the global topology the
+	neighborhood of each particle is the entire swarm. 
+*/
 void Swarm::globalTopology(){
 	for(int i = 0; i < swarmSize; i ++){
 		for(int j = 0; j < swarmSize; j++){
@@ -439,26 +452,30 @@ void Swarm::globalTopology(){
 }
 
 
-//This function bases neighborhoods on the 
+/*
+	Function that represents the ring neighborhood topology. Called by init swarm method.
+	In this topology the neighbors of each particle are the particles to the left and right
+	of the particle in the swarm vector (when it is initialized).
+*/
 void Swarm::ringTopology(){
 	
-	//takes care of all the elemetns between the first and last element
 	for(int i = 0; i < swarmSize; i++){
 		
-		//takes care of first elements
+		//takes care of the first element in the swarm vector
 		if (i == 0){
 			swarm[i]->neighborsArray.push_back(swarm[swarmSize-1]);
 			swarm[i]->neighborsArray.push_back(swarm[i]);
 			swarm[i]->neighborsArray.push_back(swarm[i+1]);
 		}
 
-		//takes care of last element in the swarm
+		//takes care of the last element in the swarm vector
 		else if (i == swarmSize - 1){
 			swarm[i]->neighborsArray.push_back(swarm[swarmSize-2]);
 			swarm[i]->neighborsArray.push_back(swarm[swarmSize-1]);
 			swarm[i]->neighborsArray.push_back(swarm[0]);
 		}
 
+		//takes care of all elements in the middle of the swarm vector
 		else {
 			swarm[i]->neighborsArray.push_back(swarm[i-1]);
 			swarm[i]->neighborsArray.push_back(swarm[i]);
@@ -469,36 +486,51 @@ void Swarm::ringTopology(){
 
 }
 
+
+/*
+	Function that represents the von Neumann neighborhod topology. Called by the init swarm
+	method. In this topology the neighbors of each particle are the particles to the left,
+	right, top, and bottom of the particle in the swarm vector (when it is initialized).
+	The easiest way to visualize and set the neighbors for this topology is to use
+	a 2-d array. However, this is costly and it is possible to use a 1-d array.
+
+*/
 void Swarm::vonNeumanTopology(){
 
-	/* Determine possible number of rows and cols that the 1-d swarm array could be
-	   stored as a 2-d array. This is done to avoid the unnecessary creation of an
-	   actual 2-d array.
+	/* 
+		Determine possible number of rows and cols that the 1-d swarm array could be
+		stored as a 2-d array. This is done to avoid the unnecessary creation of an
+		actual 2-d array. 
 	*/
 	int swarmNumRows = 3;
 
+	//finds a possible number of rows so that row*width = size of the array
 	while(swarmSize % swarmNumRows != 0){
 		swarmNumRows++;
 	}
 
 	int swarmNumCols = swarmSize / swarmNumRows;
 
+	/* 
+		Now that the 1-d array can be visualized as a 2-d array, the function finds
+		the neighbors using logic.
+	*/
 	for(int i = 0; i < swarmSize; i++){
 		/* Determine each particles left and right neighbors */
 
-		/* In case where index is in left column of array */
+		//In case where particle index is in left column of imaginary 2-d array
 		if(i % swarmNumCols == 0) {
 			swarm[i]->neighborsArray.push_back(swarm[i+swarmNumCols-1]);
 			swarm[i]->neighborsArray.push_back(swarm[i+1]);
 		}
 
-		/* In case where index is in right column of array */
+		//In case where particle index is in right column of imaginary 2-d array
 		else if(i % swarmNumCols == swarmNumCols - 1) {
 			swarm[i]->neighborsArray.push_back(swarm[i-1]);
 			swarm[i]->neighborsArray.push_back(swarm[i-swarmNumCols+1]);
 		}
 
-		/* In case where index is in any middle column of array */
+		//In case where particle index is in any middle column of imaginary 2-d array
 		else {
 			swarm[i]->neighborsArray.push_back(swarm[i-1]);
 			swarm[i]->neighborsArray.push_back(swarm[i+1]);
@@ -506,45 +538,65 @@ void Swarm::vonNeumanTopology(){
 
 		/* Determine each particles top and bottom neighbors */
 
-		/* In case where index is in top row of array */
+		//In case where particle index is in top row of 2-d imaginary array
 		if(i / swarmNumCols == 0) {
 			swarm[i]->neighborsArray.push_back(swarm[i + ((swarmNumRows - 1) * swarmNumCols)]);
 			swarm[i]->neighborsArray.push_back(swarm[i+swarmNumCols]);
 		}
 
-		/* In case where index is in bottom row of array */
+		/* In case where particle index is in bottom row of 2-d imaginary array */
 		else if(i / swarmNumCols == swarmNumRows - 1) {
 			swarm[i]->neighborsArray.push_back(swarm[i-swarmNumCols]);
 			swarm[i]->neighborsArray.push_back(swarm[i - ((swarmNumRows - 1) * swarmNumCols)]);
 		}
 
-		/* In case where index is in any middle row of array */
+		/* In case where particle index is in any middle row of 2-d imaginary array */
 		else {
 			swarm[i]->neighborsArray.push_back(swarm[i-swarmNumCols]);
 			swarm[i]->neighborsArray.push_back(swarm[i+swarmNumCols]);
 		}
 
-		/* always push back the particle itself into its neighborhood */
+		//always push back the particle itself into its neighborhood
 		swarm[i]->neighborsArray.push_back(swarm[i]);
 
 	}
 
 }
 
+
+/*
+	Function that represents the random neighborhood topology. Called by the init swarm
+	method. The neighborhood of each particle is comprised of k-1 (k is constant set to 5)
+	other particles in the swarm without duplicates. The neighborhood of each particle is
+	recreated with a probability of 0.2 in each iteration.
+*/
 void Swarm::randomTopology(){
 
 	random_device seeder;
 	mt19937 engine(seeder());
+	//gives a random index of a particle in the swarm
 	uniform_int_distribution<int> randIndex(0, swarmSize-1);
-	pair< set<int>::iterator, bool> inSet;
+	//gives a probability between 0 and 1 of neighborhood recreation
 	uniform_real_distribution<double> randDouble(0, 1);
+
+	//set is used to determine if particle is already in the neighborhood
+	pair< set<int>::iterator, bool> inSet;
 	set<int> used; 
 
 	for(int i = 0; i < swarmSize; i++){
-		if( swarm[i]->neighborsArray.size() == 0 || (swarm[i]->neighborsArray.size() != 0 && randDouble(engine) <= 0.2)) {
+		/* 
+			Neighborhood is recreated for a particle at the start and in later iterations
+			if the probability is met.
+		*/
+		if(swarm[i]->neighborsArray.size() == 0 || (swarm[i]->neighborsArray.size() != 0 && 
+			randDouble(engine) <= 0.2)) {
+
+			//clear out the old neighborhood and add the particle itself to the neighborhood
 			swarm[i]->neighborsArray.clear();
 			swarm[i]->neighborsArray.push_back(swarm[i]);
 			used.insert(i);
+
+			//insert k-1 other random particles
 			for(int j = 0; j < RANDOM_K-1; j++){
 				
 				int index = randIndex(engine);
@@ -562,14 +614,22 @@ void Swarm::randomTopology(){
 	}
 }
 
-void PSO(string neighborhoodTopology, int swarmSize, int numIterations, string testFunction, int numDimensions){
+/*
+	Function that runs particle swarm optimization on the given user inputted topology, 
+	swarm size, iterations, test function, and dimensions. The function creates a swarm
+	and then loops for the iteration length. During each loop it updates for each particle
+	the neighborhood best, its velocity, position, and calculates its fitness.
+*/
+void PSO(string neighborhoodTopology, int swarmSize, int numIterations, 
+	string testFunction, int numDimensions){
 	
+	//create and initialize the swarm
 	shared_ptr<Swarm> swarmObject(new Swarm());
-
 	swarmObject->initSwarm(swarmSize, numDimensions, neighborhoodTopology, testFunction);
 
 	for(int i = 0; i < numIterations; i++ ){
 		for(int j = 0; j < swarmSize; j++){
+			//if random topology is selected, recreate it with given probability
 			if(neighborhoodTopology.compare(RANDOM_TOPOLOGY) == 0){
 				swarmObject->randomTopology();
 			}
@@ -587,7 +647,9 @@ void PSO(string neighborhoodTopology, int swarmSize, int numIterations, string t
 }
 
 
-
+/*
+	Main function for the PSO file. It reads in the user input and calls the PSO function.
+*/
 int main(int argc, char* argv[]){
 
 	string neighborhoodTopology = string(argv[1]);
