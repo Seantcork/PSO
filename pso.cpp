@@ -37,6 +37,30 @@ const string ROSENBROCK_FUNCTION = "rok";
 const string ACKLEY_FUNCTION = "ack";
 const string RASTRIGIN_FUNCTION = "ras";
 
+//Particle starting range of position by function
+const double ROSENBROCK_INIT_MAX_POSITION = 30.0;
+const double ROSENBROCK_INIT_MIN_POSITION = 15.0;
+const double ACKLEY_INIT_MAX_POSITION = 32.0;
+const double ACKLEY_INIT_MIN_POSITION = 16.0;
+const double RASTRIGIN_INIT_MAX_POSITION = 5.12
+const double RASTRIGIN_INIT_MIN_POSITION = 2.56;
+
+//Particle starting range of velocty by function
+const double ROSENBROCK_INIT_MAX_VELOCITY = 2.0;
+const double ROSENBROCK_INIT_MIN_VELOCITY = -2.0;
+const double ACKLEY_INIT_MAX_VELOCITY = 4.0;
+const double ACKLEY_INIT_MIN_VELOCITY = -2.0;
+const double RASTRIGIN_INIT_MAX_VELOCITY = 4.0;
+const double RASTRIGIN_INIT_MIN_VELOCITY = -2.0;
+
+//Particle min and max velocity by function
+const double ROSENBROCK_MAX_VELOCITY = 2.048;
+const double ROSENBROCK_MIN_VELOCITY = -2.048;
+const double ACKLEY_MAX_VELOCITY = 32.768;
+const double ACKLEY_MIN_VELOCITY = -32.768;
+const double RASTRIGIN_MAX_VELOCITY = 5.12;
+const double RASTRIGIN_MIN_VELOCITY = -5.12;
+
 class Particle {
 	/*
 		Class to represents a particle in the swarm.
@@ -164,12 +188,12 @@ void Particle::initParticle(int numDimensions, string testFunction){
 	if(testFunction.compare(ROSENBROCK_FUNCTION) == 0){
 		
 		//sets the min and max velocity for that function
-		maxVelocity = 2.048;
-		minVelocity = -2.048;
+		maxVelocity = ROSENBROCK_MAX_VELOCITY;
+		minVelocity = ROSENBROCK_MIN_VELOCITY;
 
 		//sets the position and velocity for that function based on the ranges
-		uniform_real_distribution<double> genPosition(15.0, 30.0);
-		uniform_real_distribution<double> genVelocity(-2.0, 2.0);
+		uniform_real_distribution<double> genPosition(ROSENBROCK_INIT_MIN_POSITION, ROSENBROCK_INIT_MAX_POSITION);
+		uniform_real_distribution<double> genVelocity(ROSENBROCK_INIT_MIN_VELOCITY, ROSENBROCK_INIT_MAX_VELOCITY);
 		for(int i = 0; i < numDimensions; i ++){
 			position.push_back(genPosition(engine));
 			velocity.push_back(genVelocity(engine));
@@ -177,11 +201,11 @@ void Particle::initParticle(int numDimensions, string testFunction){
 	}
 
 	else if(testFunction.compare(ACKLEY_FUNCTION) == 0){
-		maxVelocity = 32.768;
-		minVelocity = -32.768;
+		maxVelocity = ACKLEY_MAX_VELOCITY;
+		minVelocity = ACKLEY_MIN_VELOCITY;
 
-		uniform_real_distribution<double> genPosition(16.0, 32.0);
-		uniform_real_distribution<double> genVelocity(-2.0, 4.0);
+		uniform_real_distribution<double> genPosition(ACKLEY_INIT_MIN_POSITION, ACKLEY_INIT_MAX_POSITION);
+		uniform_real_distribution<double> genVelocity(ACKLEY_INIT_MIN_VELOCITY, ACKLEY_INIT_MAX_VELOCITY);
 		for(int i = 0; i < numDimensions; i ++){
 			position.push_back(genPosition(engine));
 			velocity.push_back(genVelocity(engine));
@@ -190,11 +214,11 @@ void Particle::initParticle(int numDimensions, string testFunction){
 	}
 	
 	else if(testFunction.compare(RASTRIGIN_FUNCTION) == 0){
-		maxVelocity = 5.12;
-		minVelocity = -5.12;
+		maxVelocity = RASTRIGIN_MAX_VELOCITY;
+		minVelocity = RASTRIGIN_MIN_VELOCITY;
 
-		uniform_real_distribution<double> genPosition(2.56, 5.12);
-		uniform_real_distribution<double> genVelocity(-2.0, 4.0);
+		uniform_real_distribution<double> genPosition(RASTRIGIN_INIT_MIN_POSITION, RASTRIGIN_INIT_MAX_POSITION);
+		uniform_real_distribution<double> genVelocity(RASTRIGIN_INIT_MIN_VELOCITY, RASTRIGIN_INIT_MAX_VELOCITY);
 		for(int i = 0; i < numDimensions; i ++){
 			position.push_back(genPosition(engine));
 			velocity.push_back(genVelocity(engine));
