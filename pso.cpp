@@ -42,7 +42,7 @@ const double ROSENBROCK_INIT_MAX_POSITION = 30.0;
 const double ROSENBROCK_INIT_MIN_POSITION = 15.0;
 const double ACKLEY_INIT_MAX_POSITION = 32.0;
 const double ACKLEY_INIT_MIN_POSITION = 16.0;
-const double RASTRIGIN_INIT_MAX_POSITION = 5.12
+const double RASTRIGIN_INIT_MAX_POSITION = 5.12;
 const double RASTRIGIN_INIT_MIN_POSITION = 2.56;
 
 //Particle starting range of velocty by function
@@ -614,6 +614,9 @@ void Swarm::randomTopology(){
 		*/
 		if(swarm[i]->neighborsArray.size() == 0 || (swarm[i]->neighborsArray.size() != 0 && 
 			randDouble(engine) <= 0.2)) {
+
+			//set nBest fitness to max so new neighborhood will fill nBest
+			swarm[i]->nBestFitness = numeric_limits<double>::max();
 
 			//clear out the old neighborhood and add the particle itself to the neighborhood
 			swarm[i]->neighborsArray.clear();
