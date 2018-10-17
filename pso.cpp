@@ -6,7 +6,6 @@
 
 */
 
-
 #include <math.h>
 #include <fstream>
 #include <cstdlib>
@@ -15,15 +14,15 @@
 #include <string>
 #include <vector>
 #include <iostream>
-#include <limits>       // std::numeric_limits
+#include <limits>
 #include <set>
 
 using namespace std;
 
-
 #define E 2.71828
 const double CONSTRICTION_FACTOR = 0.7298;
 
+//phi values that scales towards pBest and nBest respectively
 const double PHI_1 = 2.05;
 const double PHI_2 = 2.05;
 
@@ -31,57 +30,105 @@ const string GLOBAL_TOPOLOGY = "gl";
 const string RING_TOPOLOGY = "ri";
 const string VON_NEUMANN_TOPOLOGY = "vn";
 const string RANDOM_TOPOLOGY = "ra";
+//neighborhood size for the random topology
+const int RANDOM_K = 5;
 
 const string ROSENBROCK_FUNCTION = "rok";
 const string ACKLEY_FUNCTION = "ack";
 const string RASTRIGIN_FUNCTION = "ras";
-const int RANDOM_K = 5;
 
-double evalAckley (vector<double> positions);
-double evalRosenbrock (vector<double> position);
-double evalRastrigin (vector<double> position);
-
-
-/*
-This class contains all of the necesary components for the Particle Class. This class keeps
-track of the particles position, velocity, its personal best position, personal best fitness. It also contains the neighborhood best
-for its array and the nbest position.
-This class includes the fucntions: Calculate fitness, which calculates the fitness of the position of the particle
-with respect to the evaluation function. It also contains the reelvant functions desired for position.
-
-
-*/
 class Particle {
+	/*
+		Class to represents a particle in the swarm.
+
+		Attributes:
+			- maxVelocity (double): The maximum velocity a particle can move at. Determined
+				by the testFunction the user specifies.
+			- minVelocity (double): The minimum velocity a particle can move at. Determined
+				by the testFunction the user specifies.
+
+			- pbestFitness (double): The best fitness the particle itself has found so far.
+			- pBestArray (vector<double>): The position of the particle at its best fitness so far.
+			- position (vector<double>): The particle's position in d dimensions.
+			- velocity (vector<double>): The particle's velocity in d dimensions.
+
+			- nBestFitness (double): The best fitness of the particle's neighborhood so far.
+			- nBestArray (vector<double>): The position of the best fitness of the neighborhood so far.
+			- neighborsArray (vector<shared_ptr<Particle> >): An array containing pointers to the
+				other particles in this particles neighborhood. 
+
+		Functions:
+			- void initParticle(int numDimensions, string testFunction): Function that initializes 
+				the particle's min/max velocity, its starting position/velocity, and sets the pBest and 
+				nBest to the starting location.
+
+			- void calculateFitness(string testFunction): Determines the fitness of a particle at its
+				current position. Takes in which function to use as the evaluation.
+			- double evalAckley(): The Ackley evaluation function. Calculates fitness of the particle.
+			- double evalRosenbrock(): The Rosenbrock evaluation function. Calculates fitness of the particle.
+			- double evalRastrigin(): The Rastrigin evaluation function. Calculates fitness of the particle.
+
+			- void updatePosition(): Uses the particle's current velocity to update its position.
+			- void updateVelocity(): Uses the old velocity, pBest, and nBest to update its velocity.
+			- void findNeighborhoodBest(): Searches through each particle in the neighborhood to determine
+				the maximum neighborhood fitness and the location of that fitness.
+
+	*/
+
 	public:
 
 		double maxVelocity;
 		double minVelocity;
 
 		double pBestFitness;
+		vector<double> pBestArray;
 		vector<double> position;
 		vector<double> velocity;
-		vector<double> pBestArray;
+		
 		
 		double nBestFitness;
 		vector<double> nBestArray;
 		vector<shared_ptr<Particle> > neighborsArray;
 
+		void initParticle(int numDimensions, string testFunction);	
+
 		void calculateFitness(string testFunction);
-		double evalAckley ();
-		double evalRosenbrock ();
-		double evalRastrigin ();
+		double evalAckley();
+		double evalRosenbrock();
+		double evalRastrigin();
 
 		void updatePosition();
 		void updateVelocity();
-
 		void findNeighborhoodBest();
-		void updateNeighborhoodBest(double currFitness, vector<double> bestFitArray);
-
-		void initParticle(int numDimensions, string testFunction);	
 };
 
 
 class Swarm {
+	/*
+		Class that represents a swarm.
+
+		Attributes:
+			- swarmSize (int): The user specified size of the swarm.
+			- numDimensions (int): The user specified number of dimensions to evaluate 
+				the particle in.
+
+			- gBestFitness (double): The best fitness of the swarm so far.
+			- gBestArray (vector<double>): The location of the best swarm fitness.
+
+		Functions:
+			- void initSwarm(int swarmSize, int numDimensions, string neighborhoodTopology, 
+				string testFunction): Function that initializes the swarm of particles and
+				calls the user specified topology.
+			- void findGlobalBest(): Determines if there is a new global best. If so, it updates
+				the gBest fitness and location array.
+
+			- void globalTopology(): Neighborhood topology that includes all particles in the swarm.
+			- void ringTopology(): Neighborhood topology that includes the left and right neighbor.
+			- void vonNeumanTopology(): Neighborhood topology that includes the left, right, top, 
+				and bottom neighbor.
+			- void randomTopology(): Neighborhood topology that contains random k-1 other particles. 
+				Neighborhood gets updated with probability 0.2 for each particle after each iteration.
+	*/
 
 	public:
 		vector<shared_ptr<Particle> > swarm;
@@ -89,38 +136,38 @@ class Swarm {
 		int swarmSize;
 		int numDimensions;
 
-		vector<double> gBestArray;
 		double gBestFitness;
+		vector<double> gBestArray;
+
+		void initSwarm(int swarmSize, int numDimensions, 
+			string neighborhoodTopology, string testFunction);
 		void findGlobalBest();
 
 		void globalTopology();
 		void ringTopology();
 		void vonNeumanTopology();
 		void randomTopology();
-
-		void initSwarm(int swarmSize, int numDimensions, 
-			string neighborhoodTopology, string testFunction);
 };
 
-
 /*
-	Functions for particle class
+	Function that initializes the particle's starting position and velocity for the user
+	specified number of dimensions. This and the min/max velocity of the particle is dependent
+	on the user specified evaluation functions. The specific ranges for position/velocity and 
+	min/max velocity was given (and are constants). The function also initializes the particle's
+	pBest and nBest fitness to max (so that all subsequent fitness are better).
 */
-
-//Purpose: initialized the particles position and velocity for the number of dimensions for each given
-//Evaluation function
-//Parameters: Number of dimensions, the testFunctions.
-//return value: None
 void Particle::initParticle(int numDimensions, string testFunction){
 	random_device seeder;
 	mt19937 engine(seeder());
 
-	//initialize particle positions
-	//Check for each test function
+	/* Checks to see which evaluation function the user specified. */
 	if(testFunction.compare(ROSENBROCK_FUNCTION) == 0){
+		
+		//sets the min and max velocity for that function
 		maxVelocity = 2.048;
 		minVelocity = -2.048;
-		//random number generations for each different test fucntions
+
+		//sets the position and velocity for that function based on the ranges
 		uniform_real_distribution<double> genPosition(15.0, 30.0);
 		uniform_real_distribution<double> genVelocity(-2.0, 2.0);
 		for(int i = 0; i < numDimensions; i ++){
@@ -130,10 +177,11 @@ void Particle::initParticle(int numDimensions, string testFunction){
 	}
 
 	else if(testFunction.compare(ACKLEY_FUNCTION) == 0){
-		uniform_real_distribution<double> genPosition(16.0, 32.0);
-		uniform_real_distribution<double> genVelocity(-2.0, 4.0);
 		maxVelocity = 32.768;
 		minVelocity = -32.768;
+
+		uniform_real_distribution<double> genPosition(16.0, 32.0);
+		uniform_real_distribution<double> genVelocity(-2.0, 4.0);
 		for(int i = 0; i < numDimensions; i ++){
 			position.push_back(genPosition(engine));
 			velocity.push_back(genVelocity(engine));
@@ -142,10 +190,11 @@ void Particle::initParticle(int numDimensions, string testFunction){
 	}
 	
 	else if(testFunction.compare(RASTRIGIN_FUNCTION) == 0){
-		uniform_real_distribution<double> genPosition(2.56, 5.12);
-		uniform_real_distribution<double> genVelocity(-2.0, 4.0);
 		maxVelocity = 5.12;
 		minVelocity = -5.12;
+
+		uniform_real_distribution<double> genPosition(2.56, 5.12);
+		uniform_real_distribution<double> genVelocity(-2.0, 4.0);
 		for(int i = 0; i < numDimensions; i ++){
 			position.push_back(genPosition(engine));
 			velocity.push_back(genVelocity(engine));
@@ -153,13 +202,13 @@ void Particle::initParticle(int numDimensions, string testFunction){
 		}
 	}
 
-	//if the string is not a function we are evaluating
+	/* If the user entered an invalid function name. */
 	else {
 
 		cerr << "Optimization Function does not exist" << endl;
 	}
 
-
+	//max out the starting pBest and nBest values
 	pBestFitness = numeric_limits<double>::max();
 	nBestFitness = numeric_limits<double>::max();
 	
@@ -173,57 +222,66 @@ void Particle::initParticle(int numDimensions, string testFunction){
 
 
 /*
-Purpose: Calculates the fitness of each individual particle with respect to the testFunction specified.
-Parameters: the testFunction
-Return value: none
-
+	Function that calculates and potentially updates the pBest fitness of the particle.
+	It checks which evaluation function to apply to determine the fitness. If the new
+	fitness is smaller than the pBest fitness, it updates the fitness and the pBest location
+	of the fitness.
 */
 void Particle::calculateFitness(string testFunction){
-	double currFitness = 0;
-	// Determine which test function to run
-	// Evaluate the fitness and update the values if its better than pBest or nBest
+	double newFitness;
+
+	/* Determine which evaluation function to run */
 	if(testFunction.compare(ROSENBROCK_FUNCTION) == 0) {
-		currFitness = evalRosenbrock();
-		if(currFitness < pBestFitness){
-			pBestFitness = currFitness;
+		newFitness = evalRosenbrock();
+
+		//PSO wants to find the minimum
+		if(newFitness < pBestFitness){
+			pBestFitness = newFitness;
 			pBestArray = position;
 		}
 
 	}
 
 	else if (testFunction.compare(ACKLEY_FUNCTION) == 0) {
-		currFitness = evalAckley();
-		if(currFitness < pBestFitness){
-			pBestFitness = currFitness;
+		newFitness = evalAckley();
+
+		if(newFitness < pBestFitness){
+			pBestFitness = newFitness;
 			pBestArray = position;
 		}
 	}
 
 	else if (testFunction.compare(RASTRIGIN_FUNCTION) == 0){
-		currFitness = evalRastrigin();
-		if(currFitness < pBestFitness) {
-			pBestFitness = currFitness;
+		newFitness = evalRastrigin();
+
+		if(newFitness < pBestFitness) {
+			pBestFitness = newFitness;
 			pBestArray = position;
 		}
 	}
+
+	/* Prints error if the user entered an invalid evaluation function. */
 	else {
 		cerr << "Optimization Function does not exist" << endl;
 	}
-	// cout << "currFitness = " << currFitness << endl;
-
 }
 
+
+/*
+	Function that calculates a particle's fitness based on the Ackley evaluation function 
+	and the user specified number of dimensions.
+*/
 double Particle::evalAckley () {
 
     double firstSum = 0.0;
     double secondSum = 0.0;
     double dimensions = double(position.size());
 
-    for(int i = 0; i < position.size(); i++){
+    for(int i = 0; i < dimensions; i++){
     	firstSum+= (position[i] * position[i]);
     }
 
-    for(int i = 0; i < position.size(); i++){
+    for(int i = 0; i < dimensions; i++){
     	secondSum += cos(2 * M_PI * position[i]);
     }
     
@@ -231,7 +289,10 @@ double Particle::evalAckley () {
     return -20 * exp(-0.2 * sqrt(firstSum/dimensions)) - exp(secondSum/dimensions) + 20.0 + exp(1);
 }  
 
- //evaluates rosenbrock for the specified number of dimensions
+/*
+	Function that calculates a particle's fitness based on the Rosenbrock evaluation function
+	and the user specified number of dimensions.
+*/
 double Particle::evalRosenbrock () {
 	double sum = 0;
 	for(int i = 1; i < position.size() -1; i++){
@@ -240,8 +301,10 @@ double Particle::evalRosenbrock () {
 	return sum;
 }
 
- // returns the value of the Rastrigin Function at point (x, y)
- // minimum is 0.0, which occurs at (0.0,...,0.0)
+/*
+	Function that calculates a particle's fitness based on the Rastrigin evaluation function
+	and the user specified number of dimensions.
+*/
 double Particle::evalRastrigin () {
 
 	double retVal = 0;
@@ -253,9 +316,10 @@ double Particle::evalRastrigin () {
 }
 
 
-//Parameters: None
-//Purpose: updates the position with respect to the current velocity
-//Return value: 
+/*
+	Function that updates the position of the particle in d dimensions based on the 
+	velocity of the particle in each dimension.
+*/
 void Particle::updatePosition(){
 	for(int i = 0; i < position.size(); i++) {
 		position.at(i) = position.at(i) + velocity.at(i);
@@ -264,9 +328,11 @@ void Particle::updatePosition(){
 }
 
 
-//Purpose: update the velcoity of each particle in respect to its initial values
-//Parameters: none
-//Return value: none
+/*
+	Function that updates the velocity of the particle based on the standard PSO velocity equation
+	found in the report. It uses the old velocity and biases from the pBest and nBest locations
+	to determine the new velocity.
+*/
 void Particle::updateVelocity(){
 	double newVelocity;
 	double pBestBias;
@@ -275,6 +341,7 @@ void Particle::updateVelocity(){
 
 	random_device seeder;
 	mt19937 engine(seeder());
+	
 	for(int i = 0; i < position.size(); i++) { 
 		//generate random distribution for phi1 and phi2
 		uniform_real_distribution<double> phi1(0,PHI_1);
@@ -287,6 +354,7 @@ void Particle::updateVelocity(){
 		//calculate the new velocity using the constriction factor and old velocity
 		newVelocity = CONSTRICTION_FACTOR * (velocity.at(i) + pBestBias + nBestBias);
 
+		//check to make sure the new velocity isn't greater or less than the min/max values
 		if(newVelocity < minVelocity){
 			velocity.at(i) = minVelocity;
 		}
@@ -301,9 +369,10 @@ void Particle::updateVelocity(){
 }
 
 
-//Purpose: finds the neighboorhood best
-//Parameters: None
-//Return value none
+/*
+	Function that checks if any particle in the neighborhood has a better fitness than the 
+	current nBest fitness. If so, the function updates the nBest fitness and location.
+*/
 void Particle::findNeighborhoodBest(){
 	for(int i = 0; i < neighborsArray.size(); i++){
 		if(neighborsArray[i]->pBestFitness < nBestFitness) {
@@ -315,21 +384,25 @@ void Particle::findNeighborhoodBest(){
 
 
 /*
-	Functions for swarm class
+	Function that initializes the swarm object. The function creates the user specified
+	number of particles and stores pointers to these particles in a vector. It then 
+	calls the user specified topology to create neighborhoods for each of the particles.
 */
 void Swarm::initSwarm(int swarmSize, int numDimensions, 
 			string neighborhoodTopology, string testFunction){
 	
+	//set user specified swarm size and max out the global best fitness value
 	this->swarmSize = swarmSize;
 	gBestFitness = numeric_limits<double>::max();
 
+	//loop that creates swarmSize particles
 	for(int i = 0; i < swarmSize; i++){
 		shared_ptr<Particle> ptr(new Particle());
 		ptr->initParticle(numDimensions, testFunction);
-
 		swarm.push_back(ptr);
 	}
 
+	/* Checks which neighborhood topology to apply. */
 	if (neighborhoodTopology.compare(GLOBAL_TOPOLOGY) == 0){
 		globalTopology();
 	}
@@ -350,6 +423,11 @@ void Swarm::initSwarm(int swarmSize, int numDimensions,
 
 }
 
+/*
+	Function that checks if any particle in the swarm has a better fitness than the 
+	current global best fitness. If so, the function updates the global best fitness 
+	and location.
+*/
 void Swarm::findGlobalBest(){
 	for (int i = 0; i < swarmSize; i++){
 		if (swarm[i]->pBestFitness < gBestFitness){
@@ -360,7 +438,11 @@ void Swarm::findGlobalBest(){
 
 }
 
-//not sure we need this
+/*
+	Function that represents the global neighborhood topology. This is called when the swarm
+	is initialized to specify the neighborhood of each particle. In the global topology the
+	neighborhood of each particle is the entire swarm. 
+*/
 void Swarm::globalTopology(){
 	for(int i = 0; i < swarmSize; i ++){
 		for(int j = 0; j < swarmSize; j++){
@@ -370,26 +452,30 @@ void Swarm::globalTopology(){
 }
 
 
-//This function bases neighborhoods on the 
+/*
+	Function that represents the ring neighborhood topology. Called by init swarm method.
+	In this topology the neighbors of each particle are the particles to the left and right
+	of the particle in the swarm vector (when it is initialized).
+*/
 void Swarm::ringTopology(){
 	
-	//takes care of all the elemetns between the first and last element
 	for(int i = 0; i < swarmSize; i++){
 		
-		//takes care of first elements
+		//takes care of the first element in the swarm vector
 		if (i == 0){
 			swarm[i]->neighborsArray.push_back(swarm[swarmSize-1]);
 			swarm[i]->neighborsArray.push_back(swarm[i]);
 			swarm[i]->neighborsArray.push_back(swarm[i+1]);
 		}
 
-		//takes care of last element in the swarm
+		//takes care of the last element in the swarm vector
 		else if (i == swarmSize - 1){
 			swarm[i]->neighborsArray.push_back(swarm[swarmSize-2]);
 			swarm[i]->neighborsArray.push_back(swarm[swarmSize-1]);
 			swarm[i]->neighborsArray.push_back(swarm[0]);
 		}
 
+		//takes care of all elements in the middle of the swarm vector
 		else {
 			swarm[i]->neighborsArray.push_back(swarm[i-1]);
 			swarm[i]->neighborsArray.push_back(swarm[i]);
@@ -400,36 +486,51 @@ void Swarm::ringTopology(){
 
 }
 
+
+/*
+	Function that represents the von Neumann neighborhod topology. Called by the init swarm
+	method. In this topology the neighbors of each particle are the particles to the left,
+	right, top, and bottom of the particle in the swarm vector (when it is initialized).
+	The easiest way to visualize and set the neighbors for this topology is to use
+	a 2-d array. However, this is costly and it is possible to use a 1-d array.
+
+*/
 void Swarm::vonNeumanTopology(){
 
-	/* Determine possible number of rows and cols that the 1-d swarm array could be
-	   stored as a 2-d array. This is done to avoid the unnecessary creation of an
-	   actual 2-d array.
+	/* 
+		Determine possible number of rows and cols that the 1-d swarm array could be
+		stored as a 2-d array. This is done to avoid the unnecessary creation of an
+		actual 2-d array. 
 	*/
 	int swarmNumRows = 3;
 
+	//finds a possible number of rows so that row*width = size of the array
 	while(swarmSize % swarmNumRows != 0){
 		swarmNumRows++;
 	}
 
 	int swarmNumCols = swarmSize / swarmNumRows;
 
+	/* 
+		Now that the 1-d array can be visualized as a 2-d array, the function finds
+		the neighbors using logic.
+	*/
 	for(int i = 0; i < swarmSize; i++){
 		/* Determine each particles left and right neighbors */
 
-		/* In case where index is in left column of array */
+		//In case where particle index is in left column of imaginary 2-d array
 		if(i % swarmNumCols == 0) {
 			swarm[i]->neighborsArray.push_back(swarm[i+swarmNumCols-1]);
 			swarm[i]->neighborsArray.push_back(swarm[i+1]);
 		}
 
-		/* In case where index is in right column of array */
+		//In case where particle index is in right column of imaginary 2-d array
 		else if(i % swarmNumCols == swarmNumCols - 1) {
 			swarm[i]->neighborsArray.push_back(swarm[i-1]);
 			swarm[i]->neighborsArray.push_back(swarm[i-swarmNumCols+1]);
 		}
 
-		/* In case where index is in any middle column of array */
+		//In case where particle index is in any middle column of imaginary 2-d array
 		else {
 			swarm[i]->neighborsArray.push_back(swarm[i-1]);
 			swarm[i]->neighborsArray.push_back(swarm[i+1]);
@@ -437,45 +538,65 @@ void Swarm::vonNeumanTopology(){
 
 		/* Determine each particles top and bottom neighbors */
 
-		/* In case where index is in top row of array */
+		//In case where particle index is in top row of 2-d imaginary array
 		if(i / swarmNumCols == 0) {
 			swarm[i]->neighborsArray.push_back(swarm[i + ((swarmNumRows - 1) * swarmNumCols)]);
 			swarm[i]->neighborsArray.push_back(swarm[i+swarmNumCols]);
 		}
 
-		/* In case where index is in bottom row of array */
+		/* In case where particle index is in bottom row of 2-d imaginary array */
 		else if(i / swarmNumCols == swarmNumRows - 1) {
 			swarm[i]->neighborsArray.push_back(swarm[i-swarmNumCols]);
 			swarm[i]->neighborsArray.push_back(swarm[i - ((swarmNumRows - 1) * swarmNumCols)]);
 		}
 
-		/* In case where index is in any middle row of array */
+		/* In case where particle index is in any middle row of 2-d imaginary array */
 		else {
 			swarm[i]->neighborsArray.push_back(swarm[i-swarmNumCols]);
 			swarm[i]->neighborsArray.push_back(swarm[i+swarmNumCols]);
 		}
 
-		/* always push back the particle itself into its neighborhood */
+		//always push back the particle itself into its neighborhood
 		swarm[i]->neighborsArray.push_back(swarm[i]);
 
 	}
 
 }
 
+
+/*
+	Function that represents the random neighborhood topology. Called by the init swarm
+	method. The neighborhood of each particle is comprised of k-1 (k is constant set to 5)
+	other particles in the swarm without duplicates. The neighborhood of each particle is
+	recreated with a probability of 0.2 in each iteration.
+*/
 void Swarm::randomTopology(){
 
 	random_device seeder;
 	mt19937 engine(seeder());
+	//gives a random index of a particle in the swarm
 	uniform_int_distribution<int> randIndex(0, swarmSize-1);
-	pair< set<int>::iterator, bool> inSet;
+	//gives a probability between 0 and 1 of neighborhood recreation
 	uniform_real_distribution<double> randDouble(0, 1);
+
+	//set is used to determine if particle is already in the neighborhood
+	pair< set<int>::iterator, bool> inSet;
 	set<int> used; 
 
 	for(int i = 0; i < swarmSize; i++){
-		if( swarm[i]->neighborsArray.size() == 0 || (swarm[i]->neighborsArray.size() != 0 && randDouble(engine) <= 0.2)) {
+		/* 
+			Neighborhood is recreated for a particle at the start and in later iterations
+			if the probability is met.
+		*/
+		if(swarm[i]->neighborsArray.size() == 0 || (swarm[i]->neighborsArray.size() != 0 && 
+			randDouble(engine) <= 0.2)) {
+
+			//clear out the old neighborhood and add the particle itself to the neighborhood
 			swarm[i]->neighborsArray.clear();
 			swarm[i]->neighborsArray.push_back(swarm[i]);
 			used.insert(i);
+
+			//insert k-1 other random particles
 			for(int j = 0; j < RANDOM_K-1; j++){
 				
 				int index = randIndex(engine);
@@ -493,15 +614,23 @@ void Swarm::randomTopology(){
 	}
 }
 
-void PSO(string neighborhoodTopology, int swarmSize, int numIterations, string testFunction, int numDimensions){
+/*
+	Function that runs particle swarm optimization on the given user inputted topology, 
+	swarm size, iterations, test function, and dimensions. The function creates a swarm
+	and then loops for the iteration length. During each loop it updates for each particle
+	the neighborhood best, its velocity, position, and calculates its fitness.
+*/
+void PSO(string neighborhoodTopology, int swarmSize, int numIterations, 
+	string testFunction, int numDimensions){
 	
+	//create and initialize the swarm
 	shared_ptr<Swarm> swarmObject(new Swarm());
-
 	swarmObject->initSwarm(swarmSize, numDimensions, neighborhoodTopology, testFunction);
 
 	for(int i = 0; i < numIterations; i++ ){
 		for(int j = 0; j < swarmSize; j++){
-			if(neighborhoodTopology.compare("ra") == 0){
+			//if random topology is selected, recreate it with given probability
+			if(neighborhoodTopology.compare(RANDOM_TOPOLOGY) == 0){
 				swarmObject->randomTopology();
 			}
 			swarmObject->swarm.at(j)->findNeighborhoodBest();
@@ -518,7 +647,9 @@ void PSO(string neighborhoodTopology, int swarmSize, int numIterations, string t
 }
 
 
-
+/*
+	Main function for the PSO file. It reads in the user input and calls the PSO function.
+*/
 int main(int argc, char* argv[]){
 
 	string neighborhoodTopology = string(argv[1]);
