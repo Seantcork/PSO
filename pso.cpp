@@ -71,7 +71,7 @@ class Particle {
 			- minVelocity (double): The minimum velocity a particle can move at. Determined
 				by the testFunction the user specifies.
 
-			- pbestFitness (double): The best fitness the particle itself has found so far.
+			- pBestFitness (double): The best fitness the particle itself has found so far.
 			- pBestArray (vector<double>): The position of the particle at its best fitness so far.
 			- position (vector<double>): The particle's position in d dimensions.
 			- velocity (vector<double>): The particle's velocity in d dimensions.
@@ -108,7 +108,6 @@ class Particle {
 		vector<double> pBestArray;
 		vector<double> position;
 		vector<double> velocity;
-		
 		
 		double nBestFitness;
 		vector<double> nBestArray;
@@ -228,8 +227,8 @@ void Particle::initParticle(int numDimensions, string testFunction){
 
 	/* If the user entered an invalid function name. */
 	else {
-
 		cerr << "Optimization Function does not exist" << endl;
+		exit(EXIT_FAILURE);
 	}
 
 	//max out the starting pBest and nBest values
@@ -287,6 +286,7 @@ void Particle::calculateFitness(string testFunction){
 	/* Prints error if the user entered an invalid evaluation function. */
 	else {
 		cerr << "Optimization Function does not exist" << endl;
+		exit(EXIT_FAILURE);
 	}
 }
 
@@ -442,6 +442,7 @@ void Swarm::initSwarm(int swarmSize, int numDimensions,
 	}
 	else {
 		cerr << "Topology type not found" << endl;
+		exit(EXIT_FAILURE);
 	}
 
 
