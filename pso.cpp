@@ -569,13 +569,13 @@ void Swarm::vonNeumanTopology(){
 			swarm[i]->neighborsArray.push_back(swarm[i+swarmNumCols]);
 		}
 
-		/* In case where particle index is in bottom row of 2-d imaginary array */
+		//In case where particle index is in bottom row of 2-d imaginary array
 		else if(i / swarmNumCols == swarmNumRows - 1) {
 			swarm[i]->neighborsArray.push_back(swarm[i-swarmNumCols]);
 			swarm[i]->neighborsArray.push_back(swarm[i - ((swarmNumRows - 1) * swarmNumCols)]);
 		}
 
-		/* In case where particle index is in any middle row of 2-d imaginary array */
+		//In case where particle index is in any middle row of 2-d imaginary array
 		else {
 			swarm[i]->neighborsArray.push_back(swarm[i-swarmNumCols]);
 			swarm[i]->neighborsArray.push_back(swarm[i+swarmNumCols]);
